@@ -1,5 +1,7 @@
 # Ros Typescript Generator
 
+[![CircleCI](https://circleci.com/gh/Greenroom-Robotics/ros-typescript-generator/tree/master.svg?style=svg)](https://circleci.com/gh/Greenroom-Robotics/ros-typescript-generator/tree/master)
+
 A CLI for generating typescript interfaces from ros messages and services.
 
 ## Usage
