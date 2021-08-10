@@ -1,6 +1,6 @@
 /* eslint-disable eslint-comments/no-unlimited-disable */
 /* eslint-disable */
-// These files were genererated using "ros-typescript-generator"
+// These files were generated using "ros-typescript-generator"
 export interface IRosTypeActionMsgsCancelGoalRequest {
   goal_info: IRosTypeActionMsgsGoalInfo;
 }

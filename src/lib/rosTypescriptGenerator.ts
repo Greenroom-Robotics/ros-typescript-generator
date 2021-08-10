@@ -27,7 +27,7 @@ export const rosTypescriptGenerator = async (config: IConfig) => {
   const typescriptInterfacesWithNote = [
     `/* eslint-disable eslint-comments/no-unlimited-disable */`,
     `/* eslint-disable */`,
-    `// These files were genererated using "ros-typescript-generator"`,
+    `// These files were generated using "ros-typescript-generator"`,
     typescriptInterfaces,
   ].join('\n');
 
