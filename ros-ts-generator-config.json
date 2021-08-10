@@ -1,5 +1,5 @@
 {
-  "output": "./__generated__/ros_msgs.ts",
+  "output": "./generated/ros_msgs.ts",
   "input": [
     { 
       "namespace": "geometry_msgs", 

@@ -9,7 +9,7 @@ A CLI for generating typescript interfaces from ros messages and services.
 
 ```json
 {
-  "output": "./__generated__/ros_msgs.ts",
+  "output": "./generated/ros_msgs.ts",
   "input": [
     {
       "namespace": "geometry_msgs",
@@ -34,4 +34,4 @@ A CLI for generating typescript interfaces from ros messages and services.
 ## Example
 
 - The example `ros-ts-generator-config.json` points to some [test_ros_msgs](./test_ros_msgs) which came from a ros2 foxy install
-- Running `./bin/ros-typescript-generator` in this repo produces [__generated__/ros_msgs.ts](./__generated__/ros_msgs.ts)
+- Running `./bin/ros-typescript-generator` in this repo produces [generated/ros_msgs.ts](./generated/ros_msgs.ts)
