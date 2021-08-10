@@ -1,0 +1,17 @@
+{
+  "output": "./generated",
+  "input": [
+    { 
+      "namespace": "geometry_msgs", 
+      "path": "./test_data/geometry_msgs" 
+    },
+    { 
+      "namespace": "std_msgs", 
+      "path": "./test_data/std_msgs" 
+    },
+    { 
+      "namespace": "sensor_msgs", 
+      "path": "./test_data/sensor_msgs" 
+    }
+  ]
+}
