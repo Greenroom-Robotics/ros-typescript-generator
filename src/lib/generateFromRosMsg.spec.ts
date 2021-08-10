@@ -3,7 +3,8 @@ import test from 'ava';
 import { generateFromRosMsg } from './generateFromRosMsg';
 
 test('generateFromRosMsg with comments', (t) => {
-  const result = generateFromRosMsg(`MSG: geometry_msgs/Point
+  const result = generateFromRosMsg(
+    `MSG: geometry_msgs/Point
   # This was originally provided as an example message.
   # It is deprecated as of Foxy
   # It is recommended to create your own semantically meaningful message.
@@ -12,17 +13,20 @@ test('generateFromRosMsg with comments', (t) => {
   string label   # label of given dimension
   uint32 size    # size of given dimension (in type units)
   uint32 stride  # stride of given dimension
-  `);
+  `,
+    'RosType'
+  );
   const expected = `export interface RosTypeGeometryMsgsPoint {
   label: string;
   size: number;
   stride: number;
-}`
+}`;
   t.is(result, expected);
 });
 
 test('generateFromRosMsg multi message', (t) => {
-  const result = generateFromRosMsg(`MSG: geometry_msgs/Pose
+  const result = generateFromRosMsg(
+    `MSG: geometry_msgs/Pose
   geometry_msgs/Point position
   geometry_msgs/Quaternion orientation
   
@@ -37,7 +41,9 @@ test('generateFromRosMsg multi message', (t) => {
   float64 x
   float64 y
   float64 z
-  float64 w`);
+  float64 w`,
+    'RosType'
+  );
 
   const expected = `export interface RosTypeGeometryMsgsPoint {
   x: number;
@@ -55,7 +61,6 @@ export interface RosTypeGeometryMsgsQuaternion {
   y: number;
   z: number;
   w: number;
-}`
+}`;
   t.is(result, expected);
 });
-

@@ -1,1 +1,1 @@
-export * from './lib/generateFromRosMsg'
+export * from './lib/generateFromRosMsg';
