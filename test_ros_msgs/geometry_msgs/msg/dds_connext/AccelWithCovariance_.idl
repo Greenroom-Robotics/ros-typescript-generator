@@ -1,0 +1,32 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geometry_msgs:msg/AccelWithCovariance.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Accel_.idl"
+
+#ifndef __geometry_msgs__msg__accel_with_covariance__idl__
+#define __geometry_msgs__msg__accel_with_covariance__idl__
+
+
+module geometry_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct AccelWithCovariance_ {
+geometry_msgs::msg::dds_::Accel_ accel_;
+double covariance_[36];
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geometry_msgs
+
+
+#endif  // __geometry_msgs__msg__accel_with_covariance__idl__

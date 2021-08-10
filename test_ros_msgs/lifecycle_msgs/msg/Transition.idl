@@ -1,0 +1,56 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from lifecycle_msgs/msg/Transition.msg
+// generated code does not contain a copyright notice
+
+
+module lifecycle_msgs {
+  module msg {
+    module Transition_Constants {
+      const uint8 TRANSITION_CREATE = 0;
+      const uint8 TRANSITION_CONFIGURE = 1;
+      const uint8 TRANSITION_CLEANUP = 2;
+      const uint8 TRANSITION_ACTIVATE = 3;
+      const uint8 TRANSITION_DEACTIVATE = 4;
+      const uint8 TRANSITION_UNCONFIGURED_SHUTDOWN = 5;
+      const uint8 TRANSITION_INACTIVE_SHUTDOWN = 6;
+      const uint8 TRANSITION_ACTIVE_SHUTDOWN = 7;
+      const uint8 TRANSITION_DESTROY = 8;
+      const uint8 TRANSITION_ON_CONFIGURE_SUCCESS = 10;
+      const uint8 TRANSITION_ON_CONFIGURE_FAILURE = 11;
+      const uint8 TRANSITION_ON_CONFIGURE_ERROR = 12;
+      const uint8 TRANSITION_ON_CLEANUP_SUCCESS = 20;
+      const uint8 TRANSITION_ON_CLEANUP_FAILURE = 21;
+      const uint8 TRANSITION_ON_CLEANUP_ERROR = 22;
+      const uint8 TRANSITION_ON_ACTIVATE_SUCCESS = 30;
+      const uint8 TRANSITION_ON_ACTIVATE_FAILURE = 31;
+      const uint8 TRANSITION_ON_ACTIVATE_ERROR = 32;
+      const uint8 TRANSITION_ON_DEACTIVATE_SUCCESS = 40;
+      const uint8 TRANSITION_ON_DEACTIVATE_FAILURE = 41;
+      const uint8 TRANSITION_ON_DEACTIVATE_ERROR = 42;
+      const uint8 TRANSITION_ON_SHUTDOWN_SUCCESS = 50;
+      const uint8 TRANSITION_ON_SHUTDOWN_FAILURE = 51;
+      const uint8 TRANSITION_ON_SHUTDOWN_ERROR = 52;
+      const uint8 TRANSITION_ON_ERROR_SUCCESS = 60;
+      const uint8 TRANSITION_ON_ERROR_FAILURE = 61;
+      const uint8 TRANSITION_ON_ERROR_ERROR = 62;
+      const uint8 TRANSITION_CALLBACK_SUCCESS = 97;
+      const uint8 TRANSITION_CALLBACK_FAILURE = 98;
+      const uint8 TRANSITION_CALLBACK_ERROR = 99;
+    };
+    @verbatim (language="comment", text=
+      " Default values for transitions as described in:" "\n"
+      " http://design.ros2.org/articles/node_lifecycle.html")
+    struct Transition {
+      @verbatim (language="comment", text=
+        "#" "\n"
+        "# Fields" "\n"
+        "#" "\n"
+        " The transition id from above definitions.")
+      uint8 id;
+
+      @verbatim (language="comment", text=
+        " A text label of the transition.")
+      string label;
+    };
+  };
+};

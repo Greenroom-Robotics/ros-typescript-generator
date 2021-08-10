@@ -1,0 +1,44 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from visualization_msgs:msg/InteractiveMarkerUpdate.idl
+// generated code does not contain a copyright notice
+#include "visualization_msgs/msg/dds_connext/InteractiveMarker_.idl"
+#include "visualization_msgs/msg/dds_connext/InteractiveMarkerPose_.idl"
+
+#ifndef __visualization_msgs__msg__interactive_marker_update__idl__
+#define __visualization_msgs__msg__interactive_marker_update__idl__
+
+
+module visualization_msgs {
+
+module msg {
+
+module dds_ {
+
+module InteractiveMarkerUpdate_Constants {
+const octet KEEP_ALIVE_ = 0;
+const octet UPDATE_ = 1;
+
+};
+
+struct InteractiveMarkerUpdate_ {
+string server_id_;
+unsigned long long seq_num_;
+octet type_;
+sequence<visualization_msgs::msg::dds_::InteractiveMarker_> markers_;
+
+sequence<visualization_msgs::msg::dds_::InteractiveMarkerPose_> poses_;
+
+sequence<string> erases_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module visualization_msgs
+
+
+#endif  // __visualization_msgs__msg__interactive_marker_update__idl__

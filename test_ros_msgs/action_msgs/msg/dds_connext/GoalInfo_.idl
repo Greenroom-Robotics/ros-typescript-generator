@@ -1,0 +1,32 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from action_msgs:msg/GoalInfo.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __action_msgs__msg__goal_info__idl__
+#define __action_msgs__msg__goal_info__idl__
+
+
+module action_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct GoalInfo_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+builtin_interfaces::msg::dds_::Time_ stamp_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module action_msgs
+
+
+#endif  // __action_msgs__msg__goal_info__idl__

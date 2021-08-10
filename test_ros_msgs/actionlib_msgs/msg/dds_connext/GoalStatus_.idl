@@ -1,0 +1,45 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from actionlib_msgs:msg/GoalStatus.idl
+// generated code does not contain a copyright notice
+#include "actionlib_msgs/msg/dds_connext/GoalID_.idl"
+
+#ifndef __actionlib_msgs__msg__goal_status__idl__
+#define __actionlib_msgs__msg__goal_status__idl__
+
+
+module actionlib_msgs {
+
+module msg {
+
+module dds_ {
+
+module GoalStatus_Constants {
+const octet PENDING_ = 0;
+const octet ACTIVE_ = 1;
+const octet PREEMPTED_ = 2;
+const octet SUCCEEDED_ = 3;
+const octet ABORTED_ = 4;
+const octet REJECTED_ = 5;
+const octet PREEMPTING_ = 6;
+const octet RECALLING_ = 7;
+const octet RECALLED_ = 8;
+const octet LOST_ = 9;
+
+};
+
+struct GoalStatus_ {
+actionlib_msgs::msg::dds_::GoalID_ goal_id_;
+octet status_;
+string text_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module actionlib_msgs
+
+
+#endif  // __actionlib_msgs__msg__goal_status__idl__

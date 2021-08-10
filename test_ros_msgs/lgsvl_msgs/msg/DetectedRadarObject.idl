@@ -1,0 +1,42 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from lgsvl_msgs/msg/DetectedRadarObject.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "geometry_msgs/msg/Vector3.idl"
+
+module lgsvl_msgs {
+  module msg {
+    module DetectedRadarObject_Constants {
+      const uint8 STATE_MOVING = 0;
+      const uint8 STATE_STATIONARY = 1;
+    };
+    struct DetectedRadarObject {
+      int32 id;
+
+      geometry_msgs::msg::Vector3 sensor_aim;
+
+      geometry_msgs::msg::Vector3 sensor_right;
+
+      geometry_msgs::msg::Point sensor_position;
+
+      geometry_msgs::msg::Vector3 sensor_velocity;
+
+      double sensor_angle;
+
+      geometry_msgs::msg::Point object_position;
+
+      geometry_msgs::msg::Vector3 object_velocity;
+
+      geometry_msgs::msg::Point object_relative_position;
+
+      geometry_msgs::msg::Vector3 object_relative_velocity;
+
+      geometry_msgs::msg::Vector3 object_collider_size;
+
+      uint8 object_state;
+
+      boolean new_detection;
+    };
+  };
+};

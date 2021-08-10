@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from visualization_msgs:msg/InteractiveMarkerPose.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Pose_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __visualization_msgs__msg__interactive_marker_pose__idl__
+#define __visualization_msgs__msg__interactive_marker_pose__idl__
+
+
+module visualization_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct InteractiveMarkerPose_ {
+std_msgs::msg::dds_::Header_ header_;
+geometry_msgs::msg::dds_::Pose_ pose_;
+string name_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module visualization_msgs
+
+
+#endif  // __visualization_msgs__msg__interactive_marker_pose__idl__

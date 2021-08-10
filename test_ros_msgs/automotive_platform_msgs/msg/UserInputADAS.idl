@@ -1,0 +1,67 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/UserInputADAS.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " User input (e.g. button presses) related to the factory ADAS functions")
+    struct UserInputADAS {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " Cruise Control on")
+      boolean btn_cc_on;
+
+      @verbatim (language="comment", text=
+        " Cruise Control off")
+      boolean btn_cc_off;
+
+      @verbatim (language="comment", text=
+        " Cruise Control on/off toggle")
+      boolean btn_cc_on_off;
+
+      @verbatim (language="comment", text=
+        " Cruise Control set/speed +")
+      boolean btn_cc_set_inc;
+
+      @verbatim (language="comment", text=
+        " Cruise Control set/speed -")
+      boolean btn_cc_set_dec;
+
+      @verbatim (language="comment", text=
+        " Cruise Control resume")
+      boolean btn_cc_res;
+
+      @verbatim (language="comment", text=
+        " Cruise Control cancel")
+      boolean btn_cc_cncl;
+
+      @verbatim (language="comment", text=
+        " Cruise Control resume/cancle toggle")
+      boolean btn_cc_res_cncl;
+
+      @verbatim (language="comment", text=
+        " Adaptive Cruise Control gap -")
+      boolean btn_acc_gap_inc;
+
+      @verbatim (language="comment", text=
+        " Adaptive Cruise Control gap +")
+      boolean btn_acc_gap_dec;
+
+      @verbatim (language="comment", text=
+        " Lane Keep Assist off")
+      boolean btn_lka_on;
+
+      @verbatim (language="comment", text=
+        " Lane Keep Assist on")
+      boolean btn_lka_off;
+
+      @verbatim (language="comment", text=
+        " Lane Keep Assist on/off toggle")
+      boolean btn_lka_on_off;
+    };
+  };
+};

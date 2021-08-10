@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geometry_msgs:msg/PoseArray.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Pose_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __geometry_msgs__msg__pose_array__idl__
+#define __geometry_msgs__msg__pose_array__idl__
+
+
+module geometry_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct PoseArray_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<geometry_msgs::msg::dds_::Pose_> poses_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geometry_msgs
+
+
+#endif  // __geometry_msgs__msg__pose_array__idl__

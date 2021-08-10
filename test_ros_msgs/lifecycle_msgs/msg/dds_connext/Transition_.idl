@@ -1,0 +1,63 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from lifecycle_msgs:msg/Transition.idl
+// generated code does not contain a copyright notice
+
+#ifndef __lifecycle_msgs__msg__transition__idl__
+#define __lifecycle_msgs__msg__transition__idl__
+
+
+module lifecycle_msgs {
+
+module msg {
+
+module dds_ {
+
+module Transition_Constants {
+const octet TRANSITION_CREATE_ = 0;
+const octet TRANSITION_CONFIGURE_ = 1;
+const octet TRANSITION_CLEANUP_ = 2;
+const octet TRANSITION_ACTIVATE_ = 3;
+const octet TRANSITION_DEACTIVATE_ = 4;
+const octet TRANSITION_UNCONFIGURED_SHUTDOWN_ = 5;
+const octet TRANSITION_INACTIVE_SHUTDOWN_ = 6;
+const octet TRANSITION_ACTIVE_SHUTDOWN_ = 7;
+const octet TRANSITION_DESTROY_ = 8;
+const octet TRANSITION_ON_CONFIGURE_SUCCESS_ = 10;
+const octet TRANSITION_ON_CONFIGURE_FAILURE_ = 11;
+const octet TRANSITION_ON_CONFIGURE_ERROR_ = 12;
+const octet TRANSITION_ON_CLEANUP_SUCCESS_ = 20;
+const octet TRANSITION_ON_CLEANUP_FAILURE_ = 21;
+const octet TRANSITION_ON_CLEANUP_ERROR_ = 22;
+const octet TRANSITION_ON_ACTIVATE_SUCCESS_ = 30;
+const octet TRANSITION_ON_ACTIVATE_FAILURE_ = 31;
+const octet TRANSITION_ON_ACTIVATE_ERROR_ = 32;
+const octet TRANSITION_ON_DEACTIVATE_SUCCESS_ = 40;
+const octet TRANSITION_ON_DEACTIVATE_FAILURE_ = 41;
+const octet TRANSITION_ON_DEACTIVATE_ERROR_ = 42;
+const octet TRANSITION_ON_SHUTDOWN_SUCCESS_ = 50;
+const octet TRANSITION_ON_SHUTDOWN_FAILURE_ = 51;
+const octet TRANSITION_ON_SHUTDOWN_ERROR_ = 52;
+const octet TRANSITION_ON_ERROR_SUCCESS_ = 60;
+const octet TRANSITION_ON_ERROR_FAILURE_ = 61;
+const octet TRANSITION_ON_ERROR_ERROR_ = 62;
+const octet TRANSITION_CALLBACK_SUCCESS_ = 97;
+const octet TRANSITION_CALLBACK_FAILURE_ = 98;
+const octet TRANSITION_CALLBACK_ERROR_ = 99;
+
+};
+
+struct Transition_ {
+octet id_;
+string label_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module lifecycle_msgs
+
+
+#endif  // __lifecycle_msgs__msg__transition__idl__

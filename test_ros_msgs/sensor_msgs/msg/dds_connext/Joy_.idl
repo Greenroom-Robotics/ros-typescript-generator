@@ -1,0 +1,34 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/Joy.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __sensor_msgs__msg__joy__idl__
+#define __sensor_msgs__msg__joy__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Joy_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<float> axes_;
+
+sequence<long> buttons_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__joy__idl__

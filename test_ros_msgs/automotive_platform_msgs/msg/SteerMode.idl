@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/SteerMode.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Steering Control Message with Mode" "\n"
+      " Contains steering commands and desired autonomy active mode flag")
+    struct SteerMode {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " Is 1 if autonomy mode should be active")
+      uint16 mode;
+
+      @verbatim (language="comment", text=
+        " Desired steering curvature (1/m)")
+      float curvature;
+
+      @verbatim (language="comment", text=
+        " Max rate of change for curvature (1/m/sec)")
+      float max_curvature_rate;
+    };
+  };
+};

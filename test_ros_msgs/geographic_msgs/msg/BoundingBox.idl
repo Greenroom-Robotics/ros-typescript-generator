@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from geographic_msgs/msg/BoundingBox.msg
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/GeoPoint.idl"
+
+module geographic_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Geographic map bounding box." "\n"
+      "" "\n"
+      " The two GeoPoints denote diagonally opposite corners of the box." "\n"
+      "" "\n"
+      " If min_pt.latitude is NaN, the bounding box is \"global\", matching" "\n"
+      " any valid latitude, longitude and altitude." "\n"
+      "" "\n"
+      " If min_pt.altitude is NaN, the bounding box is two-dimensional and" "\n"
+      " matches any altitude within the specified latitude and longitude" "\n"
+      " range.")
+    struct BoundingBox {
+      @verbatim (language="comment", text=
+        " lowest and most Southwestern corner")
+      geographic_msgs::msg::GeoPoint min_pt;
+
+      @verbatim (language="comment", text=
+        " highest and most Northeastern corner")
+      geographic_msgs::msg::GeoPoint max_pt;
+    };
+  };
+};

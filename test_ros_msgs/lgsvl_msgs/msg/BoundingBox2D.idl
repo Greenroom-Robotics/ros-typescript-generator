@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from lgsvl_msgs/msg/BoundingBox2D.msg
+// generated code does not contain a copyright notice
+
+
+module lgsvl_msgs {
+  module msg {
+    struct BoundingBox2D {
+      @verbatim (language="comment", text=
+        " x position of the bounding box center in camera image space, in pixels")
+      float x;
+
+      @verbatim (language="comment", text=
+        " y position of the bounding box center in camera image space, in pixels")
+      float y;
+
+      @verbatim (language="comment", text=
+        " width of the bounding box, in pixels")
+      float width;
+
+      @verbatim (language="comment", text=
+        " height of the bounding box, in pixels")
+      float height;
+    };
+  };
+};

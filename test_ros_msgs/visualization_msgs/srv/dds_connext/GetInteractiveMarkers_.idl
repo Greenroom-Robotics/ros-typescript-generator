@@ -1,0 +1,52 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from visualization_msgs:srv/GetInteractiveMarkers.idl
+// generated code does not contain a copyright notice
+#include "visualization_msgs/msg/dds_connext/InteractiveMarker_.idl"
+
+#ifndef __visualization_msgs__srv__get_interactive_markers__idl__
+#define __visualization_msgs__srv__get_interactive_markers__idl__
+
+
+module visualization_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetInteractiveMarkers_Request_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module visualization_msgs
+
+
+module visualization_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetInteractiveMarkers_Response_ {
+unsigned long long sequence_number_;
+sequence<visualization_msgs::msg::dds_::InteractiveMarker_> markers_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module visualization_msgs
+
+
+#endif  // __visualization_msgs__srv__get_interactive_markers__idl__

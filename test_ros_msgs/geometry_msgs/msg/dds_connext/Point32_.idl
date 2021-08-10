@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geometry_msgs:msg/Point32.idl
+// generated code does not contain a copyright notice
+
+#ifndef __geometry_msgs__msg__point32__idl__
+#define __geometry_msgs__msg__point32__idl__
+
+
+module geometry_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Point32_ {
+float x_;
+float y_;
+float z_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geometry_msgs
+
+
+#endif  // __geometry_msgs__msg__point32__idl__

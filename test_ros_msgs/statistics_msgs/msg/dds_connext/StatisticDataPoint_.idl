@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from statistics_msgs:msg/StatisticDataPoint.idl
+// generated code does not contain a copyright notice
+
+#ifndef __statistics_msgs__msg__statistic_data_point__idl__
+#define __statistics_msgs__msg__statistic_data_point__idl__
+
+
+module statistics_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct StatisticDataPoint_ {
+octet data_type_;
+double data_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module statistics_msgs
+
+
+#endif  // __statistics_msgs__msg__statistic_data_point__idl__

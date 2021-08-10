@@ -1,0 +1,32 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geographic_msgs:msg/GeoPose.idl
+// generated code does not contain a copyright notice
+#include "geographic_msgs/msg/dds_connext/GeoPoint_.idl"
+#include "geometry_msgs/msg/dds_connext/Quaternion_.idl"
+
+#ifndef __geographic_msgs__msg__geo_pose__idl__
+#define __geographic_msgs__msg__geo_pose__idl__
+
+
+module geographic_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct GeoPose_ {
+geographic_msgs::msg::dds_::GeoPoint_ position_;
+geometry_msgs::msg::dds_::Quaternion_ orientation_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geographic_msgs
+
+
+#endif  // __geographic_msgs__msg__geo_pose__idl__

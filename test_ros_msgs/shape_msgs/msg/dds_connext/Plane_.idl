@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from shape_msgs:msg/Plane.idl
+// generated code does not contain a copyright notice
+
+#ifndef __shape_msgs__msg__plane__idl__
+#define __shape_msgs__msg__plane__idl__
+
+
+module shape_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Plane_ {
+double coef_[4];
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module shape_msgs
+
+
+#endif  // __shape_msgs__msg__plane__idl__

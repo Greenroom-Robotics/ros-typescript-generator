@@ -1,0 +1,32 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geometry_msgs:msg/Pose.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Point_.idl"
+#include "geometry_msgs/msg/dds_connext/Quaternion_.idl"
+
+#ifndef __geometry_msgs__msg__pose__idl__
+#define __geometry_msgs__msg__pose__idl__
+
+
+module geometry_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Pose_ {
+geometry_msgs::msg::dds_::Point_ position_;
+geometry_msgs::msg::dds_::Quaternion_ orientation_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geometry_msgs
+
+
+#endif  // __geometry_msgs__msg__pose__idl__

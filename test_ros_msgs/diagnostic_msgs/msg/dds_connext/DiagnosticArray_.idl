@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from diagnostic_msgs:msg/DiagnosticArray.idl
+// generated code does not contain a copyright notice
+#include "diagnostic_msgs/msg/dds_connext/DiagnosticStatus_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __diagnostic_msgs__msg__diagnostic_array__idl__
+#define __diagnostic_msgs__msg__diagnostic_array__idl__
+
+
+module diagnostic_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct DiagnosticArray_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<diagnostic_msgs::msg::dds_::DiagnosticStatus_> status_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module diagnostic_msgs
+
+
+#endif  // __diagnostic_msgs__msg__diagnostic_array__idl__

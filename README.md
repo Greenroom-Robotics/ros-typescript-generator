@@ -21,10 +21,7 @@ A CLI for generating typescript interfaces from ros messages and services.
       "namespace": "std_msgs",
       "path": "./test_ros_msgs/std_msgs"
     },
-    {
-      "namespace": "sensor_msgs",
-      "path": "./test_ros_msgs/sensor_msgs"
-    }
+    ...
   ],
   "typePrefix": "IRosType"
 }
@@ -36,4 +33,4 @@ A CLI for generating typescript interfaces from ros messages and services.
 ## Example
 
 - The example `ros-ts-generator-config.json` points to some [test_ros_msgs](./test_ros_msgs) which came from a ros2 foxy install
-- Running `./bin/ros-typescript-generator` in this repo produces [generated/ros_msgs.ts](./generated/ros_msgs.ts)
+- Running `./bin/ros-typescript-generator` in this repo produces [./src/generated/ros_msgs.ts](./src/generated/ros_msgs.ts)

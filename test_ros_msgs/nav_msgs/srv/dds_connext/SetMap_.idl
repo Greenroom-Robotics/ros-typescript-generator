@@ -1,0 +1,52 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from nav_msgs:srv/SetMap.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/PoseWithCovarianceStamped_.idl"
+#include "nav_msgs/msg/dds_connext/OccupancyGrid_.idl"
+
+#ifndef __nav_msgs__srv__set_map__idl__
+#define __nav_msgs__srv__set_map__idl__
+
+
+module nav_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetMap_Request_ {
+nav_msgs::msg::dds_::OccupancyGrid_ map_;
+geometry_msgs::msg::dds_::PoseWithCovarianceStamped_ initial_pose_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module nav_msgs
+
+
+module nav_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetMap_Response_ {
+boolean success_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module nav_msgs
+
+
+#endif  // __nav_msgs__srv__set_map__idl__

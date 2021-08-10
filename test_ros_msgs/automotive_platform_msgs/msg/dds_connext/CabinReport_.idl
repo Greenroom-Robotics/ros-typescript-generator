@@ -1,0 +1,40 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from automotive_platform_msgs:msg/CabinReport.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __automotive_platform_msgs__msg__cabin_report__idl__
+#define __automotive_platform_msgs__msg__cabin_report__idl__
+
+
+module automotive_platform_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct CabinReport_ {
+std_msgs::msg::dds_::Header_ header_;
+boolean door_open_front_right_;
+boolean door_open_front_left_;
+boolean door_open_rear_right_;
+boolean door_open_rear_left_;
+boolean hood_open_;
+boolean trunk_open_;
+boolean passenger_present_;
+boolean passenger_airbag_enabled_;
+boolean seatbelt_engaged_driver_;
+boolean seatbelt_engaged_passenger_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module automotive_platform_msgs
+
+
+#endif  // __automotive_platform_msgs__msg__cabin_report__idl__

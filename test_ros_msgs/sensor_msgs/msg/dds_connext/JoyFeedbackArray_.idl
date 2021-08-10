@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/JoyFeedbackArray.idl
+// generated code does not contain a copyright notice
+#include "sensor_msgs/msg/dds_connext/JoyFeedback_.idl"
+
+#ifndef __sensor_msgs__msg__joy_feedback_array__idl__
+#define __sensor_msgs__msg__joy_feedback_array__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct JoyFeedbackArray_ {
+sequence<sensor_msgs::msg::dds_::JoyFeedback_> array_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__joy_feedback_array__idl__

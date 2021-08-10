@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/SteerWheel.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Steering Wheel Control Message with Mode" "\n"
+      " Contains steering wheel command and desired autonomy active mode flag")
+    struct SteerWheel {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " Is 1 if autonomy mode should be active")
+      uint16 mode;
+
+      @verbatim (language="comment", text=
+        " Desired steering wheel angle (rad)")
+      float angle;
+
+      @verbatim (language="comment", text=
+        " Desired steering wheel angle max velocity (rad/sec)")
+      float angle_velocity;
+    };
+  };
+};

@@ -1,0 +1,40 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from tf2_msgs:msg/TF2Error.idl
+// generated code does not contain a copyright notice
+
+#ifndef __tf2_msgs__msg__tf2_error__idl__
+#define __tf2_msgs__msg__tf2_error__idl__
+
+
+module tf2_msgs {
+
+module msg {
+
+module dds_ {
+
+module TF2Error_Constants {
+const octet NO_ERROR_ = 0;
+const octet LOOKUP_ERROR_ = 1;
+const octet CONNECTIVITY_ERROR_ = 2;
+const octet EXTRAPOLATION_ERROR_ = 3;
+const octet INVALID_ARGUMENT_ERROR_ = 4;
+const octet TIMEOUT_ERROR_ = 5;
+const octet TRANSFORM_ERROR_ = 6;
+
+};
+
+struct TF2Error_ {
+octet error_;
+string error_string_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module tf2_msgs
+
+
+#endif  // __tf2_msgs__msg__tf2_error__idl__

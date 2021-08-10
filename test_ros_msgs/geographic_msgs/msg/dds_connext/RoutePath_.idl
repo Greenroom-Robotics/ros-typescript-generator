@@ -1,0 +1,37 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geographic_msgs:msg/RoutePath.idl
+// generated code does not contain a copyright notice
+#include "geographic_msgs/msg/dds_connext/KeyValue_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __geographic_msgs__msg__route_path__idl__
+#define __geographic_msgs__msg__route_path__idl__
+
+
+module geographic_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct RoutePath_ {
+std_msgs::msg::dds_::Header_ header_;
+unique_identifier_msgs::msg::dds_::UUID_ network_;
+sequence<unique_identifier_msgs::msg::dds_::UUID_> segments_;
+
+sequence<geographic_msgs::msg::dds_::KeyValue_> props_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geographic_msgs
+
+
+#endif  // __geographic_msgs__msg__route_path__idl__

@@ -1,0 +1,35 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from nav_msgs:msg/Odometry.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/PoseWithCovariance_.idl"
+#include "geometry_msgs/msg/dds_connext/TwistWithCovariance_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __nav_msgs__msg__odometry__idl__
+#define __nav_msgs__msg__odometry__idl__
+
+
+module nav_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Odometry_ {
+std_msgs::msg::dds_::Header_ header_;
+string child_frame_id_;
+geometry_msgs::msg::dds_::PoseWithCovariance_ pose_;
+geometry_msgs::msg::dds_::TwistWithCovariance_ twist_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module nav_msgs
+
+
+#endif  // __nav_msgs__msg__odometry__idl__

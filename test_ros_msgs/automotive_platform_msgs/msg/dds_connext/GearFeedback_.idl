@@ -1,0 +1,32 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from automotive_platform_msgs:msg/GearFeedback.idl
+// generated code does not contain a copyright notice
+#include "automotive_platform_msgs/msg/dds_connext/Gear_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __automotive_platform_msgs__msg__gear_feedback__idl__
+#define __automotive_platform_msgs__msg__gear_feedback__idl__
+
+
+module automotive_platform_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct GearFeedback_ {
+std_msgs::msg::dds_::Header_ header_;
+automotive_platform_msgs::msg::dds_::Gear_ current_gear_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module automotive_platform_msgs
+
+
+#endif  // __automotive_platform_msgs__msg__gear_feedback__idl__

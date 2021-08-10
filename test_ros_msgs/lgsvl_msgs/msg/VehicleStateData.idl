@@ -1,0 +1,52 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from lgsvl_msgs/msg/VehicleStateData.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module lgsvl_msgs {
+  module msg {
+    module VehicleStateData_Constants {
+      const uint8 BLINKERS_OFF = 0;
+      const uint8 BLINKERS_LEFT = 1;
+      const uint8 BLINKERS_RIGHT = 2;
+      const uint8 BLINKERS_HAZARD = 3;
+      const uint8 HEADLIGHTS_OFF = 0;
+      const uint8 HEADLIGHTS_LOW = 1;
+      const uint8 HEADLIGHTS_HIGH = 2;
+      const uint8 WIPERS_OFF = 0;
+      const uint8 WIPERS_LOW = 1;
+      const uint8 WIPERS_MED = 2;
+      const uint8 WIPERS_HIGH = 3;
+      const uint8 GEAR_NEUTRAL = 0;
+      const uint8 GEAR_DRIVE = 1;
+      const uint8 GEAR_REVERSE = 2;
+      const uint8 GEAR_PARKING = 3;
+      const uint8 GEAR_LOW = 4;
+      const uint8 VEHICLE_MODE_COMPLETE_MANUAL = 0;
+      const uint8 VEHICLE_MODE_COMPLETE_AUTO_DRIVE = 1;
+      const uint8 VEHICLE_MODE_AUTO_STEER_ONLY = 2;
+      const uint8 VEHICLE_MODE_AUTO_SPEED_ONLY = 3;
+      const uint8 VEHICLE_MODE_EMERGENCY_MODE = 4;
+    };
+    struct VehicleStateData {
+      std_msgs::msg::Header header;
+
+      uint8 blinker_state;
+
+      uint8 headlight_state;
+
+      uint8 wiper_state;
+
+      uint8 current_gear;
+
+      uint8 vehicle_mode;
+
+      boolean hand_brake_active;
+
+      boolean horn_active;
+
+      boolean autonomous_mode_active;
+    };
+  };
+};

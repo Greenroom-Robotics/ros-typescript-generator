@@ -1,0 +1,45 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/UserInputMenus.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Inputs (e.g. button presses) for in-vehicle menus")
+    struct UserInputMenus {
+      std_msgs::msg::Header header;
+
+      boolean str_whl_left_btn_left;
+
+      boolean str_whl_left_btn_down;
+
+      boolean str_whl_left_btn_right;
+
+      boolean str_whl_left_btn_up;
+
+      boolean str_whl_left_btn_ok;
+
+      boolean str_whl_right_btn_left;
+
+      boolean str_whl_right_btn_down;
+
+      boolean str_whl_right_btn_right;
+
+      boolean str_whl_right_btn_up;
+
+      boolean str_whl_right_btn_ok;
+
+      boolean cntr_cons_btn_left;
+
+      boolean cntr_cons_btn_down;
+
+      boolean cntr_cons_btn_right;
+
+      boolean cntr_cons_btn_up;
+
+      boolean cntr_cons_btn_ok;
+    };
+  };
+};

@@ -1,0 +1,59 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geographic_msgs:srv/GetGeoPath.idl
+// generated code does not contain a copyright notice
+#include "geographic_msgs/msg/dds_connext/GeoPath_.idl"
+#include "geographic_msgs/msg/dds_connext/GeoPoint_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __geographic_msgs__srv__get_geo_path__idl__
+#define __geographic_msgs__srv__get_geo_path__idl__
+
+
+module geographic_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetGeoPath_Request_ {
+geographic_msgs::msg::dds_::GeoPoint_ start_;
+geographic_msgs::msg::dds_::GeoPoint_ goal_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module geographic_msgs
+
+
+module geographic_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetGeoPath_Response_ {
+boolean success_;
+string status_;
+geographic_msgs::msg::dds_::GeoPath_ plan_;
+unique_identifier_msgs::msg::dds_::UUID_ network_;
+unique_identifier_msgs::msg::dds_::UUID_ start_seg_;
+unique_identifier_msgs::msg::dds_::UUID_ goal_seg_;
+double distance_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module geographic_msgs
+
+
+#endif  // __geographic_msgs__srv__get_geo_path__idl__

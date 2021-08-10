@@ -1,0 +1,43 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from automotive_platform_msgs:msg/UserInputMedia.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __automotive_platform_msgs__msg__user_input_media__idl__
+#define __automotive_platform_msgs__msg__user_input_media__idl__
+
+
+module automotive_platform_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct UserInputMedia_ {
+std_msgs::msg::dds_::Header_ header_;
+boolean btn_vol_up_;
+boolean btn_vol_down_;
+boolean btn_mute_;
+boolean btn_next_;
+boolean btn_prev_;
+boolean btn_next_hang_up_;
+boolean btn_prev_answer_;
+boolean btn_hang_up_;
+boolean btn_answer_;
+boolean btn_play_;
+boolean btn_pause_;
+boolean btn_play_pause_;
+boolean btn_mode_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module automotive_platform_msgs
+
+
+#endif  // __automotive_platform_msgs__msg__user_input_media__idl__
