@@ -17,4 +17,5 @@
   int64: "number", 
   uint64: "number",
   string: "string",
+  time: "number"
 }
