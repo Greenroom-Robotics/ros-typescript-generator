@@ -24,6 +24,7 @@
   ],
   "flagWords": [],
   "ignorePaths": [
+    "src/generated/**",
     "package.json",
     "package-lock.json",
     "yarn.lock",
