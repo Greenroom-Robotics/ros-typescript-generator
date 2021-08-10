@@ -18,5 +18,5 @@ export const primitives = {
   uint64: 'number',
   string: 'string',
   time: 'number',
-  duration: 'number'
+  duration: 'number',
 };
