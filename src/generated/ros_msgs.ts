@@ -16,7 +16,7 @@ export interface IRosTypeActionMsgsCancelGoalResponse {
 
 export interface IRosTypeActionMsgsGoalInfo {
   goal_id: IRosTypeUniqueIdentifierMsgsUuid;
-  stamp: {sec: number, nanosec: number};
+  stamp: { sec: number; nanosec: number };
 }
 
 export interface IRosTypeActionMsgsGoalStatus {
@@ -36,7 +36,7 @@ export interface IRosTypeActionMsgsGoalStatusArray {
 }
 
 export interface IRosTypeActionlibMsgsGoalId {
-  stamp: {sec: number, nanosec: number};
+  stamp: { sec: number; nanosec: number };
   id: string;
 }
 
@@ -336,9 +336,7 @@ export interface IRosTypeDiagnosticMsgsKeyValue {
   value: string;
 }
 
-export interface IRosTypeDiagnosticMsgsSelfTestRequest {
-
-}
+export interface IRosTypeDiagnosticMsgsSelfTestRequest {}
 
 export interface IRosTypeDiagnosticMsgsSelfTestResponse {
   id: string;
@@ -809,25 +807,19 @@ export interface IRosTypeLifecycleMsgsChangeStateResponse {
   success: boolean;
 }
 
-export interface IRosTypeLifecycleMsgsGetAvailableStatesRequest {
-
-}
+export interface IRosTypeLifecycleMsgsGetAvailableStatesRequest {}
 
 export interface IRosTypeLifecycleMsgsGetAvailableStatesResponse {
   available_states: IRosTypeLifecycleMsgsState[];
 }
 
-export interface IRosTypeLifecycleMsgsGetAvailableTransitionsRequest {
-
-}
+export interface IRosTypeLifecycleMsgsGetAvailableTransitionsRequest {}
 
 export interface IRosTypeLifecycleMsgsGetAvailableTransitionsResponse {
   available_transitions: IRosTypeLifecycleMsgsTransitionDescription[];
 }
 
-export interface IRosTypeLifecycleMsgsGetStateRequest {
-
-}
+export interface IRosTypeLifecycleMsgsGetStateRequest {}
 
 export interface IRosTypeLifecycleMsgsGetStateResponse {
   current_state: IRosTypeLifecycleMsgsState;
@@ -897,9 +889,7 @@ export interface IRosTypeLifecycleMsgsTransitionEvent {
   goal_state: IRosTypeLifecycleMsgsState;
 }
 
-export interface IRosTypeNavMsgsGetMapRequest {
-
-}
+export interface IRosTypeNavMsgsGetMapRequest {}
 
 export interface IRosTypeNavMsgsGetMapResponse {
   map: IRosTypeNavMsgsOccupancyGrid;
@@ -923,7 +913,7 @@ export interface IRosTypeNavMsgsGridCells {
 }
 
 export interface IRosTypeNavMsgsMapMetaData {
-  map_load_time: {sec: number, nanosec: number};
+  map_load_time: { sec: number; nanosec: number };
   resolution: number;
   width: number;
   height: number;
@@ -986,7 +976,7 @@ export interface IRosTypePclMsgsVertices {
 }
 
 export interface IRosTypeRosgraphMsgsClock {
-  clock: {sec: number, nanosec: number};
+  clock: { sec: number; nanosec: number };
 }
 
 export interface IRosTypeSensorMsgsBatteryState {
@@ -1259,7 +1249,7 @@ export interface IRosTypeSensorMsgsTemperature {
 
 export interface IRosTypeSensorMsgsTimeReference {
   header: IRosTypeStdMsgsHeader;
-  time_ref: {sec: number, nanosec: number};
+  time_ref: { sec: number; nanosec: number };
   source: string;
 }
 
@@ -1297,8 +1287,8 @@ export interface IRosTypeStatisticsMsgsMetricsMessage {
   measurement_source_name: string;
   metrics_source: string;
   unit: string;
-  window_start: {sec: number, nanosec: number};
-  window_stop: {sec: number, nanosec: number};
+  window_start: { sec: number; nanosec: number };
+  window_stop: { sec: number; nanosec: number };
   statistics: IRosTypeStatisticsMsgsStatisticDataPoint[];
 }
 
@@ -1340,9 +1330,7 @@ export interface IRosTypeStdMsgsColorRgba {
   a: number;
 }
 
-export interface IRosTypeStdMsgsEmpty {
-
-}
+export interface IRosTypeStdMsgsEmpty {}
 
 export interface IRosTypeStdMsgsFloat32 {
   data: number;
@@ -1363,7 +1351,7 @@ export interface IRosTypeStdMsgsFloat64MultiArray {
 }
 
 export interface IRosTypeStdMsgsHeader {
-  stamp: {sec: number, nanosec: number};
+  stamp: { sec: number; nanosec: number };
   frame_id: string;
 }
 
@@ -1465,9 +1453,7 @@ export interface IRosTypeStereoMsgsDisparityImage {
   delta_d: number;
 }
 
-export interface IRosTypeTf2MsgsFrameGraphRequest {
-
-}
+export interface IRosTypeTf2MsgsFrameGraphRequest {}
 
 export interface IRosTypeTf2MsgsFrameGraphResponse {
   frame_yaml: string;
@@ -1520,9 +1506,7 @@ export interface IRosTypeUniqueIdentifierMsgsUuid {
   uuid: number[];
 }
 
-export interface IRosTypeVisualizationMsgsGetInteractiveMarkersRequest {
-
-}
+export interface IRosTypeVisualizationMsgsGetInteractiveMarkersRequest {}
 
 export interface IRosTypeVisualizationMsgsGetInteractiveMarkersResponse {
   sequence_number: number;
