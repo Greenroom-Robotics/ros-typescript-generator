@@ -20,7 +20,8 @@
     "sandboxed",
     "transpiled",
     "typedoc",
-    "untracked"
+    "untracked",
+    "nanosec"
   ],
   "flagWords": [],
   "ignorePaths": [
