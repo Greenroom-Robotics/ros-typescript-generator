@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/MrBlenny/ros-typescript-generator/compare/v1.1.0...v1.2.0) (2022-02-16)
+
+
+### Features
+
+* add a failing test for enum grouping ([9eaa812](https://github.com/MrBlenny/ros-typescript-generator/commit/9eaa8122978ada002073ef7d6e42b7b1e1c41714))
+* add enum support ([595a67b](https://github.com/MrBlenny/ros-typescript-generator/commit/595a67b4ac36e373dd531da39a663947e43cfa89))
+* skip enum test ([7b22b5f](https://github.com/MrBlenny/ros-typescript-generator/commit/7b22b5ffc34a0c760422d2d7a7a796f847b32a40))
+
 ## 1.1.0 (2022-02-01)
 
 
