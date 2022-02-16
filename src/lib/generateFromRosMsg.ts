@@ -1,5 +1,5 @@
-import { parse, RosMsgField } from '@foxglove/rosmsg';
-import { camelCase, compact, groupBy, partition, upperFirst } from 'lodash';
+import { parse } from '@foxglove/rosmsg';
+import { camelCase, compact, partition, upperFirst } from 'lodash';
 
 import { primitives } from './primitives';
 
@@ -33,29 +33,6 @@ export const generateFromRosMsg = (rosDefinition: string, typePrefix = '') => {
           return `  ${param.name}: ${paramType}${arrayMarker};`;
         })
         .join('\n');
-
-      // Generate an enum for the other items
-      // const defConstantsGroups = groupBy(
-      //   defConstants,
-      //   (item) => item.name.split('_')[0]
-      // );
-
-      // const grouped: { name: string, items: RosMsgField[] }[] = []
-      // const ungrouped: RosMsgField[] = []
-
-      // const getEnumInner = (items: RosMsgField[]) => items.map((param) => {
-      //   return `  ${param.name} = ${param.value},`;
-      // })
-      //   .join('\n');
-
-      // Object.keys(defConstantsGroups).forEach((groupName) => {
-      //   const group = defConstantsGroups[groupName]
-      //   if (group.length === 1) {
-      //     ungrouped.push(group[0])
-      //   }
-      // })
-
-
 
       const tsEnum = defConstants
         .map((param) => {
