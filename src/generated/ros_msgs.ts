@@ -1,17 +1,29 @@
 /* eslint-disable eslint-comments/no-unlimited-disable */
 /* eslint-disable */
 // These files were generated using "ros-typescript-generator"
+export enum IRosTypeStatisticsMsgsStatisticDataTypeConst {
+  STATISTICS_DATA_TYPE_UNINITIALIZED = 0,
+  STATISTICS_DATA_TYPE_AVERAGE = 1,
+  STATISTICS_DATA_TYPE_MINIMUM = 2,
+  STATISTICS_DATA_TYPE_MAXIMUM = 3,
+  STATISTICS_DATA_TYPE_STDDEV = 4,
+  STATISTICS_DATA_TYPE_SAMPLE_COUNT = 5,
+}
+
 export interface IRosTypeActionMsgsCancelGoalRequest {
   goal_info: IRosTypeActionMsgsGoalInfo;
 }
 
 export interface IRosTypeActionMsgsCancelGoalResponse {
-  ERROR_NONE: number;
-  ERROR_REJECTED: number;
-  ERROR_UNKNOWN_GOAL_ID: number;
-  ERROR_GOAL_TERMINATED: number;
   return_code: number;
   goals_canceling: IRosTypeActionMsgsGoalInfo[];
+}
+
+export enum IRosTypeActionMsgsCancelGoalResponseConst {
+  ERROR_NONE = 0,
+  ERROR_REJECTED = 1,
+  ERROR_UNKNOWN_GOAL_ID = 2,
+  ERROR_GOAL_TERMINATED = 3,
 }
 
 export interface IRosTypeActionMsgsGoalInfo {
@@ -20,15 +32,18 @@ export interface IRosTypeActionMsgsGoalInfo {
 }
 
 export interface IRosTypeActionMsgsGoalStatus {
-  STATUS_UNKNOWN: number;
-  STATUS_ACCEPTED: number;
-  STATUS_EXECUTING: number;
-  STATUS_CANCELING: number;
-  STATUS_SUCCEEDED: number;
-  STATUS_CANCELED: number;
-  STATUS_ABORTED: number;
   goal_info: IRosTypeActionMsgsGoalInfo;
   status: number;
+}
+
+export enum IRosTypeActionMsgsGoalStatusConst {
+  STATUS_UNKNOWN = 0,
+  STATUS_ACCEPTED = 1,
+  STATUS_EXECUTING = 2,
+  STATUS_CANCELING = 3,
+  STATUS_SUCCEEDED = 4,
+  STATUS_CANCELED = 5,
+  STATUS_ABORTED = 6,
 }
 
 export interface IRosTypeActionMsgsGoalStatusArray {
@@ -43,17 +58,20 @@ export interface IRosTypeActionlibMsgsGoalId {
 export interface IRosTypeActionlibMsgsGoalStatus {
   goal_id: IRosTypeActionlibMsgsGoalId;
   status: number;
-  PENDING: number;
-  ACTIVE: number;
-  PREEMPTED: number;
-  SUCCEEDED: number;
-  ABORTED: number;
-  REJECTED: number;
-  PREEMPTING: number;
-  RECALLING: number;
-  RECALLED: number;
-  LOST: number;
   text: string;
+}
+
+export enum IRosTypeActionlibMsgsGoalStatusConst {
+  PENDING = 0,
+  ACTIVE = 1,
+  PREEMPTED = 2,
+  SUCCEEDED = 3,
+  ABORTED = 4,
+  REJECTED = 5,
+  PREEMPTING = 6,
+  RECALLING = 7,
+  RECALLED = 8,
+  LOST = 9,
 }
 
 export interface IRosTypeActionlibMsgsGoalStatusArray {
@@ -132,13 +150,16 @@ export interface IRosTypeAutomotivePlatformMsgsDriverCommands {
 }
 
 export interface IRosTypeAutomotivePlatformMsgsGear {
-  NONE: number;
-  PARK: number;
-  REVERSE: number;
-  NEUTRAL: number;
-  DRIVE: number;
-  LOW: number;
   gear: number;
+}
+
+export enum IRosTypeAutomotivePlatformMsgsGearConst {
+  NONE = 0,
+  PARK = 1,
+  REVERSE = 2,
+  NEUTRAL = 3,
+  DRIVE = 4,
+  LOW = 5,
 }
 
 export interface IRosTypeAutomotivePlatformMsgsGearCommand {
@@ -223,10 +244,13 @@ export interface IRosTypeAutomotivePlatformMsgsThrottleFeedback {
 export interface IRosTypeAutomotivePlatformMsgsTurnSignalCommand {
   header: IRosTypeStdMsgsHeader;
   mode: number;
-  NONE: number;
-  LEFT: number;
-  RIGHT: number;
   turn_signal: number;
+}
+
+export enum IRosTypeAutomotivePlatformMsgsTurnSignalCommandConst {
+  NONE = 0,
+  LEFT = 1,
+  RIGHT = 2,
 }
 
 export interface IRosTypeAutomotivePlatformMsgsUserInputAdas {
@@ -320,10 +344,6 @@ export interface IRosTypeDiagnosticMsgsDiagnosticArray {
 }
 
 export interface IRosTypeDiagnosticMsgsDiagnosticStatus {
-  OK: number;
-  WARN: number;
-  ERROR: number;
-  STALE: number;
   level: number;
   name: string;
   message: string;
@@ -331,12 +351,17 @@ export interface IRosTypeDiagnosticMsgsDiagnosticStatus {
   values: IRosTypeDiagnosticMsgsKeyValue[];
 }
 
+export enum IRosTypeDiagnosticMsgsDiagnosticStatusConst {
+  OK = 0,
+  WARN = 1,
+  ERROR = 2,
+  STALE = 3,
+}
+
 export interface IRosTypeDiagnosticMsgsKeyValue {
   key: string;
   value: string;
 }
-
-export interface IRosTypeDiagnosticMsgsSelfTestRequest {}
 
 export interface IRosTypeDiagnosticMsgsSelfTestResponse {
   id: string;
@@ -669,11 +694,14 @@ export interface IRosTypeLgsvlMsgsCanBusData {
   gps_altitude: number;
   orientation: IRosTypeGeometryMsgsQuaternion;
   linear_velocities: IRosTypeGeometryMsgsVector3;
-  GEAR_NEUTRAL: number;
-  GEAR_DRIVE: number;
-  GEAR_REVERSE: number;
-  GEAR_PARKING: number;
-  GEAR_LOW: number;
+}
+
+export enum IRosTypeLgsvlMsgsCanBusDataConst {
+  GEAR_NEUTRAL = 0,
+  GEAR_DRIVE = 1,
+  GEAR_REVERSE = 2,
+  GEAR_PARKING = 3,
+  GEAR_LOW = 4,
 }
 
 export interface IRosTypeLgsvlMsgsDetectedRadarObject {
@@ -690,8 +718,11 @@ export interface IRosTypeLgsvlMsgsDetectedRadarObject {
   object_collider_size: IRosTypeGeometryMsgsVector3;
   object_state: number;
   new_detection: boolean;
-  STATE_MOVING: number;
-  STATE_STATIONARY: number;
+}
+
+export enum IRosTypeLgsvlMsgsDetectedRadarObjectConst {
+  STATE_MOVING = 0,
+  STATE_STATIONARY = 1,
 }
 
 export interface IRosTypeLgsvlMsgsDetectedRadarObjectArray {
@@ -752,11 +783,14 @@ export interface IRosTypeLgsvlMsgsVehicleControlData {
   target_wheel_angle: number;
   target_wheel_angular_rate: number;
   target_gear: number;
-  GEAR_NEUTRAL: number;
-  GEAR_DRIVE: number;
-  GEAR_REVERSE: number;
-  GEAR_PARKING: number;
-  GEAR_LOW: number;
+}
+
+export enum IRosTypeLgsvlMsgsVehicleControlDataConst {
+  GEAR_NEUTRAL = 0,
+  GEAR_DRIVE = 1,
+  GEAR_REVERSE = 2,
+  GEAR_PARKING = 3,
+  GEAR_LOW = 4,
 }
 
 export interface IRosTypeLgsvlMsgsVehicleOdometry {
@@ -776,27 +810,30 @@ export interface IRosTypeLgsvlMsgsVehicleStateData {
   hand_brake_active: boolean;
   horn_active: boolean;
   autonomous_mode_active: boolean;
-  BLINKERS_OFF: number;
-  BLINKERS_LEFT: number;
-  BLINKERS_RIGHT: number;
-  BLINKERS_HAZARD: number;
-  HEADLIGHTS_OFF: number;
-  HEADLIGHTS_LOW: number;
-  HEADLIGHTS_HIGH: number;
-  WIPERS_OFF: number;
-  WIPERS_LOW: number;
-  WIPERS_MED: number;
-  WIPERS_HIGH: number;
-  GEAR_NEUTRAL: number;
-  GEAR_DRIVE: number;
-  GEAR_REVERSE: number;
-  GEAR_PARKING: number;
-  GEAR_LOW: number;
-  VEHICLE_MODE_COMPLETE_MANUAL: number;
-  VEHICLE_MODE_COMPLETE_AUTO_DRIVE: number;
-  VEHICLE_MODE_AUTO_STEER_ONLY: number;
-  VEHICLE_MODE_AUTO_SPEED_ONLY: number;
-  VEHICLE_MODE_EMERGENCY_MODE: number;
+}
+
+export enum IRosTypeLgsvlMsgsVehicleStateDataConst {
+  BLINKERS_OFF = 0,
+  BLINKERS_LEFT = 1,
+  BLINKERS_RIGHT = 2,
+  BLINKERS_HAZARD = 3,
+  HEADLIGHTS_OFF = 0,
+  HEADLIGHTS_LOW = 1,
+  HEADLIGHTS_HIGH = 2,
+  WIPERS_OFF = 0,
+  WIPERS_LOW = 1,
+  WIPERS_MED = 2,
+  WIPERS_HIGH = 3,
+  GEAR_NEUTRAL = 0,
+  GEAR_DRIVE = 1,
+  GEAR_REVERSE = 2,
+  GEAR_PARKING = 3,
+  GEAR_LOW = 4,
+  VEHICLE_MODE_COMPLETE_MANUAL = 0,
+  VEHICLE_MODE_COMPLETE_AUTO_DRIVE = 1,
+  VEHICLE_MODE_AUTO_STEER_ONLY = 2,
+  VEHICLE_MODE_AUTO_SPEED_ONLY = 3,
+  VEHICLE_MODE_EMERGENCY_MODE = 4,
 }
 
 export interface IRosTypeLifecycleMsgsChangeStateRequest {
@@ -807,73 +844,73 @@ export interface IRosTypeLifecycleMsgsChangeStateResponse {
   success: boolean;
 }
 
-export interface IRosTypeLifecycleMsgsGetAvailableStatesRequest {}
-
 export interface IRosTypeLifecycleMsgsGetAvailableStatesResponse {
   available_states: IRosTypeLifecycleMsgsState[];
 }
 
-export interface IRosTypeLifecycleMsgsGetAvailableTransitionsRequest {}
-
 export interface IRosTypeLifecycleMsgsGetAvailableTransitionsResponse {
   available_transitions: IRosTypeLifecycleMsgsTransitionDescription[];
 }
-
-export interface IRosTypeLifecycleMsgsGetStateRequest {}
 
 export interface IRosTypeLifecycleMsgsGetStateResponse {
   current_state: IRosTypeLifecycleMsgsState;
 }
 
 export interface IRosTypeLifecycleMsgsState {
-  PRIMARY_STATE_UNKNOWN: number;
-  PRIMARY_STATE_UNCONFIGURED: number;
-  PRIMARY_STATE_INACTIVE: number;
-  PRIMARY_STATE_ACTIVE: number;
-  PRIMARY_STATE_FINALIZED: number;
-  TRANSITION_STATE_CONFIGURING: number;
-  TRANSITION_STATE_CLEANINGUP: number;
-  TRANSITION_STATE_SHUTTINGDOWN: number;
-  TRANSITION_STATE_ACTIVATING: number;
-  TRANSITION_STATE_DEACTIVATING: number;
-  TRANSITION_STATE_ERRORPROCESSING: number;
   id: number;
   label: string;
 }
 
+export enum IRosTypeLifecycleMsgsStateConst {
+  PRIMARY_STATE_UNKNOWN = 0,
+  PRIMARY_STATE_UNCONFIGURED = 1,
+  PRIMARY_STATE_INACTIVE = 2,
+  PRIMARY_STATE_ACTIVE = 3,
+  PRIMARY_STATE_FINALIZED = 4,
+  TRANSITION_STATE_CONFIGURING = 10,
+  TRANSITION_STATE_CLEANINGUP = 11,
+  TRANSITION_STATE_SHUTTINGDOWN = 12,
+  TRANSITION_STATE_ACTIVATING = 13,
+  TRANSITION_STATE_DEACTIVATING = 14,
+  TRANSITION_STATE_ERRORPROCESSING = 15,
+}
+
 export interface IRosTypeLifecycleMsgsTransition {
-  TRANSITION_CREATE: number;
-  TRANSITION_CONFIGURE: number;
-  TRANSITION_CLEANUP: number;
-  TRANSITION_ACTIVATE: number;
-  TRANSITION_DEACTIVATE: number;
-  TRANSITION_UNCONFIGURED_SHUTDOWN: number;
-  TRANSITION_INACTIVE_SHUTDOWN: number;
-  TRANSITION_ACTIVE_SHUTDOWN: number;
-  TRANSITION_DESTROY: number;
-  TRANSITION_ON_CONFIGURE_SUCCESS: number;
-  TRANSITION_ON_CONFIGURE_FAILURE: number;
-  TRANSITION_ON_CONFIGURE_ERROR: number;
-  TRANSITION_ON_CLEANUP_SUCCESS: number;
-  TRANSITION_ON_CLEANUP_FAILURE: number;
-  TRANSITION_ON_CLEANUP_ERROR: number;
-  TRANSITION_ON_ACTIVATE_SUCCESS: number;
-  TRANSITION_ON_ACTIVATE_FAILURE: number;
-  TRANSITION_ON_ACTIVATE_ERROR: number;
-  TRANSITION_ON_DEACTIVATE_SUCCESS: number;
-  TRANSITION_ON_DEACTIVATE_FAILURE: number;
-  TRANSITION_ON_DEACTIVATE_ERROR: number;
-  TRANSITION_ON_SHUTDOWN_SUCCESS: number;
-  TRANSITION_ON_SHUTDOWN_FAILURE: number;
-  TRANSITION_ON_SHUTDOWN_ERROR: number;
-  TRANSITION_ON_ERROR_SUCCESS: number;
-  TRANSITION_ON_ERROR_FAILURE: number;
-  TRANSITION_ON_ERROR_ERROR: number;
-  TRANSITION_CALLBACK_SUCCESS: number;
-  TRANSITION_CALLBACK_FAILURE: number;
-  TRANSITION_CALLBACK_ERROR: number;
   id: number;
   label: string;
+}
+
+export enum IRosTypeLifecycleMsgsTransitionConst {
+  TRANSITION_CREATE = 0,
+  TRANSITION_CONFIGURE = 1,
+  TRANSITION_CLEANUP = 2,
+  TRANSITION_ACTIVATE = 3,
+  TRANSITION_DEACTIVATE = 4,
+  TRANSITION_UNCONFIGURED_SHUTDOWN = 5,
+  TRANSITION_INACTIVE_SHUTDOWN = 6,
+  TRANSITION_ACTIVE_SHUTDOWN = 7,
+  TRANSITION_DESTROY = 8,
+  TRANSITION_ON_CONFIGURE_SUCCESS = 10,
+  TRANSITION_ON_CONFIGURE_FAILURE = 11,
+  TRANSITION_ON_CONFIGURE_ERROR = 12,
+  TRANSITION_ON_CLEANUP_SUCCESS = 20,
+  TRANSITION_ON_CLEANUP_FAILURE = 21,
+  TRANSITION_ON_CLEANUP_ERROR = 22,
+  TRANSITION_ON_ACTIVATE_SUCCESS = 30,
+  TRANSITION_ON_ACTIVATE_FAILURE = 31,
+  TRANSITION_ON_ACTIVATE_ERROR = 32,
+  TRANSITION_ON_DEACTIVATE_SUCCESS = 40,
+  TRANSITION_ON_DEACTIVATE_FAILURE = 41,
+  TRANSITION_ON_DEACTIVATE_ERROR = 42,
+  TRANSITION_ON_SHUTDOWN_SUCCESS = 50,
+  TRANSITION_ON_SHUTDOWN_FAILURE = 51,
+  TRANSITION_ON_SHUTDOWN_ERROR = 52,
+  TRANSITION_ON_ERROR_SUCCESS = 60,
+  TRANSITION_ON_ERROR_FAILURE = 61,
+  TRANSITION_ON_ERROR_ERROR = 62,
+  TRANSITION_CALLBACK_SUCCESS = 97,
+  TRANSITION_CALLBACK_FAILURE = 98,
+  TRANSITION_CALLBACK_ERROR = 99,
 }
 
 export interface IRosTypeLifecycleMsgsTransitionDescription {
@@ -888,8 +925,6 @@ export interface IRosTypeLifecycleMsgsTransitionEvent {
   start_state: IRosTypeLifecycleMsgsState;
   goal_state: IRosTypeLifecycleMsgsState;
 }
-
-export interface IRosTypeNavMsgsGetMapRequest {}
 
 export interface IRosTypeNavMsgsGetMapResponse {
   map: IRosTypeNavMsgsOccupancyGrid;
@@ -980,27 +1015,6 @@ export interface IRosTypeRosgraphMsgsClock {
 }
 
 export interface IRosTypeSensorMsgsBatteryState {
-  POWER_SUPPLY_STATUS_UNKNOWN: number;
-  POWER_SUPPLY_STATUS_CHARGING: number;
-  POWER_SUPPLY_STATUS_DISCHARGING: number;
-  POWER_SUPPLY_STATUS_NOT_CHARGING: number;
-  POWER_SUPPLY_STATUS_FULL: number;
-  POWER_SUPPLY_HEALTH_UNKNOWN: number;
-  POWER_SUPPLY_HEALTH_GOOD: number;
-  POWER_SUPPLY_HEALTH_OVERHEAT: number;
-  POWER_SUPPLY_HEALTH_DEAD: number;
-  POWER_SUPPLY_HEALTH_OVERVOLTAGE: number;
-  POWER_SUPPLY_HEALTH_UNSPEC_FAILURE: number;
-  POWER_SUPPLY_HEALTH_COLD: number;
-  POWER_SUPPLY_HEALTH_WATCHDOG_TIMER_EXPIRE: number;
-  POWER_SUPPLY_HEALTH_SAFETY_TIMER_EXPIRE: number;
-  POWER_SUPPLY_TECHNOLOGY_UNKNOWN: number;
-  POWER_SUPPLY_TECHNOLOGY_NIMH: number;
-  POWER_SUPPLY_TECHNOLOGY_LION: number;
-  POWER_SUPPLY_TECHNOLOGY_LIPO: number;
-  POWER_SUPPLY_TECHNOLOGY_LIFE: number;
-  POWER_SUPPLY_TECHNOLOGY_NICD: number;
-  POWER_SUPPLY_TECHNOLOGY_LIMN: number;
   header: IRosTypeStdMsgsHeader;
   voltage: number;
   temperature: number;
@@ -1017,6 +1031,30 @@ export interface IRosTypeSensorMsgsBatteryState {
   cell_temperature: number[];
   location: string;
   serial_number: string;
+}
+
+export enum IRosTypeSensorMsgsBatteryStateConst {
+  POWER_SUPPLY_STATUS_UNKNOWN = 0,
+  POWER_SUPPLY_STATUS_CHARGING = 1,
+  POWER_SUPPLY_STATUS_DISCHARGING = 2,
+  POWER_SUPPLY_STATUS_NOT_CHARGING = 3,
+  POWER_SUPPLY_STATUS_FULL = 4,
+  POWER_SUPPLY_HEALTH_UNKNOWN = 0,
+  POWER_SUPPLY_HEALTH_GOOD = 1,
+  POWER_SUPPLY_HEALTH_OVERHEAT = 2,
+  POWER_SUPPLY_HEALTH_DEAD = 3,
+  POWER_SUPPLY_HEALTH_OVERVOLTAGE = 4,
+  POWER_SUPPLY_HEALTH_UNSPEC_FAILURE = 5,
+  POWER_SUPPLY_HEALTH_COLD = 6,
+  POWER_SUPPLY_HEALTH_WATCHDOG_TIMER_EXPIRE = 7,
+  POWER_SUPPLY_HEALTH_SAFETY_TIMER_EXPIRE = 8,
+  POWER_SUPPLY_TECHNOLOGY_UNKNOWN = 0,
+  POWER_SUPPLY_TECHNOLOGY_NIMH = 1,
+  POWER_SUPPLY_TECHNOLOGY_LION = 2,
+  POWER_SUPPLY_TECHNOLOGY_LIPO = 3,
+  POWER_SUPPLY_TECHNOLOGY_LIFE = 4,
+  POWER_SUPPLY_TECHNOLOGY_NICD = 5,
+  POWER_SUPPLY_TECHNOLOGY_LIMN = 6,
 }
 
 export interface IRosTypeSensorMsgsCameraInfo {
@@ -1091,12 +1129,15 @@ export interface IRosTypeSensorMsgsJoy {
 }
 
 export interface IRosTypeSensorMsgsJoyFeedback {
-  TYPE_LED: number;
-  TYPE_RUMBLE: number;
-  TYPE_BUZZER: number;
   type: number;
   id: number;
   intensity: number;
+}
+
+export enum IRosTypeSensorMsgsJoyFeedbackConst {
+  TYPE_LED = 0,
+  TYPE_RUMBLE = 1,
+  TYPE_BUZZER = 2,
 }
 
 export interface IRosTypeSensorMsgsJoyFeedbackArray {
@@ -1154,24 +1195,30 @@ export interface IRosTypeSensorMsgsNavSatFix {
   longitude: number;
   altitude: number;
   position_covariance: number[];
-  COVARIANCE_TYPE_UNKNOWN: number;
-  COVARIANCE_TYPE_APPROXIMATED: number;
-  COVARIANCE_TYPE_DIAGONAL_KNOWN: number;
-  COVARIANCE_TYPE_KNOWN: number;
   position_covariance_type: number;
 }
 
+export enum IRosTypeSensorMsgsNavSatFixConst {
+  COVARIANCE_TYPE_UNKNOWN = 0,
+  COVARIANCE_TYPE_APPROXIMATED = 1,
+  COVARIANCE_TYPE_DIAGONAL_KNOWN = 2,
+  COVARIANCE_TYPE_KNOWN = 3,
+}
+
 export interface IRosTypeSensorMsgsNavSatStatus {
-  STATUS_NO_FIX: number;
-  STATUS_FIX: number;
-  STATUS_SBAS_FIX: number;
-  STATUS_GBAS_FIX: number;
   status: number;
-  SERVICE_GPS: number;
-  SERVICE_GLONASS: number;
-  SERVICE_COMPASS: number;
-  SERVICE_GALILEO: number;
   service: number;
+}
+
+export enum IRosTypeSensorMsgsNavSatStatusConst {
+  STATUS_NO_FIX = -1,
+  STATUS_FIX = 0,
+  STATUS_SBAS_FIX = 1,
+  STATUS_GBAS_FIX = 2,
+  SERVICE_GPS = 1,
+  SERVICE_GLONASS = 2,
+  SERVICE_COMPASS = 4,
+  SERVICE_GALILEO = 8,
 }
 
 export interface IRosTypeSensorMsgsPointCloud {
@@ -1193,29 +1240,35 @@ export interface IRosTypeSensorMsgsPointCloud2 {
 }
 
 export interface IRosTypeSensorMsgsPointField {
-  INT8: number;
-  UINT8: number;
-  INT16: number;
-  UINT16: number;
-  INT32: number;
-  UINT32: number;
-  FLOAT32: number;
-  FLOAT64: number;
   name: string;
   offset: number;
   datatype: number;
   count: number;
 }
 
+export enum IRosTypeSensorMsgsPointFieldConst {
+  INT8 = 1,
+  UINT8 = 2,
+  INT16 = 3,
+  UINT16 = 4,
+  INT32 = 5,
+  UINT32 = 6,
+  FLOAT32 = 7,
+  FLOAT64 = 8,
+}
+
 export interface IRosTypeSensorMsgsRange {
   header: IRosTypeStdMsgsHeader;
-  ULTRASOUND: number;
-  INFRARED: number;
   radiation_type: number;
   field_of_view: number;
   min_range: number;
   max_range: number;
   range: number;
+}
+
+export enum IRosTypeSensorMsgsRangeConst {
+  ULTRASOUND = 0,
+  INFRARED = 1,
 }
 
 export interface IRosTypeSensorMsgsRegionOfInterest {
@@ -1267,20 +1320,23 @@ export interface IRosTypeShapeMsgsPlane {
 }
 
 export interface IRosTypeShapeMsgsSolidPrimitive {
-  BOX: number;
-  SPHERE: number;
-  CYLINDER: number;
-  CONE: number;
   type: number;
   dimensions: number[];
-  BOX_X: number;
-  BOX_Y: number;
-  BOX_Z: number;
-  SPHERE_RADIUS: number;
-  CYLINDER_HEIGHT: number;
-  CYLINDER_RADIUS: number;
-  CONE_HEIGHT: number;
-  CONE_RADIUS: number;
+}
+
+export enum IRosTypeShapeMsgsSolidPrimitiveConst {
+  BOX = 1,
+  SPHERE = 2,
+  CYLINDER = 3,
+  CONE = 4,
+  BOX_X = 0,
+  BOX_Y = 1,
+  BOX_Z = 2,
+  SPHERE_RADIUS = 0,
+  CYLINDER_HEIGHT = 0,
+  CYLINDER_RADIUS = 1,
+  CONE_HEIGHT = 0,
+  CONE_RADIUS = 1,
 }
 
 export interface IRosTypeStatisticsMsgsMetricsMessage {
@@ -1295,15 +1351,6 @@ export interface IRosTypeStatisticsMsgsMetricsMessage {
 export interface IRosTypeStatisticsMsgsStatisticDataPoint {
   data_type: number;
   data: number;
-}
-
-export interface IRosTypeStatisticsMsgsStatisticDataType {
-  STATISTICS_DATA_TYPE_UNINITIALIZED: number;
-  STATISTICS_DATA_TYPE_AVERAGE: number;
-  STATISTICS_DATA_TYPE_MINIMUM: number;
-  STATISTICS_DATA_TYPE_MAXIMUM: number;
-  STATISTICS_DATA_TYPE_STDDEV: number;
-  STATISTICS_DATA_TYPE_SAMPLE_COUNT: number;
 }
 
 export interface IRosTypeStdMsgsBool {
@@ -1329,8 +1376,6 @@ export interface IRosTypeStdMsgsColorRgba {
   b: number;
   a: number;
 }
-
-export interface IRosTypeStdMsgsEmpty {}
 
 export interface IRosTypeStdMsgsFloat32 {
   data: number;
@@ -1453,22 +1498,23 @@ export interface IRosTypeStereoMsgsDisparityImage {
   delta_d: number;
 }
 
-export interface IRosTypeTf2MsgsFrameGraphRequest {}
-
 export interface IRosTypeTf2MsgsFrameGraphResponse {
   frame_yaml: string;
 }
 
 export interface IRosTypeTf2MsgsTf2Error {
-  NO_ERROR: number;
-  LOOKUP_ERROR: number;
-  CONNECTIVITY_ERROR: number;
-  EXTRAPOLATION_ERROR: number;
-  INVALID_ARGUMENT_ERROR: number;
-  TIMEOUT_ERROR: number;
-  TRANSFORM_ERROR: number;
   error: number;
   error_string: string;
+}
+
+export enum IRosTypeTf2MsgsTf2ErrorConst {
+  NO_ERROR = 0,
+  LOOKUP_ERROR = 1,
+  CONNECTIVITY_ERROR = 2,
+  EXTRAPOLATION_ERROR = 3,
+  INVALID_ARGUMENT_ERROR = 4,
+  TIMEOUT_ERROR = 5,
+  TRANSFORM_ERROR = 6,
 }
 
 export interface IRosTypeTf2MsgsTfMessage {
@@ -1506,21 +1552,12 @@ export interface IRosTypeUniqueIdentifierMsgsUuid {
   uuid: number[];
 }
 
-export interface IRosTypeVisualizationMsgsGetInteractiveMarkersRequest {}
-
 export interface IRosTypeVisualizationMsgsGetInteractiveMarkersResponse {
   sequence_number: number;
   markers: IRosTypeVisualizationMsgsInteractiveMarker[];
 }
 
 export interface IRosTypeVisualizationMsgsImageMarker {
-  CIRCLE: number;
-  LINE_STRIP: number;
-  LINE_LIST: number;
-  POLYGON: number;
-  POINTS: number;
-  ADD: number;
-  REMOVE: number;
   header: IRosTypeStdMsgsHeader;
   ns: string;
   id: number;
@@ -1536,6 +1573,16 @@ export interface IRosTypeVisualizationMsgsImageMarker {
   outline_colors: IRosTypeStdMsgsColorRgba[];
 }
 
+export enum IRosTypeVisualizationMsgsImageMarkerConst {
+  CIRCLE = 0,
+  LINE_STRIP = 1,
+  LINE_LIST = 2,
+  POLYGON = 3,
+  POINTS = 4,
+  ADD = 0,
+  REMOVE = 1,
+}
+
 export interface IRosTypeVisualizationMsgsInteractiveMarker {
   header: IRosTypeStdMsgsHeader;
   pose: IRosTypeGeometryMsgsPose;
@@ -1549,20 +1596,7 @@ export interface IRosTypeVisualizationMsgsInteractiveMarker {
 export interface IRosTypeVisualizationMsgsInteractiveMarkerControl {
   name: string;
   orientation: IRosTypeGeometryMsgsQuaternion;
-  INHERIT: number;
-  FIXED: number;
-  VIEW_FACING: number;
   orientation_mode: number;
-  NONE: number;
-  MENU: number;
-  BUTTON: number;
-  MOVE_AXIS: number;
-  MOVE_PLANE: number;
-  ROTATE_AXIS: number;
-  MOVE_ROTATE: number;
-  MOVE_3D: number;
-  ROTATE_3D: number;
-  MOVE_ROTATE_3D: number;
   interaction_mode: number;
   always_visible: boolean;
   markers: IRosTypeVisualizationMsgsMarker[];
@@ -1570,22 +1604,41 @@ export interface IRosTypeVisualizationMsgsInteractiveMarkerControl {
   description: string;
 }
 
+export enum IRosTypeVisualizationMsgsInteractiveMarkerControlConst {
+  INHERIT = 0,
+  FIXED = 1,
+  VIEW_FACING = 2,
+  NONE = 0,
+  MENU = 1,
+  BUTTON = 2,
+  MOVE_AXIS = 3,
+  MOVE_PLANE = 4,
+  ROTATE_AXIS = 5,
+  MOVE_ROTATE = 6,
+  MOVE_3D = 7,
+  ROTATE_3D = 8,
+  MOVE_ROTATE_3D = 9,
+}
+
 export interface IRosTypeVisualizationMsgsInteractiveMarkerFeedback {
   header: IRosTypeStdMsgsHeader;
   client_id: string;
   marker_name: string;
   control_name: string;
-  KEEP_ALIVE: number;
-  POSE_UPDATE: number;
-  MENU_SELECT: number;
-  BUTTON_CLICK: number;
-  MOUSE_DOWN: number;
-  MOUSE_UP: number;
   event_type: number;
   pose: IRosTypeGeometryMsgsPose;
   menu_entry_id: number;
   mouse_point: IRosTypeGeometryMsgsPoint;
   mouse_point_valid: boolean;
+}
+
+export enum IRosTypeVisualizationMsgsInteractiveMarkerFeedbackConst {
+  KEEP_ALIVE = 0,
+  POSE_UPDATE = 1,
+  MENU_SELECT = 2,
+  BUTTON_CLICK = 3,
+  MOUSE_DOWN = 4,
+  MOUSE_UP = 5,
 }
 
 export interface IRosTypeVisualizationMsgsInteractiveMarkerInit {
@@ -1603,31 +1656,18 @@ export interface IRosTypeVisualizationMsgsInteractiveMarkerPose {
 export interface IRosTypeVisualizationMsgsInteractiveMarkerUpdate {
   server_id: string;
   seq_num: number;
-  KEEP_ALIVE: number;
-  UPDATE: number;
   type: number;
   markers: IRosTypeVisualizationMsgsInteractiveMarker[];
   poses: IRosTypeVisualizationMsgsInteractiveMarkerPose[];
   erases: string[];
 }
 
+export enum IRosTypeVisualizationMsgsInteractiveMarkerUpdateConst {
+  KEEP_ALIVE = 0,
+  UPDATE = 1,
+}
+
 export interface IRosTypeVisualizationMsgsMarker {
-  ARROW: number;
-  CUBE: number;
-  SPHERE: number;
-  CYLINDER: number;
-  LINE_STRIP: number;
-  LINE_LIST: number;
-  CUBE_LIST: number;
-  SPHERE_LIST: number;
-  POINTS: number;
-  TEXT_VIEW_FACING: number;
-  MESH_RESOURCE: number;
-  TRIANGLE_LIST: number;
-  ADD: number;
-  MODIFY: number;
-  DELETE: number;
-  DELETEALL: number;
   header: IRosTypeStdMsgsHeader;
   ns: string;
   id: number;
@@ -1645,6 +1685,25 @@ export interface IRosTypeVisualizationMsgsMarker {
   mesh_use_embedded_materials: boolean;
 }
 
+export enum IRosTypeVisualizationMsgsMarkerConst {
+  ARROW = 0,
+  CUBE = 1,
+  SPHERE = 2,
+  CYLINDER = 3,
+  LINE_STRIP = 4,
+  LINE_LIST = 5,
+  CUBE_LIST = 6,
+  SPHERE_LIST = 7,
+  POINTS = 8,
+  TEXT_VIEW_FACING = 9,
+  MESH_RESOURCE = 10,
+  TRIANGLE_LIST = 11,
+  ADD = 0,
+  MODIFY = 0,
+  DELETE = 2,
+  DELETEALL = 3,
+}
+
 export interface IRosTypeVisualizationMsgsMarkerArray {
   markers: IRosTypeVisualizationMsgsMarker[];
 }
@@ -1654,8 +1713,11 @@ export interface IRosTypeVisualizationMsgsMenuEntry {
   parent_id: number;
   title: string;
   command: string;
-  FEEDBACK: number;
-  ROSRUN: number;
-  ROSLAUNCH: number;
   command_type: number;
+}
+
+export enum IRosTypeVisualizationMsgsMenuEntryConst {
+  FEEDBACK = 0,
+  ROSRUN = 1,
+  ROSLAUNCH = 2,
 }

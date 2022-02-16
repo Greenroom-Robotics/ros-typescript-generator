@@ -1,5 +1,5 @@
 import { parse } from '@foxglove/rosmsg';
-import { camelCase, upperFirst } from 'lodash';
+import { camelCase, compact, partition, upperFirst } from 'lodash';
 
 import { primitives } from './primitives';
 
@@ -9,12 +9,20 @@ const rosNameToTypeName = (rosName: string, prefix = '') =>
 /** Take in a ros definition string and generates a typescript interface */
 export const generateFromRosMsg = (rosDefinition: string, typePrefix = '') => {
   const messageDefinitions = parse(rosDefinition, { ros2: true });
+
   return messageDefinitions
     .map((definition) => {
       // Get the interface key
       const typeName = rosNameToTypeName(definition.name || '', typePrefix);
-      // Get the interface value (the type)
-      const typeKeyValues = definition.definitions
+
+      // Find the constant and variable definitions
+      const [defConstants, defType] = partition(
+        definition.definitions,
+        (item) => item.isConstant
+      );
+
+      // Generate the ts types for the key val items
+      const tsTypes = defType
         .map((param) => {
           const paramType: string =
             param.type in primitives
@@ -25,10 +33,29 @@ export const generateFromRosMsg = (rosDefinition: string, typePrefix = '') => {
           return `  ${param.name}: ${paramType}${arrayMarker};`;
         })
         .join('\n');
-      return `export interface ${typeName} {
-${typeKeyValues}
+
+      // Generate an enum for the other items
+      const tsEnum = defConstants
+        .map((param) => {
+          return `  ${param.name} = ${param.value},`;
+        })
+        .join('\n');
+
+      const tsTypeFinal =
+        tsTypes.length > 0 &&
+        `export interface ${typeName} {
+${tsTypes}
 }`;
+
+      const tsEnumFinal =
+        tsEnum.length > 0 &&
+        `export enum ${typeName}Const {
+${tsEnum}
+}`;
+
+      return compact([tsTypeFinal, tsEnumFinal]).join('\n\n');
     })
+    .filter((item) => item)
     .sort()
     .join('\n\n');
 };

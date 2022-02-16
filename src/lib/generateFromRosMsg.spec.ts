@@ -64,3 +64,30 @@ export interface RosTypeGeometryMsgsQuaternion {
 }`;
   t.is(result, expected);
 });
+
+test('generateFromRosMsg with enum', (t) => {
+  const result = generateFromRosMsg(
+    `MSG: example/Message
+  uint8 NONE=0
+  uint8 PARK=1
+  uint8 REVERSE=2
+  uint8 NEUTRAL=3
+  uint8 DRIVE=4
+  uint8 LOW=5
+  uint8 gear`
+  );
+
+  const expected = `export interface ExampleMessage {
+  gear: number;
+}
+
+export enum ExampleMessageConst {
+  NONE = 0,
+  PARK = 1,
+  REVERSE = 2,
+  NEUTRAL = 3,
+  DRIVE = 4,
+  LOW = 5,
+}`;
+  t.is(result, expected);
+});
