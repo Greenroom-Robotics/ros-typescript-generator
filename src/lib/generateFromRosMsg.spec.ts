@@ -92,7 +92,7 @@ export enum ExampleMessageConst {
   t.is(result, expected);
 });
 
-test.only('generateFromRosMsg with enum which are prefixed', (t) => {
+test.skip('generateFromRosMsg with enum which are prefixed', (t) => {
   const result = generateFromRosMsg(
     `MSG: example/Message
 
