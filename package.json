@@ -2,9 +2,9 @@
   "name": "ros-typescript-generator",
   "version": "1.2.0",
   "description": "A CLI for generating typescript interfaces from ros messages and services",
-  "main": "build/main/index.js",
-  "typings": "build/main/index.d.ts",
-  "module": "build/module/index.js",
+  "main": "build/main/cli/cli.js",
+  "typings": "build/main/cli/cli.d.ts",
+  "module": "build/module/cli/cli.js",
   "repository": "https://github.com/MrBlenny/ros-typescript-generator",
   "license": "MIT",
   "keywords": [],
@@ -75,6 +75,7 @@
     "typescript": "^4.0.2"
   },
   "files": [
+    "bin",
     "build/main",
     "build/module",
     "!**/*.spec.*",
