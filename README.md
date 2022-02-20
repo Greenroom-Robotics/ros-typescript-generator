@@ -45,7 +45,7 @@ export interface IRosTypeExampleOther {
 
 Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rostsd_gen), this **ONLY** generates ts types and enums. This means the output does not include any nodejs dependencies. You may find this particularly useful if you want to use this in a frontend project.
 
-## Usage
+### Usage
 
 - Add a `ros-ts-generator-config.json` file to your project root. For example:
 
@@ -69,7 +69,11 @@ Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rost
 - Run `npx ros-typescript-generator --config ros-ts-generator-config.json`
 - Done!
 
-## Examples
+### Examples
 
 * [Basic Example](./examples/basic)
 * [Real-world Example](./examples/real)
+
+### Credit
+
+Credit goes to [foxglove](https://github.com/foxglove) for their [foxglove/rosmsg](https://github.com/foxglove/rosmsg) library.
