@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.2.0...v1.4.0) (2022-02-20)
+
+
+### Features
+
+* add real example ([8f7670b](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/8f7670bfd4b072793c7eb5f7757f2ff0589e8d9d))
+
 ## [1.3.0](https://github.com/MrBlenny/ros-typescript-generator/compare/v1.2.0...v1.3.0) (2022-02-20)
 
 
