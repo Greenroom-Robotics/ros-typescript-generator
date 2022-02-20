@@ -72,7 +72,7 @@ Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rost
 ### Examples
 
 * [Basic Example](./examples/basic)
-* [Real-world Example](./examples/real)
+* [Real ROS Example](./examples/real)
 
 ### Credit
 
