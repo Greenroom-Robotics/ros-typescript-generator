@@ -2,16 +2,80 @@
   "output": "./generated/msgs.ts",
   "input": [
     {
-      "namespace": "std_msgs",
-      "path": "/opt/ros/galactic/share/std_msgs"
+      "namespace": "example_msgs",
+      "path": "./example_msgs"
+    },
+    {
+      "namespace": "action_msgs",
+      "path": "/opt/ros/galactic/share/action_msgs"
+    },
+    {
+      "namespace": "actionlib_msgs",
+      "path": "/opt/ros/galactic/share/actionlib_msgs"
+    },
+    {
+      "namespace": "diagnostic_msgs",
+      "path": "/opt/ros/galactic/share/diagnostic_msgs"
     },
     {
       "namespace": "geometry_msgs",
       "path": "/opt/ros/galactic/share/geometry_msgs"
     },
     {
-      "namespace": "example_msgs",
-      "path": "./example_msgs"
+      "namespace": "lifecycle_msgs",
+      "path": "/opt/ros/galactic/share/lifecycle_msgs"
+    },
+    {
+      "namespace": "nav_msgs",
+      "path": "/opt/ros/galactic/share/nav_msgs"
+    },
+    {
+      "namespace": "rosgraph_msgs",
+      "path": "/opt/ros/galactic/share/rosgraph_msgs"
+    },
+    {
+      "namespace": "sensor_msgs",
+      "path": "/opt/ros/galactic/share/sensor_msgs"
+    },
+    {
+      "namespace": "shape_msgs",
+      "path": "/opt/ros/galactic/share/shape_msgs"
+    },
+    {
+      "namespace": "statistics_msgs",
+      "path": "/opt/ros/galactic/share/statistics_msgs"
+    },
+    {
+      "namespace": "std_msgs",
+      "path": "/opt/ros/galactic/share/std_msgs"
+    },
+    {
+      "namespace": "stereo_msgs",
+      "path": "/opt/ros/galactic/share/stereo_msgs"
+    },
+    {
+      "namespace": "tf2_geometry_msgs",
+      "path": "/opt/ros/galactic/share/tf2_geometry_msgs"
+    },
+    {
+      "namespace": "tf2_msgs",
+      "path": "/opt/ros/galactic/share/tf2_msgs"
+    },
+    {
+      "namespace": "tf2_sensor_msgs",
+      "path": "/opt/ros/galactic/share/tf2_sensor_msgs"
+    },
+    {
+      "namespace": "trajectory_msgs",
+      "path": "/opt/ros/galactic/share/trajectory_msgs"
+    },
+    {
+      "namespace": "unique_identifier_msgs",
+      "path": "/opt/ros/galactic/share/unique_identifier_msgs"
+    },
+    {
+      "namespace": "visualization_msgs",
+      "path": "/opt/ros/galactic/share/visualization_msgs"
     }
   ],
   "typePrefix": "IRosType"

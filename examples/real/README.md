@@ -7,6 +7,7 @@ In this example, we use docker to generate typescript types and enums from a rea
 3. We also copy in [ros-ts-generator-config.json](./ros-ts-generator-config.json) which for this example just points to `std_msgs`, `geometry_msgs` and our `example_msgs`
 4. When the container starts, `ros-typescript-generator` is run.
 5. This generates [./generated/msgs.ts](./generated/msgs.ts)
+6. Include this generated file in your project and have your `tsconfig` transpile it for you :)
 
 If you want to run this example yourself:
 

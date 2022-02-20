@@ -11,5 +11,8 @@ WORKDIR /app
 COPY ros-ts-generator-config.json ./
 COPY ./example_msgs ./example_msgs
 
+# List all the <something>_msg libs in the ros distro
+RUN ls /opt/ros/galactic/share | grep "_msg"
+
 # Run ros-typescript-generator
 CMD npx ros-typescript-generator
