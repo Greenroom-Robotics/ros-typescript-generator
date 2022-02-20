@@ -1,89 +1,89 @@
 {
-  "output": "./src/generated/ros_msgs.ts",
+  "output": "./generated/msgs.ts",
   "input": [
     {
       "namespace": "actionlib_msgs",
-      "path": "./test_ros_msgs/actionlib_msgs"
+      "path": "./ros_msgs/actionlib_msgs"
     },
     {
       "namespace": "action_msgs",
-      "path": "./test_ros_msgs/action_msgs"
+      "path": "./ros_msgs/action_msgs"
     },
     {
       "namespace": "automotive_platform_msgs",
-      "path": "./test_ros_msgs/automotive_platform_msgs"
+      "path": "./ros_msgs/automotive_platform_msgs"
     },
     {
       "namespace": "can_msgs",
-      "path": "./test_ros_msgs/can_msgs"
+      "path": "./ros_msgs/can_msgs"
     },
     {
       "namespace": "diagnostic_msgs",
-      "path": "./test_ros_msgs/diagnostic_msgs"
+      "path": "./ros_msgs/diagnostic_msgs"
     },
     {
       "namespace": "geographic_msgs",
-      "path": "./test_ros_msgs/geographic_msgs"
+      "path": "./ros_msgs/geographic_msgs"
     },
     {
       "namespace": "geometry_msgs",
-      "path": "./test_ros_msgs/geometry_msgs"
+      "path": "./ros_msgs/geometry_msgs"
     },
     {
       "namespace": "lgsvl_msgs",
-      "path": "./test_ros_msgs/lgsvl_msgs"
+      "path": "./ros_msgs/lgsvl_msgs"
     },
     {
       "namespace": "lifecycle_msgs",
-      "path": "./test_ros_msgs/lifecycle_msgs"
+      "path": "./ros_msgs/lifecycle_msgs"
     },
     {
       "namespace": "nav_msgs",
-      "path": "./test_ros_msgs/nav_msgs"
+      "path": "./ros_msgs/nav_msgs"
     },
     {
       "namespace": "pcl_msgs",
-      "path": "./test_ros_msgs/pcl_msgs"
+      "path": "./ros_msgs/pcl_msgs"
     },
     {
       "namespace": "rosgraph_msgs",
-      "path": "./test_ros_msgs/rosgraph_msgs"
+      "path": "./ros_msgs/rosgraph_msgs"
     },
     {
       "namespace": "sensor_msgs",
-      "path": "./test_ros_msgs/sensor_msgs"
+      "path": "./ros_msgs/sensor_msgs"
     },
     {
       "namespace": "shape_msgs",
-      "path": "./test_ros_msgs/shape_msgs"
+      "path": "./ros_msgs/shape_msgs"
     },
     {
       "namespace": "statistics_msgs",
-      "path": "./test_ros_msgs/statistics_msgs"
+      "path": "./ros_msgs/statistics_msgs"
     },
     {
       "namespace": "std_msgs",
-      "path": "./test_ros_msgs/std_msgs"
+      "path": "./ros_msgs/std_msgs"
     },
     {
       "namespace": "stereo_msgs",
-      "path": "./test_ros_msgs/stereo_msgs"
+      "path": "./ros_msgs/stereo_msgs"
     },
     {
       "namespace": "tf2_msgs",
-      "path": "./test_ros_msgs/tf2_msgs"
+      "path": "./ros_msgs/tf2_msgs"
     },
     {
       "namespace": "trajectory_msgs",
-      "path": "./test_ros_msgs/trajectory_msgs"
+      "path": "./ros_msgs/trajectory_msgs"
     },
     {
       "namespace": "unique_identifier_msgs",
-      "path": "./test_ros_msgs/unique_identifier_msgs"
+      "path": "./ros_msgs/unique_identifier_msgs"
     },
     {
       "namespace": "visualization_msgs",
-      "path": "./test_ros_msgs/visualization_msgs"
+      "path": "./ros_msgs/visualization_msgs"
     }
   ],
   "typePrefix": "IRosType"

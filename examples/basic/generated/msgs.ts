@@ -28,7 +28,7 @@ export enum IRosTypeActionMsgsCancelGoalResponseConst {
 
 export interface IRosTypeActionMsgsGoalInfo {
   goal_id: IRosTypeUniqueIdentifierMsgsUuid;
-  stamp: { sec: number; nanosec: number };
+  stamp: { sec: number, nanosec: number };
 }
 
 export interface IRosTypeActionMsgsGoalStatus {
@@ -51,7 +51,7 @@ export interface IRosTypeActionMsgsGoalStatusArray {
 }
 
 export interface IRosTypeActionlibMsgsGoalId {
-  stamp: { sec: number; nanosec: number };
+  stamp: { sec: number, nanosec: number };
   id: string;
 }
 
@@ -948,7 +948,7 @@ export interface IRosTypeNavMsgsGridCells {
 }
 
 export interface IRosTypeNavMsgsMapMetaData {
-  map_load_time: { sec: number; nanosec: number };
+  map_load_time: { sec: number, nanosec: number };
   resolution: number;
   width: number;
   height: number;
@@ -1011,7 +1011,7 @@ export interface IRosTypePclMsgsVertices {
 }
 
 export interface IRosTypeRosgraphMsgsClock {
-  clock: { sec: number; nanosec: number };
+  clock: { sec: number, nanosec: number };
 }
 
 export interface IRosTypeSensorMsgsBatteryState {
@@ -1302,7 +1302,7 @@ export interface IRosTypeSensorMsgsTemperature {
 
 export interface IRosTypeSensorMsgsTimeReference {
   header: IRosTypeStdMsgsHeader;
-  time_ref: { sec: number; nanosec: number };
+  time_ref: { sec: number, nanosec: number };
   source: string;
 }
 
@@ -1343,8 +1343,8 @@ export interface IRosTypeStatisticsMsgsMetricsMessage {
   measurement_source_name: string;
   metrics_source: string;
   unit: string;
-  window_start: { sec: number; nanosec: number };
-  window_stop: { sec: number; nanosec: number };
+  window_start: { sec: number, nanosec: number };
+  window_stop: { sec: number, nanosec: number };
   statistics: IRosTypeStatisticsMsgsStatisticDataPoint[];
 }
 
@@ -1396,7 +1396,7 @@ export interface IRosTypeStdMsgsFloat64MultiArray {
 }
 
 export interface IRosTypeStdMsgsHeader {
-  stamp: { sec: number; nanosec: number };
+  stamp: { sec: number, nanosec: number };
   frame_id: string;
 }
 
