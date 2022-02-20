@@ -13,4 +13,4 @@ COPY ./example_msgs ./example_msgs
 RUN npm install
 
 # Run ros-typescript-generator
-CMD node node_modules/ros-typescript-generator/build/main/cli/cli.js
+CMD npm run generate
