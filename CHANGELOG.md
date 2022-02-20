@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/MrBlenny/ros-typescript-generator/compare/v1.2.0...v1.3.0) (2022-02-20)
+
+
+### Features
+
+* add real example ([2bb5aae](https://github.com/MrBlenny/ros-typescript-generator/commit/2bb5aae5adb2e3b1d22480138bd8d10cebbad965))
+
 ## [1.2.0](https://github.com/MrBlenny/ros-typescript-generator/compare/v1.1.0...v1.2.0) (2022-02-16)
 
 
