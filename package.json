@@ -5,7 +5,7 @@
   "main": "build/main/cli/cli.js",
   "typings": "build/main/cli/cli.d.ts",
   "module": "build/module/cli/cli.js",
-  "repository": "https://github.com/MrBlenny/ros-typescript-generator",
+  "repository": "https://github.com/Greenroom-Robotics/ros-typescript-generator",
   "license": "MIT",
   "keywords": [],
   "scripts": {
