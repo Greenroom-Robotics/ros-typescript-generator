@@ -8,9 +8,8 @@ RUN apt-get -y install nodejs
 
 # Install ros-typescript-generator
 WORKDIR /app
-COPY package.json package-lock.json ros-ts-generator-config.json ./
+COPY ros-ts-generator-config.json ./
 COPY ./example_msgs ./example_msgs
-RUN npm install
 
 # Run ros-typescript-generator
-CMD npm run generate
+CMD npx ros-typescript-generator

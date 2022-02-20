@@ -10,7 +10,6 @@ Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rost
 
 ## Usage
 
-- Add this to your project as a dev dependencies, eg) `yarn add ros-typescript-generator -D`
 - Add a `ros-ts-generator-config.json` file to your project root. For example:
 
 ```json
@@ -25,14 +24,13 @@ Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rost
       "namespace": "geometry_msgs",
       "path": "/opt/ros/galactic/share/geometry_msgs"
     },
-    ...
+    // Add any other messages including your own custom messages.
   ],
   "typePrefix": "IRosType"
 }
 ```
-
-- Update the `"input"` to point to all the ros msgs. You can include your own custom messages here also.
-- Run `./bin/ros-typescript-generator --config ros-ts-generator-config.json`
+- Run `npx ros-typescript-generator --config ros-ts-generator-config.json`
+- Done!
 
 ## Examples
 
