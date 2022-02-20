@@ -38,6 +38,9 @@
     "reset-hard": "git clean -dfx && git reset --hard && yarn",
     "prepare-release": "run-s reset-hard test doc:html version doc:publish"
   },
+  "bin": {
+    "ros-typescript-generator": "./.bin/ros-typescript-generator"
+  },
   "engines": {
     "node": ">=10"
   },
