@@ -43,7 +43,7 @@ export interface IRosTypeExampleOther {
 ```
 ### Comparison to rclnodejs / rostsd-gen
 
-Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rostsd_gen), this **ONLY** generates ts types and enums. This means the output does not include any nodejs dependencies. You may find this particularly useful if you want to use this in a frontend project.
+Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rostsd_gen), this **ONLY** generates ts types and enums. This means the output does not include any nodejs dependencies. In fact, it has no runtime dependencies at all. It uses interfaces rather than classes 🙂. This makes it good option for any frontend project.
 
 ### Usage
 
