@@ -21,7 +21,9 @@
     "transpiled",
     "typedoc",
     "untracked",
-    "nanosec"
+    "nanosec",
+    "rclnodejs",
+    "rostsd"
   ],
   "flagWords": [],
   "ignorePaths": [
