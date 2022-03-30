@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.4.2...v1.5.0) (2022-03-30)
+
+
+### Features
+
+* add wstring support ([278ee43](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/278ee433a042491269939aba59bd90a928ab0add))
+
+
+### Bug Fixes
+
+* spelling ([b090563](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/b09056365c7d506e43c33f03e93f5789b8eb016e))
+
 ### [1.4.2](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.4.1...v1.4.2) (2022-02-20)
 
 ### [1.4.1](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.4.0...v1.4.1) (2022-02-20)
