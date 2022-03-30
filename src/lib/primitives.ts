@@ -17,6 +17,8 @@ export const primitives = {
   int64: 'number',
   uint64: 'number',
   string: 'string',
+  wstring: 'string',
+  wchar: 'string',
   time: '{ sec: number, nanosec: number }',
   duration: 'number',
 };
