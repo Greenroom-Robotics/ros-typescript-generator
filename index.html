@@ -69,15 +69,51 @@
 				</a>
 				<p><a href="https://circleci.com/gh/Greenroom-Robotics/ros-typescript-generator/tree/master"><img src="https://circleci.com/gh/Greenroom-Robotics/ros-typescript-generator/tree/master.svg?style=svg" alt="CircleCI"></a></p>
 				<p>A CLI for generating typescript interfaces and enums from ros <code>msg</code> files. </p>
+				<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+					<h3>Features</h3>
+				</a>
+				<ul>
+					<li><input checked="" disabled="" type="checkbox"> Generate ts types from ROS <code>msgs</code></li>
+					<li><input checked="" disabled="" type="checkbox"> Generate ts enums from ROS <code>msgs</code></li>
+					<li><input checked="" disabled="" type="checkbox"> Configurable type prefix, eg) <code>IRosType</code> or <code>Ros</code></li>
+					<li><input checked="" disabled="" type="checkbox"> Works with custom <code>msgs</code></li>
+					<li><input checked="" disabled="" type="checkbox"> No runtime dependencies</li>
+					<li><input disabled="" type="checkbox"> Advanced multi-enum support<pre><code class="language-msg"># example_msgs/example.msg
+uint8 STATUS_DISABLED = 0 
+uint8 STATUS_ENABLED = 1
+</code></pre>
+					</li>
+				</ul>
+				<p>uint8 OTHER_THING_1 = 1
+				uint8 OTHER_THING_2 = 2</p>
+				<p>uint8 status
+					uint8 other
+				uint8 more</p>
+				<pre><code>
+Should become:
+```ts
+export enum <span class="hljs-keyword">IRosTypeExampleStatus</span> {
+  <span class="hljs-string">&quot;STATUS_DISABLED&quot;</span> = <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;STATUS_ENABLED&quot;</span> = <span class="hljs-number">1</span>,
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">enum</span> <span class="hljs-keyword">IRosTypeExampleOther</span> {
+  <span class="hljs-string">&quot;OTHER_THING_1&quot;</span> = <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;OTHER_THING_2&quot;</span> = <span class="hljs-number">2</span>
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-keyword">IRosTypeExampleOther</span> {
+  <span class="hljs-literal">status</span>: IRosTypeExampleStatus
+  other: IRosTypeExampleOther
+  more: number
+}
+</code></pre>
 				<a href="#comparison-to-rclnodejs--rostsd-gen" id="comparison-to-rclnodejs--rostsd-gen" style="color: inherit; text-decoration: none;">
 					<h3>Comparison to rclnodejs / rostsd-gen</h3>
 				</a>
-				<p>Unlike <a href="https://github.com/RobotWebTools/rclnodejs/tree/develop/rostsd_gen">rostsd-gen</a>, this <strong>ONLY</strong> generates ts types and enums. This means the output does not include any nodejs dependencies. You may find this particularly useful if you want to use this in a frontend project.</p>
+				<p>Unlike <a href="https://github.com/RobotWebTools/rclnodejs/tree/develop/rostsd_gen">rostsd-gen</a>, this <strong>ONLY</strong> generates ts types and enums. This means the output does not include any nodejs dependencies. In fact, it has no runtime dependencies at all. It uses interfaces rather than classes 🙂. This makes it good option for any frontend project.</p>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-					<h2>Usage</h2>
+					<h3>Usage</h3>
 				</a>
 				<ul>
-					<li>Add this to your project as a dev dependencies, eg) <code>yarn add ros-typescript-generator -D</code></li>
 					<li>Add a <code>ros-ts-generator-config.json</code> file to your project root. For example:</li>
 				</ul>
 				<pre><code class="language-json">{
@@ -91,22 +127,26 @@
       <span class="hljs-attr">&quot;namespace&quot;</span>: <span class="hljs-string">&quot;geometry_msgs&quot;</span>,
       <span class="hljs-attr">&quot;path&quot;</span>: <span class="hljs-string">&quot;/opt/ros/galactic/share/geometry_msgs&quot;</span>
     },
-    ...
+    <span class="hljs-comment">// Add any other messages including your own custom messages.</span>
   ],
   <span class="hljs-attr">&quot;typePrefix&quot;</span>: <span class="hljs-string">&quot;IRosType&quot;</span>
 }
 </code></pre>
 				<ul>
-					<li>Update the <code>&quot;input&quot;</code> to point to all the ros msgs. You can include your own custom messages here also.</li>
-					<li>Run <code>./bin/ros-typescript-generator --config ros-ts-generator-config.json</code></li>
+					<li>Run <code>npx ros-typescript-generator --config ros-ts-generator-config.json</code></li>
+					<li>Done!</li>
 				</ul>
 				<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
-					<h2>Examples</h2>
+					<h3>Examples</h3>
 				</a>
 				<ul>
 					<li><a href="./examples/basic">Basic Example</a></li>
-					<li><a href="./examples/real">Real-world Example</a></li>
+					<li><a href="./examples/real">Real ROS Example</a></li>
 				</ul>
+				<a href="#credit" id="credit" style="color: inherit; text-decoration: none;">
+					<h3>Credit</h3>
+				</a>
+				<p>Credit goes to <a href="https://github.com/foxglove">foxglove</a> for their <a href="https://github.com/foxglove/rosmsg">foxglove/rosmsg</a> library.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
