@@ -23,7 +23,9 @@
     "untracked",
     "nanosec",
     "rclnodejs",
-    "rostsd"
+    "rostsd",
+    "wstring",
+    "wchar"
   ],
   "flagWords": [],
   "ignorePaths": [
