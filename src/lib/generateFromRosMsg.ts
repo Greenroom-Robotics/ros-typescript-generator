@@ -7,8 +7,12 @@ const rosNameToTypeName = (rosName: string, prefix = '') =>
   `${prefix}${upperFirst(camelCase(rosName))}`;
 
 /** Take in a ros definition string and generates a typescript interface */
-export const generateFromRosMsg = (rosDefinition: string, typePrefix = '') => {
-  const messageDefinitions = parse(rosDefinition, { ros2: true });
+export const generateFromRosMsg = (
+  rosDefinition: string,
+  typePrefix = '',
+  ros2 = true
+) => {
+  const messageDefinitions = parse(rosDefinition, { ros2 });
 
   return messageDefinitions
     .map((definition) => {
