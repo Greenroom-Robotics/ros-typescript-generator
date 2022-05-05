@@ -21,7 +21,8 @@ export const rosTypescriptGenerator = async (config: IConfig) => {
 
   const typescriptInterfaces = generateFromRosMsg(
     joinedMessages,
-    config.typePrefix
+    config.typePrefix,
+    config.parseRos2
   );
 
   const typescriptInterfacesWithNote = [

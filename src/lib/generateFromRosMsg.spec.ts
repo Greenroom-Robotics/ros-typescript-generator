@@ -9,7 +9,7 @@ test('generateFromRosMsg with comments', (t) => {
   # It is deprecated as of Foxy
   # It is recommended to create your own semantically meaningful message.
   # However if you would like to continue using this please use the equivalent in example_msgs.
-  
+
   string label   # label of given dimension
   uint32 size    # size of given dimension (in type units)
   uint32 stride  # stride of given dimension
@@ -29,13 +29,13 @@ test('generateFromRosMsg multi message', (t) => {
     `MSG: geometry_msgs/Pose
   geometry_msgs/Point position
   geometry_msgs/Quaternion orientation
-  
+
   ===
   MSG: geometry_msgs/Point
   float64 x
   float64 y
   float64 z
-  
+
   ===
   MSG: geometry_msgs/Quaternion
   float64 x
@@ -104,27 +104,27 @@ test.skip('generateFromRosMsg with enum which are prefixed', (t) => {
   bool hand_brake_active
   bool horn_active
   bool autonomous_mode_active
-  
+
   uint8 BLINKERS_OFF = 0
   uint8 BLINKERS_LEFT = 1
   uint8 BLINKERS_RIGHT = 2
   uint8 BLINKERS_HAZARD = 3
-  
+
   uint8 HEADLIGHTS_OFF = 0
   uint8 HEADLIGHTS_LOW = 1
   uint8 HEADLIGHTS_HIGH = 2
-  
+
   uint8 WIPERS_OFF = 0
   uint8 WIPERS_LOW = 1
   uint8 WIPERS_MED = 2
   uint8 WIPERS_HIGH = 3
-  
+
   uint8 GEAR_NEUTRAL = 0
   uint8 GEAR_DRIVE = 1
   uint8 GEAR_REVERSE = 2
   uint8 GEAR_PARKING = 3
   uint8 GEAR_LOW = 4
-  
+
   uint8 VEHICLE_MODE_COMPLETE_MANUAL = 0
   uint8 VEHICLE_MODE_COMPLETE_AUTO_DRIVE = 1
   uint8 VEHICLE_MODE_AUTO_STEER_ONLY = 2
@@ -133,5 +133,53 @@ test.skip('generateFromRosMsg with enum which are prefixed', (t) => {
   );
 
   const expected = ` `;
+  t.is(result, expected);
+});
+
+test('generateFromRosMsg with ROS1 msg', (t) => {
+  // Message partially from
+  // http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/CameraInfo.html
+  const result = generateFromRosMsg(
+    `
+  float64[] D
+  float64[9]  K # 3x3 row-major matrix
+  float64[9]  R # 3x3 row-major matrix
+  float64[12] P # 3x4 row-major matrix
+
+  uint32 binning_x
+  uint32 binning_y
+  `,
+    '',
+    false
+  );
+
+  const expected = `export interface  {
+  D: number[];
+  K: number[];
+  R: number[];
+  P: number[];
+  binning_x: number;
+  binning_y: number;
+}`;
+
+  t.is(result, expected);
+});
+
+test('generateFromRosMsg with prefix', (t) => {
+  const result = generateFromRosMsg(
+    `MSG: package/Type
+float64 x
+float64 y
+float64 z
+`,
+    'Prefix'
+  );
+
+  const expected = `export interface PrefixPackageType {
+  x: number;
+  y: number;
+  z: number;
+}`;
+
   t.is(result, expected);
 });
