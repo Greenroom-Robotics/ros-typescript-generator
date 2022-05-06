@@ -73,6 +73,7 @@
 					<h3>Features</h3>
 				</a>
 				<ul>
+					<li><input checked="" disabled="" type="checkbox"> ROS1 and ROS2 support</li>
 					<li><input checked="" disabled="" type="checkbox"> Generate ts types from ROS <code>msgs</code></li>
 					<li><input checked="" disabled="" type="checkbox"> Generate ts enums from ROS <code>msgs</code></li>
 					<li><input checked="" disabled="" type="checkbox"> Configurable type prefix, eg) <code>IRosType</code> or <code>Ros</code></li>
@@ -118,6 +119,7 @@ export enum <span class="hljs-keyword">IRosTypeExampleStatus</span> {
 				</ul>
 				<pre><code class="language-json">{
   <span class="hljs-attr">&quot;output&quot;</span>: <span class="hljs-string">&quot;./generated/ros_msgs.ts&quot;</span>,
+  <span class="hljs-attr">&quot;rosVersion&quot;</span>: <span class="hljs-number">2</span>, <span class="hljs-comment">// 1 or 2</span>
   <span class="hljs-attr">&quot;input&quot;</span>: [
     {
       <span class="hljs-attr">&quot;namespace&quot;</span>: <span class="hljs-string">&quot;std_msgs&quot;</span>,
@@ -141,7 +143,8 @@ export enum <span class="hljs-keyword">IRosTypeExampleStatus</span> {
 				</a>
 				<ul>
 					<li><a href="./examples/basic">Basic Example</a></li>
-					<li><a href="./examples/real">Real ROS Example</a></li>
+					<li><a href="./examples/real-ros1">Real ROS1 Example</a></li>
+					<li><a href="./examples/real-ros2">Real ROS2 Example</a></li>
 				</ul>
 				<a href="#credit" id="credit" style="color: inherit; text-decoration: none;">
 					<h3>Credit</h3>
@@ -164,6 +167,9 @@ export enum <span class="hljs-keyword">IRosTypeExampleStatus</span> {
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#iconfigdirectory" class="tsd-kind-icon">IConfig<wbr>Directory</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#supported_ros_versions" class="tsd-kind-icon">SUPPORTED_<wbr>ROS_<wbr>VERSIONS</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#generatefromrosmsg" class="tsd-kind-icon">generate<wbr>From<wbr>Ros<wbr>Msg</a>
