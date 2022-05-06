@@ -1,7 +1,11 @@
 import { parse } from '@foxglove/rosmsg';
 import { camelCase, compact, partition, upperFirst } from 'lodash';
 
+import { IConfig } from '../types/config';
+
 import { primitives } from './primitives';
+
+const SUPPORTED_ROS_VERSIONS = [1, 2];
 
 const rosNameToTypeName = (rosName: string, prefix = '') =>
   `${prefix}${upperFirst(camelCase(rosName))}`;
@@ -10,9 +14,13 @@ const rosNameToTypeName = (rosName: string, prefix = '') =>
 export const generateFromRosMsg = (
   rosDefinition: string,
   typePrefix = '',
-  ros2 = true
+  rosVersion: IConfig['rosVersion'] = 2
 ) => {
-  const messageDefinitions = parse(rosDefinition, { ros2 });
+  if (!SUPPORTED_ROS_VERSIONS.includes(rosVersion)) {
+    throw new Error('Unsupported rosVersion');
+  }
+
+  const messageDefinitions = parse(rosDefinition, { ros2: rosVersion === 2 });
 
   return messageDefinitions
     .map((definition) => {

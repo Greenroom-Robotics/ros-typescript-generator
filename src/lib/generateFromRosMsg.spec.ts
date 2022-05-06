@@ -137,6 +137,7 @@ test.skip('generateFromRosMsg with enum which are prefixed', (t) => {
 });
 
 test('generateFromRosMsg with ROS1 msg', (t) => {
+  const rosVersion = 1;
   // Message partially from
   // http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/CameraInfo.html
   const result = generateFromRosMsg(
@@ -150,7 +151,7 @@ test('generateFromRosMsg with ROS1 msg', (t) => {
   uint32 binning_y
   `,
     '',
-    false
+    rosVersion
   );
 
   const expected = `export interface  {

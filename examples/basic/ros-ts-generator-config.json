@@ -1,5 +1,6 @@
 {
   "output": "./generated/msgs.ts",
+  "rosVersion": 2,
   "input": [
     {
       "namespace": "actionlib_msgs",

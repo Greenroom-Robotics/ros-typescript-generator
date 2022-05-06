@@ -5,7 +5,7 @@ export type IConfigDirectory = {
 
 export type IConfig = {
   readonly output: string;
+  readonly rosVersion?: 1 | 2;
   readonly input: readonly IConfigDirectory[];
   readonly typePrefix: string;
-  readonly parseRos2: boolean;
 };

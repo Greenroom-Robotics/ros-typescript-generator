@@ -1,8 +1,8 @@
-# Real example (using docker)
+# Real example - ROS1 (using docker)
 
-In this example, we use docker to generate typescript types and enums from a real ros2 install. You may not be using docker for your project but this should nonetheless serve as a useful reference.
+In this example, we use docker to generate typescript types and enums from a real ros1 install. You may not be using docker for your project but this should nonetheless serve as a useful reference.
 
-1. We add a [Dockerfile](./Dockerfile) which is based on ros2 galactic. You can use any version of ROS2.
+1. We add a [Dockerfile](./Dockerfile) which is based on ros1 noetic. You can use any version of ROS2.
 2. Note, for this example we copy in some [./example_msgs](./example_msgs)
 3. We also copy in [ros-ts-generator-config.json](./ros-ts-generator-config.json) which for this example just points to `std_msgs`, `geometry_msgs` and our `example_msgs`
 4. When the container starts, `ros-typescript-generator` is run.

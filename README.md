@@ -52,6 +52,7 @@ Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rost
 ```json
 {
   "output": "./generated/ros_msgs.ts",
+  "rosVersion": 2, // 1 or 2
   "input": [
     {
       "namespace": "std_msgs",
@@ -72,7 +73,8 @@ Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rost
 ### Examples
 
 * [Basic Example](./examples/basic)
-* [Real ROS Example](./examples/real)
+* [Real ROS1 Example](./examples/real-ros1)
+* [Real ROS2 Example](./examples/real-ros2)
 
 ### Credit
 

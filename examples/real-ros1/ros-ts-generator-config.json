@@ -1,0 +1,59 @@
+{
+  "output": "./generated/msgs.ts",
+  "rosVersion": 1,
+  "input": [
+    {
+      "namespace": "example_msgs",
+      "path": "./example_msgs"
+    },
+    {
+      "namespace": "actionlib_msgs",
+      "path": "/opt/ros/noetic/share/actionlib_msgs"
+    },
+    {
+      "namespace": "common_msgs",
+      "path": "/opt/ros/noetic/share/common_msgs"
+    },
+    {
+      "namespace": "diagnostic_msgs",
+      "path": "/opt/ros/noetic/share/diagnostic_msgs"
+    },
+    {
+      "namespace": "geometry_msgs",
+      "path": "/opt/ros/noetic/share/geometry_msgs"
+    },
+    {
+      "namespace": "nav_msgs",
+      "path": "/opt/ros/noetic/share/nav_msgs"
+    },
+    {
+      "namespace": "rosgraph_msgs",
+      "path": "/opt/ros/noetic/share/rosgraph_msgs"
+    },
+    {
+      "namespace": "sensor_msgs",
+      "path": "/opt/ros/noetic/share/sensor_msgs"
+    },
+    {
+      "namespace": "shape_msgs",
+      "path": "/opt/ros/noetic/share/shape_msgs"
+    },
+    {
+      "namespace": "std_msgs",
+      "path": "/opt/ros/noetic/share/std_msgs"
+    },
+    {
+      "namespace": "stereo_msgs",
+      "path": "/opt/ros/noetic/share/stereo_msgs"
+    },
+    {
+      "namespace": "trajectory_msgs",
+      "path": "/opt/ros/noetic/share/trajectory_msgs"
+    },
+    {
+      "namespace": "visualization_msgs",
+      "path": "/opt/ros/noetic/share/visualization_msgs"
+    }
+  ],
+  "typePrefix": "IRosType"
+}

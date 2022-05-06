@@ -1,10 +1,22 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "parserOptions": { "project": "./tsconfig.json" },
-  "env": { "es6": true },
-  "ignorePatterns": ["node_modules", "build", "coverage"],
-  "plugins": ["import", "eslint-comments", "functional"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "es6": true
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "build",
+    "coverage"
+  ],
+  "plugins": [
+    "import",
+    "eslint-comments",
+    "functional"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:eslint-comments/recommended",
@@ -14,21 +26,36 @@
     "prettier",
     "prettier/@typescript-eslint"
   ],
-  "globals": { "BigInt": true, "console": true, "WebAssembly": true },
+  "globals": {
+    "BigInt": true,
+    "console": true,
+    "WebAssembly": true
+  },
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "eslint-comments/disable-enable-pair": [
       "error",
-      { "allowWholeFile": true }
+      {
+        "allowWholeFile": true
+      }
     ],
     "eslint-comments/no-unused-disable": "error",
+    "functional/no-throw-statement": "off",
     "import/order": [
       "error",
-      { "newlines-between": "always", "alphabetize": { "order": "asc" } }
+      {
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
     ],
     "sort-imports": [
       "error",
-      { "ignoreDeclarationSort": true, "ignoreCase": true }
+      {
+        "ignoreDeclarationSort": true,
+        "ignoreCase": true
+      }
     ]
   }
 }
