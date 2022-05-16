@@ -1,4 +1,4 @@
-import { parse } from '@foxglove/rosmsg';
+import { parse, RosMsgField } from '@foxglove/rosmsg';
 import { camelCase, compact, partition, upperFirst } from 'lodash';
 
 import { IConfig } from '../types/config';
@@ -22,19 +22,38 @@ export const generateFromRosMsg = (
 
   const messageDefinitions = parse(rosDefinition, { ros2: rosVersion === 2 });
 
+  function isOfNoneEmptyType(field: RosMsgField): boolean {
+    if (!field.isComplex) {
+      return true;
+    }
+
+    const definition = messageDefinitions.find((definition) => {
+      return definition.name === field.type;
+    });
+
+    if (definition) {
+      return definition.definitions.length > 0;
+    }
+
+    throw new Error(
+      `Field with type "${field.type}" doesn't exist in message definitions`
+    );
+  }
+
   return messageDefinitions
     .map((definition) => {
       // Get the interface key
       const typeName = rosNameToTypeName(definition.name || '', typePrefix);
 
       // Find the constant and variable definitions
-      const [defConstants, defType] = partition(
+      const [defConstants, defTypes] = partition(
         definition.definitions,
-        (item) => item.isConstant
+        (field) => field.isConstant
       );
 
       // Generate the ts types for the key val items
-      const tsTypes = defType
+      const tsTypes = defTypes
+        .filter((defType) => isOfNoneEmptyType(defType))
         .map((param) => {
           const paramType: string =
             param.type in primitives
