@@ -184,3 +184,31 @@ float64 z
 
   t.is(result, expected);
 });
+
+test('generateFromRosMsg with empty type', (t) => {
+  const result = generateFromRosMsg(
+    `MSG: test_msgs/HasOneEmpty
+  test_msgs/Empty empty
+  test_msgs/Normal normal
+
+  ===
+  MSG: test_msgs/Empty
+
+  ===
+  MSG: test_msgs/Normal
+  float64 x
+  float64 y`,
+    'Prefix'
+  );
+
+  const expected = `export interface PrefixTestMsgsHasOneEmpty {
+  normal: PrefixTestMsgsNormal;
+}
+
+export interface PrefixTestMsgsNormal {
+  x: number;
+  y: number;
+}`;
+
+  t.is(result, expected);
+});
