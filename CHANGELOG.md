@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.6.0...v1.6.1) (2022-05-19)
+
+
+### Bug Fixes
+
+* don't add fields which are of "empty" type ([04d3b37](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/04d3b37b791e607d28fd504a74debec093eddd96))
+* remove eslint-disable eslint-comments/no-unlimited-disable ([9ab1517](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/9ab15171374d24ef1e35660e247ec151c250343b))
+
 ## [1.6.0](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.5.0...v1.6.0) (2022-05-06)
 
 
