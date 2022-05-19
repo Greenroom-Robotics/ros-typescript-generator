@@ -1,4 +1,3 @@
-/* eslint-disable eslint-comments/no-unlimited-disable */
 /* eslint-disable */
 // These files were generated using "ros-typescript-generator"
 export interface IRosTypeActionlibMsgsGoalId {
