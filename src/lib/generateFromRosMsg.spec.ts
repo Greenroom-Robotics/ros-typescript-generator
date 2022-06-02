@@ -212,3 +212,35 @@ export interface PrefixTestMsgsNormal {
 
   t.is(result, expected);
 });
+
+test('generateFromRosMsg with bool enum', (t) => {
+  const result = generateFromRosMsg(
+    `MSG: test_msgs/State
+  bool OFF = 0
+  bool ON = 1
+`
+  );
+
+  const expected = `export enum TestMsgsStateConst {
+  OFF = 0,
+  ON = 1,
+}`;
+
+  t.is(result, expected);
+});
+
+test('generateFromRosMsg with string enum', (t) => {
+  const result = generateFromRosMsg(
+    `MSG: test_msgs/State
+  string OFF = 'off'
+  string ON = 'on'
+`
+  );
+
+  const expected = `export enum TestMsgsStateConst {
+  OFF = 'off',
+  ON = 'on',
+}`;
+
+  t.is(result, expected);
+});

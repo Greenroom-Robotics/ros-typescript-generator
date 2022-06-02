@@ -40,6 +40,22 @@ export const generateFromRosMsg = (
     );
   }
 
+  function toEnumValue(field: RosMsgField) {
+    if (field.type === 'bool') {
+      return field.value ? 1 : 0;
+    }
+    if (
+      field.type === 'char' ||
+      field.type === 'wchar' ||
+      field.type === 'string' ||
+      field.type === 'wstring'
+    ) {
+      return `'${field.value}'`;
+    }
+
+    return field.value;
+  }
+
   return messageDefinitions
     .map((definition) => {
       // Get the interface key
@@ -67,7 +83,7 @@ export const generateFromRosMsg = (
 
       const tsEnum = defConstants
         .map((param) => {
-          return `  ${param.name} = ${param.value},`;
+          return `  ${param.name} = ${toEnumValue(param)},`;
         })
         .join('\n');
 
