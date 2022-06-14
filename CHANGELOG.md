@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.2](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.6.1...v1.6.2) (2022-06-14)
+
+
+### Bug Fixes
+
+* convert non-number `const` values to valid `enum` values ([20788c5](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/20788c5f3ee5c67abf7683c041d1d538ad94fc41))
+
 ### [1.6.1](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.6.0...v1.6.1) (2022-05-19)
 
 
