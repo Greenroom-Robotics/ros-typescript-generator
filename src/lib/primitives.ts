@@ -20,5 +20,5 @@ export const primitives = {
   wstring: 'string',
   wchar: 'string',
   time: '{ sec: number, nanosec: number }',
-  duration: 'number',
+  duration: '{ sec: number, nanosec: number }',
 };
