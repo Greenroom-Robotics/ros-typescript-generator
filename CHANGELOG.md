@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.3](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.6.2...v1.6.3) (2023-02-10)
+
+### Bug Fixes
+
+* fixed the incorrect typing of `duration` thanks to ([EzraBrooks](https://github.com/Greenroom-Robotics/ros-typescript-generator/pull/9)
+
 ### [1.6.2](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.6.1...v1.6.2) (2022-06-14)
 
 

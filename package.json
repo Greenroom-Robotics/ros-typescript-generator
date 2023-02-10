@@ -1,6 +1,6 @@
 {
   "name": "ros-typescript-generator",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "A CLI for generating typescript interfaces from ros messages and services",
   "main": "build/main/cli/cli.js",
   "typings": "build/main/cli/cli.d.ts",
