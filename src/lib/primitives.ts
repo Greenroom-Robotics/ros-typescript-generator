@@ -1,8 +1,7 @@
 /**
- * Map all ros primitives to a ts type
- * https://design.ros2.org/articles/interface_definition.html
+ * Common types between ROS 1 & 2
  */
-export const primitives = {
+export const common = {
   bool: 'boolean',
   byte: 'Int8Array',
   char: 'string',
@@ -19,6 +18,23 @@ export const primitives = {
   string: 'string',
   wstring: 'string',
   wchar: 'string',
-  time: '{ sec: number, nanosec: number }',
+};
+
+/**
+ * ROS 1
+ */
+export const primitives1 = {
+  ...common,
+  duration: '{ secs: number, nsecs: number }',
+  time: '{ secs: number, nsecs: number }',
+};
+
+/**
+ * Map all ROS 2 primitives to a ts type
+ * https://design.ros2.org/articles/interface_definition.html
+ */
+export const primitives2 = {
+  ...common,
   duration: '{ sec: number, nanosec: number }',
+  time: '{ sec: number, nanosec: number }',
 };
