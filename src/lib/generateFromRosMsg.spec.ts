@@ -244,3 +244,35 @@ test('generateFromRosMsg with string enum', (t) => {
 
   t.is(result, expected);
 });
+
+test('generateFromRosMsg with time (ROS 1)', (t) => {
+  const result = generateFromRosMsg(
+    `MSG: test_msgs/time
+  time stamp
+`,
+    '',
+    1
+  );
+
+  const expected = `export interface TestMsgsTime {
+  stamp: { secs: number, nsecs: number };
+}`;
+
+  t.is(result, expected);
+});
+
+test('generateFromRosMsg with time (ROS 2)', (t) => {
+  const result = generateFromRosMsg(
+    `MSG: test_msgs/time
+  time stamp
+`,
+    '',
+    2
+  );
+
+  const expected = `export interface TestMsgsTime {
+  stamp: { sec: number, nanosec: number };
+}`;
+
+  t.is(result, expected);
+});

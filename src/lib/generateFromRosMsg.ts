@@ -3,7 +3,7 @@ import { camelCase, compact, partition, upperFirst } from 'lodash';
 
 import { IConfig } from '../types/config';
 
-import { primitives } from './primitives';
+import { primitives1, primitives2 } from './primitives';
 
 const SUPPORTED_ROS_VERSIONS = [1, 2];
 
@@ -21,6 +21,7 @@ export const generateFromRosMsg = (
   }
 
   const messageDefinitions = parse(rosDefinition, { ros2: rosVersion === 2 });
+  const primitives = rosVersion === 1 ? primitives1 : primitives2;
 
   function isOfNoneEmptyType(field: RosMsgField): boolean {
     if (!field.isComplex) {
