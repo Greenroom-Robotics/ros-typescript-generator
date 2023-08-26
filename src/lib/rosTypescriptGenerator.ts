@@ -6,11 +6,21 @@ import { IConfig } from '../types/config';
 
 import { generateFromRosMsg } from './generateFromRosMsg';
 import { getMsgFilesData } from './readMsgFiles';
+import { join } from 'path';
+
+import { tmpdir } from 'os';
+const fs = require('fs');
+const { promisify } = require('util');
+const mkdtemp = promisify(fs.mkdtemp);
 
 export const rosTypescriptGenerator = async (config: IConfig) => {
+  // TMP dir vor generated msg files from action and srv files
+  const tempDir = await mkdtemp(join(tmpdir(), 'ros-typescript-generattor-'));
+  console.log('Temporary directory created:', tempDir);
+
   const files = flatten(
     await Promise.all(
-      config.input.map((dir) => getMsgFilesData(dir.path, dir.namespace))
+      config.input.map((dir) => getMsgFilesData(dir.path, dir.namespace, tempDir))
     )
   );
   const joinedMessages = files
