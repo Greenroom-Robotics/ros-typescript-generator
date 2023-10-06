@@ -16,7 +16,6 @@ const mkdtemp = promisify(fs.mkdtemp);
 export const rosTypescriptGenerator = async (config: IConfig) => {
   // TMP dir vor generated msg files from action and srv files
   const tempDir = await mkdtemp(join(tmpdir(), 'ros-typescript-generattor-'));
-  console.log('Temporary directory created:', tempDir);
 
   const files = flatten(
     await Promise.all(
