@@ -45,7 +45,6 @@ export const srvFile = async (inputFilePath: string, tmpDir: string): Promise<st
 
 export const actionFile = async (inputFilePath: string, tmpDir: string): Promise<string[]> => {
   try {
-    console.log("Found action: " + inputFilePath);
     let srvName = basename(inputFilePath, ".action");
     let output: string[] = [];
 
@@ -55,10 +54,6 @@ export const actionFile = async (inputFilePath: string, tmpDir: string): Promise
     // Split the content into two parts based on the '---' line
     const [goal, result, feedback] = fileContent.split('---', 3);
 
-    console.log("Goal: " + goal);
-    console.log("result: " + result);
-    console.log("feedback: " + feedback);
-
     // Check if a part is empty or consists only of lines starting with #
     const isGoalEmptyOrCommentOnly = !goal.trim() || goal.trim().split('\n').every(line => line.trim().startsWith('#'));
     const isResultEmptyOrCommentOnly = !result.trim() || result.trim().split('\n').every(line => line.trim().startsWith('#'));
@@ -66,21 +61,18 @@ export const actionFile = async (inputFilePath: string, tmpDir: string): Promise
 
     if (!isGoalEmptyOrCommentOnly) {
       const goalMsgFile = join(tmpDir, srvName + "ActionGoal.msg");
-      console.log(goalMsgFile);
       await writeFile(goalMsgFile, goal, 'utf-8');
       output = [...output, goalMsgFile];
     }
 
     if (!isResultEmptyOrCommentOnly) {
       const resultMsgFile = join(tmpDir, srvName + "ActionResult.msg");
-      console.log(resultMsgFile);
       await writeFile(resultMsgFile, result, 'utf-8');
       output = [...output, resultMsgFile];
     }
 
     if (!isFeedbackEmptyOrCommentOnly) {
       const feedbackMsgFile = join(tmpDir, srvName + "ActionFeedback.msg");
-      console.log(feedbackMsgFile);
       await writeFile(feedbackMsgFile, feedback, 'utf-8');
       output = [...output, feedbackMsgFile];
     }
@@ -94,7 +86,6 @@ export const actionFile = async (inputFilePath: string, tmpDir: string): Promise
 
 
 export const getMsgFiles = async (dir: string, tmpDir: string): Promise<string[]> => {
-  console.log("Check DIR: " + dir);
   let output: string[] = [];
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     if (entry.isDirectory()) {
