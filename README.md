@@ -9,7 +9,7 @@ A CLI for generating typescript interfaces and enums from ros `msg` files.
 - [x] ROS1 and ROS2 support
 - [x] Generate ts types from ROS `msgs`
 - [x] Generate ts enums from ROS `msgs`
-- [x] Configurable type prefix, eg) `IRosType` or `Ros` (config: `{"useNamespaces": "IRosType"}`)
+- [x] Configurable type prefix, eg) `IRosType` or `Ros` (config: `{"typePrefix": "IRosType"}`)
 - [x] TypeScript namespaces for ROS packages (config: `{"useNamespaces": true}`)
 - [x] Works with custom `msgs`
 - [x] No runtime dependencies
