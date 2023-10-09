@@ -217,7 +217,7 @@ ${tsRemainingEnum}
   return Array.from(interfacesByPackage.entries())
     .map(([pkgName, ifaces]) => {
       if (useNamespaces) {
-        return `namespace ${pascalCase(pkgName)} {
+        return `export namespace ${pascalCase(pkgName)} {
 ${ifaces.map(iface => indent(iface, 2)).join("\n\n")}
 }`
       } else {
