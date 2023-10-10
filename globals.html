@@ -84,6 +84,8 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="globals.html#generatefromrosmsg" class="tsd-kind-icon">generate<wbr>From<wbr>Ros<wbr>Msg</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#generatemsgsfromactionsfiles" class="tsd-kind-icon">generate<wbr>Msgs<wbr>From<wbr>Actions<wbr>Files</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#generatemsgsfromsrvfiles" class="tsd-kind-icon">generate<wbr>Msgs<wbr>From<wbr>Srv<wbr>Files</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#getmsgfiles" class="tsd-kind-icon">get<wbr>Msg<wbr>Files</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#getmsgfilesdata" class="tsd-kind-icon">get<wbr>Msg<wbr>Files<wbr>Data</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#rosnametotypename" class="tsd-kind-icon">ros<wbr>Name<wbr>ToType<wbr>Name</a></li>
@@ -109,7 +111,7 @@
 					<div class="tsd-signature tsd-kind-icon">IConfig<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">readonly </span><a href="globals.html#iconfigdirectory" class="tsd-signature-type">IConfigDirectory</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>output<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>rosVersion<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">1</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">2</span><span class="tsd-signature-symbol">; </span>typePrefix<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/types/config.ts#L6">types/config.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/types/config.ts#L6">types/config.ts:6</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -136,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">IConfig<wbr>Directory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>namespace<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/types/config.ts#L1">types/config.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/types/config.ts#L1">types/config.ts:1</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -160,7 +162,7 @@
 					<div class="tsd-signature tsd-kind-icon">SUPPORTED_<wbr>ROS_<wbr>VERSIONS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [1, 2]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/generateFromRosMsg.ts#L8">lib/generateFromRosMsg.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/generateFromRosMsg.ts#L8">lib/generateFromRosMsg.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -177,7 +179,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/generateFromRosMsg.ts#L14">lib/generateFromRosMsg.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/generateFromRosMsg.ts#L14">lib/generateFromRosMsg.ts:14</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -202,22 +204,77 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
-					<a name="getmsgfiles" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Msg<wbr>Files</h3>
+					<a name="generatemsgsfromactionsfiles" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> generate<wbr>Msgs<wbr>From<wbr>Actions<wbr>Files</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Msg<wbr>Files<span class="tsd-signature-symbol">(</span>dir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Msgs<wbr>From<wbr>Actions<wbr>Files<span class="tsd-signature-symbol">(</span>inputFilePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tmpDir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/readMsgFiles.ts#L7">lib/readMsgFiles.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/readMsgFiles.ts#L57">lib/readMsgFiles.ts:57</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>inputFilePath: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tmpDir: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="generatemsgsfromsrvfiles" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> generate<wbr>Msgs<wbr>From<wbr>Srv<wbr>Files</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Msgs<wbr>From<wbr>Srv<wbr>Files<span class="tsd-signature-symbol">(</span>inputFilePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tmpDir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/readMsgFiles.ts#L7">lib/readMsgFiles.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>inputFilePath: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tmpDir: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getmsgfiles" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Msg<wbr>Files</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Msg<wbr>Files<span class="tsd-signature-symbol">(</span>dir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tmpDir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/readMsgFiles.ts#L116">lib/readMsgFiles.ts:116</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>dir: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tmpDir: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -228,13 +285,13 @@
 					<a name="getmsgfilesdata" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Msg<wbr>Files<wbr>Data</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Msg<wbr>Files<wbr>Data<span class="tsd-signature-symbol">(</span>dir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, namespace<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>namespace<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Msg<wbr>Files<wbr>Data<span class="tsd-signature-symbol">(</span>dir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, namespace<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tmpDir<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>namespace<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/readMsgFiles.ts#L20">lib/readMsgFiles.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/readMsgFiles.ts#L144">lib/readMsgFiles.ts:144</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -244,6 +301,9 @@
 								</li>
 								<li>
 									<h5>namespace: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>tmpDir: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>namespace<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -260,7 +320,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/generateFromRosMsg.ts#L10">lib/generateFromRosMsg.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/generateFromRosMsg.ts#L10">lib/generateFromRosMsg.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -286,7 +346,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/rosTypescriptGenerator.ts#L10">lib/rosTypescriptGenerator.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/rosTypescriptGenerator.ts#L12">lib/rosTypescriptGenerator.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -308,7 +368,7 @@
 					<div class="tsd-signature tsd-kind-icon">common<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L4">lib/primitives.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L4">lib/primitives.ts:4</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -322,7 +382,7 @@
 						<div class="tsd-signature tsd-kind-icon">bool<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;boolean&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L5">lib/primitives.ts:5</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L5">lib/primitives.ts:5</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -332,7 +392,7 @@
 						<div class="tsd-signature tsd-kind-icon">byte<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Int8Array&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L6">lib/primitives.ts:6</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L6">lib/primitives.ts:6</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -342,7 +402,7 @@
 						<div class="tsd-signature tsd-kind-icon">char<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;string&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L7">lib/primitives.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L7">lib/primitives.ts:7</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -352,7 +412,7 @@
 						<div class="tsd-signature tsd-kind-icon">float32<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;number&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L8">lib/primitives.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L8">lib/primitives.ts:8</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -362,7 +422,7 @@
 						<div class="tsd-signature tsd-kind-icon">float64<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;number&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L9">lib/primitives.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L9">lib/primitives.ts:9</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -372,7 +432,7 @@
 						<div class="tsd-signature tsd-kind-icon">int16<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;number&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L12">lib/primitives.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L12">lib/primitives.ts:12</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -382,7 +442,7 @@
 						<div class="tsd-signature tsd-kind-icon">int32<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;number&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L14">lib/primitives.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L14">lib/primitives.ts:14</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -392,7 +452,7 @@
 						<div class="tsd-signature tsd-kind-icon">int64<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;number&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L16">lib/primitives.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L16">lib/primitives.ts:16</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -402,7 +462,7 @@
 						<div class="tsd-signature tsd-kind-icon">int8<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;number&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L10">lib/primitives.ts:10</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L10">lib/primitives.ts:10</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -412,7 +472,7 @@
 						<div class="tsd-signature tsd-kind-icon">string<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;string&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L18">lib/primitives.ts:18</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L18">lib/primitives.ts:18</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -422,7 +482,7 @@
 						<div class="tsd-signature tsd-kind-icon">uint16<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;number&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L13">lib/primitives.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L13">lib/primitives.ts:13</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -432,7 +492,7 @@
 						<div class="tsd-signature tsd-kind-icon">uint32<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;number&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L15">lib/primitives.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L15">lib/primitives.ts:15</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -442,7 +502,7 @@
 						<div class="tsd-signature tsd-kind-icon">uint64<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;number&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L17">lib/primitives.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L17">lib/primitives.ts:17</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -452,7 +512,7 @@
 						<div class="tsd-signature tsd-kind-icon">uint8<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;number&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L11">lib/primitives.ts:11</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L11">lib/primitives.ts:11</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -462,7 +522,7 @@
 						<div class="tsd-signature tsd-kind-icon">wchar<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;string&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L20">lib/primitives.ts:20</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L20">lib/primitives.ts:20</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -472,7 +532,7 @@
 						<div class="tsd-signature tsd-kind-icon">wstring<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;string&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L19">lib/primitives.ts:19</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L19">lib/primitives.ts:19</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -483,7 +543,7 @@
 					<div class="tsd-signature tsd-kind-icon">primitives1<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L26">lib/primitives.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L26">lib/primitives.ts:26</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -497,7 +557,7 @@
 						<div class="tsd-signature tsd-kind-icon">duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;{ secs: number, nsecs: number }&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L28">lib/primitives.ts:28</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L28">lib/primitives.ts:28</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -507,7 +567,7 @@
 						<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;{ secs: number, nsecs: number }&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L29">lib/primitives.ts:29</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L29">lib/primitives.ts:29</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -518,7 +578,7 @@
 					<div class="tsd-signature tsd-kind-icon">primitives2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L36">lib/primitives.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L36">lib/primitives.ts:36</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -533,7 +593,7 @@
 						<div class="tsd-signature tsd-kind-icon">duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;{ sec: number, nanosec: number }&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L38">lib/primitives.ts:38</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L38">lib/primitives.ts:38</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -543,7 +603,7 @@
 						<div class="tsd-signature tsd-kind-icon">time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;{ sec: number, nanosec: number }&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/5e2e172/src/lib/primitives.ts#L39">lib/primitives.ts:39</a></li>
+								<li>Defined in <a href="https://github.com/Greenroom-Robotics/ros-typescript-generator/blob/6baec16/src/lib/primitives.ts#L39">lib/primitives.ts:39</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -571,6 +631,12 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#generatefromrosmsg" class="tsd-kind-icon">generate<wbr>From<wbr>Ros<wbr>Msg</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#generatemsgsfromactionsfiles" class="tsd-kind-icon">generate<wbr>Msgs<wbr>From<wbr>Actions<wbr>Files</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#generatemsgsfromsrvfiles" class="tsd-kind-icon">generate<wbr>Msgs<wbr>From<wbr>Srv<wbr>Files</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getmsgfiles" class="tsd-kind-icon">get<wbr>Msg<wbr>Files</a>

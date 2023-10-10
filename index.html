@@ -77,7 +77,7 @@
 					<li><input checked="" disabled="" type="checkbox"> Generate ts types from ROS <code>msgs</code></li>
 					<li><input checked="" disabled="" type="checkbox"> Generate ts enums from ROS <code>msgs</code></li>
 					<li><input checked="" disabled="" type="checkbox"> Configurable type prefix, eg) <code>IRosType</code> or <code>Ros</code></li>
-					<li><input checked="" disabled="" type="checkbox"> Works with custom <code>msgs</code></li>
+					<li><input checked="" disabled="" type="checkbox"> Works with custom <code>.msg</code>, <code>.srv</code> and <code>.action</code> files </li>
 					<li><input checked="" disabled="" type="checkbox"> No runtime dependencies</li>
 					<li><input disabled="" type="checkbox"> Advanced multi-enum support<pre><code class="language-msg"># example_msgs/example.msg
 uint8 STATUS_DISABLED = 0 
@@ -173,6 +173,12 @@ export enum <span class="hljs-keyword">IRosTypeExampleStatus</span> {
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#generatefromrosmsg" class="tsd-kind-icon">generate<wbr>From<wbr>Ros<wbr>Msg</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#generatemsgsfromactionsfiles" class="tsd-kind-icon">generate<wbr>Msgs<wbr>From<wbr>Actions<wbr>Files</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#generatemsgsfromsrvfiles" class="tsd-kind-icon">generate<wbr>Msgs<wbr>From<wbr>Srv<wbr>Files</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getmsgfiles" class="tsd-kind-icon">get<wbr>Msg<wbr>Files</a>
