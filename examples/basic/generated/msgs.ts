@@ -1531,7 +1531,7 @@ export interface IRosTypeTrajectoryMsgsJointTrajectoryPoint {
   velocities: number[];
   accelerations: number[];
   effort: number[];
-  time_from_start: number;
+  time_from_start: { sec: number, nanosec: number };
 }
 
 export interface IRosTypeTrajectoryMsgsMultiDofJointTrajectory {
@@ -1544,7 +1544,7 @@ export interface IRosTypeTrajectoryMsgsMultiDofJointTrajectoryPoint {
   transforms: IRosTypeGeometryMsgsTransform[];
   velocities: IRosTypeGeometryMsgsTwist[];
   accelerations: IRosTypeGeometryMsgsTwist[];
-  time_from_start: number;
+  time_from_start: { sec: number, nanosec: number };
 }
 
 export interface IRosTypeUniqueIdentifierMsgsUuid {
@@ -1567,7 +1567,7 @@ export interface IRosTypeVisualizationMsgsImageMarker {
   outline_color: IRosTypeStdMsgsColorRgba;
   filled: number;
   fill_color: IRosTypeStdMsgsColorRgba;
-  lifetime: number;
+  lifetime: { sec: number, nanosec: number };
   points: IRosTypeGeometryMsgsPoint[];
   outline_colors: IRosTypeStdMsgsColorRgba[];
 }
@@ -1675,7 +1675,7 @@ export interface IRosTypeVisualizationMsgsMarker {
   pose: IRosTypeGeometryMsgsPose;
   scale: IRosTypeGeometryMsgsVector3;
   color: IRosTypeStdMsgsColorRgba;
-  lifetime: number;
+  lifetime: { sec: number, nanosec: number };
   frame_locked: boolean;
   points: IRosTypeGeometryMsgsPoint[];
   colors: IRosTypeStdMsgsColorRgba[];
