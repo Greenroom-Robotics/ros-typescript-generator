@@ -57,11 +57,11 @@ Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rost
   "input": [
     {
       "namespace": "std_msgs",
-      "path": "/opt/ros/galactic/share/std_msgs"
+      "path": "/opt/ros/iron/share/std_msgs"
     },
     {
       "namespace": "geometry_msgs",
-      "path": "/opt/ros/galactic/share/geometry_msgs"
+      "path": "/opt/ros/iron/share/geometry_msgs"
     },
     // Add any other messages including your own custom messages.
   ],

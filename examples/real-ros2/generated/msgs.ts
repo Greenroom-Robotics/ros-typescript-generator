@@ -128,6 +128,20 @@ export enum IRosTypeExampleMsgsExampleConst {
   ENUM_2 = 2,
 }
 
+export interface IRosTypeExampleMsgsExampleServiceRequest {
+  example1: number;
+  example2: number;
+}
+
+export enum IRosTypeExampleMsgsExampleServiceRequestConst {
+  ENUM_1 = 1,
+  ENUM_2 = 2,
+}
+
+export interface IRosTypeExampleMsgsExampleServiceResponse {
+  success: boolean;
+}
+
 export interface IRosTypeGeometryMsgsAccel {
   linear: IRosTypeGeometryMsgsVector3;
   angular: IRosTypeGeometryMsgsVector3;
@@ -493,6 +507,8 @@ export enum IRosTypeSensorMsgsBatteryStateConst {
   POWER_SUPPLY_TECHNOLOGY_LIFE = 4,
   POWER_SUPPLY_TECHNOLOGY_NICD = 5,
   POWER_SUPPLY_TECHNOLOGY_LIMN = 6,
+  POWER_SUPPLY_TECHNOLOGY_TERNARY = 7,
+  POWER_SUPPLY_TECHNOLOGY_VRLA = 8,
 }
 
 export interface IRosTypeSensorMsgsCameraInfo {
@@ -702,6 +718,7 @@ export interface IRosTypeSensorMsgsRange {
   min_range: number;
   max_range: number;
   range: number;
+  variance: number;
 }
 
 export enum IRosTypeSensorMsgsRangeConst {
@@ -760,6 +777,7 @@ export interface IRosTypeShapeMsgsPlane {
 export interface IRosTypeShapeMsgsSolidPrimitive {
   type: number;
   dimensions: number[];
+  polygon: IRosTypeGeometryMsgsPolygon;
 }
 
 export enum IRosTypeShapeMsgsSolidPrimitiveConst {
@@ -767,6 +785,7 @@ export enum IRosTypeShapeMsgsSolidPrimitiveConst {
   SPHERE = 2,
   CYLINDER = 3,
   CONE = 4,
+  PRISM = 5,
   BOX_X = 0,
   BOX_Y = 1,
   BOX_Z = 2,
@@ -775,6 +794,7 @@ export enum IRosTypeShapeMsgsSolidPrimitiveConst {
   CYLINDER_RADIUS = 1,
   CONE_HEIGHT = 0,
   CONE_RADIUS = 1,
+  PRISM_HEIGHT = 0,
 }
 
 export interface IRosTypeStatisticsMsgsMetricsMessage {
@@ -940,6 +960,21 @@ export interface IRosTypeTf2MsgsFrameGraphResponse {
   frame_yaml: string;
 }
 
+export interface IRosTypeTf2MsgsLookupTransformActionGoal {
+  target_frame: string;
+  source_frame: string;
+  source_time: { sec: number, nanosec: number };
+  timeout: { sec: number, nanosec: number };
+  target_time: { sec: number, nanosec: number };
+  fixed_frame: string;
+  advanced: boolean;
+}
+
+export interface IRosTypeTf2MsgsLookupTransformActionResult {
+  transform: IRosTypeGeometryMsgsTransformStamped;
+  error: IRosTypeTf2MsgsTf2Error;
+}
+
 export interface IRosTypeTf2MsgsTf2Error {
   error: number;
   error_string: string;
@@ -970,7 +1005,7 @@ export interface IRosTypeTrajectoryMsgsJointTrajectoryPoint {
   velocities: number[];
   accelerations: number[];
   effort: number[];
-  time_from_start: number;
+  time_from_start: { sec: number, nanosec: number };
 }
 
 export interface IRosTypeTrajectoryMsgsMultiDofJointTrajectory {
@@ -983,7 +1018,7 @@ export interface IRosTypeTrajectoryMsgsMultiDofJointTrajectoryPoint {
   transforms: IRosTypeGeometryMsgsTransform[];
   velocities: IRosTypeGeometryMsgsTwist[];
   accelerations: IRosTypeGeometryMsgsTwist[];
-  time_from_start: number;
+  time_from_start: { sec: number, nanosec: number };
 }
 
 export interface IRosTypeUniqueIdentifierMsgsUuid {
@@ -1006,7 +1041,7 @@ export interface IRosTypeVisualizationMsgsImageMarker {
   outline_color: IRosTypeStdMsgsColorRgba;
   filled: number;
   fill_color: IRosTypeStdMsgsColorRgba;
-  lifetime: number;
+  lifetime: { sec: number, nanosec: number };
   points: IRosTypeGeometryMsgsPoint[];
   outline_colors: IRosTypeStdMsgsColorRgba[];
 }
@@ -1114,12 +1149,16 @@ export interface IRosTypeVisualizationMsgsMarker {
   pose: IRosTypeGeometryMsgsPose;
   scale: IRosTypeGeometryMsgsVector3;
   color: IRosTypeStdMsgsColorRgba;
-  lifetime: number;
+  lifetime: { sec: number, nanosec: number };
   frame_locked: boolean;
   points: IRosTypeGeometryMsgsPoint[];
   colors: IRosTypeStdMsgsColorRgba[];
+  texture_resource: string;
+  texture: IRosTypeSensorMsgsCompressedImage;
+  uv_coordinates: IRosTypeVisualizationMsgsUvCoordinate[];
   text: string;
   mesh_resource: string;
+  mesh_file: IRosTypeVisualizationMsgsMeshFile;
   mesh_use_embedded_materials: boolean;
 }
 
@@ -1158,4 +1197,14 @@ export enum IRosTypeVisualizationMsgsMenuEntryConst {
   FEEDBACK = 0,
   ROSRUN = 1,
   ROSLAUNCH = 2,
+}
+
+export interface IRosTypeVisualizationMsgsMeshFile {
+  filename: string;
+  data: number[];
+}
+
+export interface IRosTypeVisualizationMsgsUvCoordinate {
+  u: number;
+  v: number;
 }
