@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.6.4...v1.7.0) (2023-10-10)
+
+
+### Features
+
+* add support for action and srv files ([#14](https://github.com/Greenroom-Robotics/ros-typescript-generator/issues/14)) ([6baec16](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/6baec160eb102e03266569d841f55ed263394bad))
+
 ### [1.6.4](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.6.2...v1.6.4) (2023-04-26)
 
 
