@@ -10,7 +10,7 @@ A CLI for generating typescript interfaces and enums from ros `msg` files.
 - [x] Generate ts types from ROS `msgs`
 - [x] Generate ts enums from ROS `msgs`
 - [x] Configurable type prefix, eg) `IRosType` or `Ros`
-- [x] Works with custom `msgs`
+- [x] Works with custom `.msg`, `.srv` and `.action` files 
 - [x] No runtime dependencies
 - [ ] Advanced multi-enum support
 ```msg
