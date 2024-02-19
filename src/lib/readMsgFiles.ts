@@ -1,6 +1,5 @@
-import { readdir, readFile, writeFile } from 'fs/promises';
-import { join } from 'path';
-import { basename } from 'path';
+import { readdir, readFile, realpath, writeFile } from 'fs/promises';
+import { basename, join } from 'path';
 
 /* eslint-disable functional/prefer-readonly-type,functional/no-let,functional/no-loop-statement,functional/immutable-data */
 
@@ -135,6 +134,10 @@ export const getMsgFiles = async (
         tmpDir
       );
       output.push(...actionFiles);
+    } else if (entry.isSymbolicLink()) {
+      const fullPath = join(dir, entry.name);
+      const resolvedPath = await realpath(fullPath);
+      output.push(resolvedPath);
     }
   }
   return output;
