@@ -1,4 +1,5 @@
-import { parse, RosMsgDefinition, RosMsgField } from '@foxglove/rosmsg';
+import { MessageDefinition, MessageDefinitionField } from '@foxglove/message-definition';
+import { parse, } from '@foxglove/rosmsg';
 import { camelCase, compact, partition, upperFirst } from 'lodash';
 
 import { IConfig } from '../types/config';
@@ -23,7 +24,7 @@ export const generateFromRosMsg = (
   const messageDefinitions = parse(rosDefinition, { ros2: rosVersion === 2 });
   const primitives = rosVersion === 1 ? primitives1 : primitives2;
 
-  function isOfNoneEmptyType(field: RosMsgField): boolean {
+  function isOfNoneEmptyType(field: MessageDefinitionField): boolean {
     if (!field.isComplex) {
       return true;
     }
@@ -41,7 +42,7 @@ export const generateFromRosMsg = (
     );
   }
 
-  function toEnumValue(field: RosMsgField) {
+  function toEnumValue(field: MessageDefinitionField) {
     if (field.type === 'bool') {
       return field.value ? 1 : 0;
     }
@@ -65,7 +66,7 @@ export const generateFromRosMsg = (
     def.name?.endsWith('_Response')
   );
 
-  const serviceDefinitions = serviceRequests.map<RosMsgDefinition | undefined>(
+  const serviceDefinitions = serviceRequests.map<MessageDefinition | undefined>(
     (request) => {
       // Grab the First Response that matches the request
       const response = serviceResponses.filter(

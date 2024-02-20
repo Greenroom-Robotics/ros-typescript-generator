@@ -51,7 +51,7 @@ export enum IRosTypeActionMsgsGoalStatusConst {
 }
 
 export interface IRosTypeActionMsgsGoalStatusArray {
-  status_list: IRosTypeActionlibMsgsGoalStatus[];
+  status_list: IRosTypeActionMsgsGoalStatus[];
 }
 
 export interface IRosTypeActionlibMsgsGoalId {
@@ -419,7 +419,7 @@ export interface IRosTypeGeographicMsgsGeographicMap {
   bounds: IRosTypeGeographicMsgsBoundingBox;
   points: IRosTypeGeographicMsgsWayPoint[];
   features: IRosTypeGeographicMsgsMapFeature[];
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeographicMsgsGeographicMapChanges {
@@ -489,7 +489,7 @@ export interface IRosTypeGeographicMsgsKeyValue {
 export interface IRosTypeGeographicMsgsMapFeature {
   id: IRosTypeUniqueIdentifierMsgsUuid;
   components: IRosTypeUniqueIdentifierMsgsUuid[];
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeographicMsgsRouteNetwork {
@@ -498,21 +498,21 @@ export interface IRosTypeGeographicMsgsRouteNetwork {
   bounds: IRosTypeGeographicMsgsBoundingBox;
   points: IRosTypeGeographicMsgsWayPoint[];
   segments: IRosTypeGeographicMsgsRouteSegment[];
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeographicMsgsRoutePath {
   header: IRosTypeStdMsgsHeader;
   network: IRosTypeUniqueIdentifierMsgsUuid;
   segments: IRosTypeUniqueIdentifierMsgsUuid[];
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeographicMsgsRouteSegment {
   id: IRosTypeUniqueIdentifierMsgsUuid;
   start: IRosTypeUniqueIdentifierMsgsUuid;
   end: IRosTypeUniqueIdentifierMsgsUuid;
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeographicMsgsUpdateGeographicMap {
@@ -532,7 +532,7 @@ export interface IRosTypeGeographicMsgsUpdateGeographicMapResponse {
 export interface IRosTypeGeographicMsgsWayPoint {
   id: IRosTypeUniqueIdentifierMsgsUuid;
   position: IRosTypeGeographicMsgsGeoPoint;
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeometryMsgsAccel {
