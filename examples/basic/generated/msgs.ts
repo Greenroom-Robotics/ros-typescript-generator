@@ -9,6 +9,11 @@ export enum IRosTypeStatisticsMsgsStatisticDataTypeConst {
   STATISTICS_DATA_TYPE_SAMPLE_COUNT = 5,
 }
 
+export interface IRosTypeActionMsgsCancelGoal {
+  request: IRosTypeActionMsgsCancelGoalRequest;
+  response: IRosTypeActionMsgsCancelGoalResponse;
+}
+
 export interface IRosTypeActionMsgsCancelGoalRequest {
   goal_info: IRosTypeActionMsgsGoalInfo;
 }
@@ -328,6 +333,11 @@ export interface IRosTypeCanMsgsFrame {
   data: number[];
 }
 
+export interface IRosTypeDiagnosticMsgsAddDiagnostics {
+  request: IRosTypeDiagnosticMsgsAddDiagnosticsRequest;
+  response: IRosTypeDiagnosticMsgsAddDiagnosticsResponse;
+}
+
 export interface IRosTypeDiagnosticMsgsAddDiagnosticsRequest {
   load_namespace: string;
 }
@@ -360,6 +370,10 @@ export enum IRosTypeDiagnosticMsgsDiagnosticStatusConst {
 export interface IRosTypeDiagnosticMsgsKeyValue {
   key: string;
   value: string;
+}
+
+export interface IRosTypeDiagnosticMsgsSelfTest {
+  response: IRosTypeDiagnosticMsgsSelfTestResponse;
 }
 
 export interface IRosTypeDiagnosticMsgsSelfTestResponse {
@@ -414,6 +428,11 @@ export interface IRosTypeGeographicMsgsGeographicMapChanges {
   deletes: IRosTypeUniqueIdentifierMsgsUuid[];
 }
 
+export interface IRosTypeGeographicMsgsGetGeoPath {
+  request: IRosTypeGeographicMsgsGetGeoPathRequest;
+  response: IRosTypeGeographicMsgsGetGeoPathResponse;
+}
+
 export interface IRosTypeGeographicMsgsGetGeoPathRequest {
   start: IRosTypeGeographicMsgsGeoPoint;
   goal: IRosTypeGeographicMsgsGeoPoint;
@@ -429,6 +448,11 @@ export interface IRosTypeGeographicMsgsGetGeoPathResponse {
   distance: number;
 }
 
+export interface IRosTypeGeographicMsgsGetGeographicMap {
+  request: IRosTypeGeographicMsgsGetGeographicMapRequest;
+  response: IRosTypeGeographicMsgsGetGeographicMapResponse;
+}
+
 export interface IRosTypeGeographicMsgsGetGeographicMapRequest {
   url: string;
   bounds: IRosTypeGeographicMsgsBoundingBox;
@@ -438,6 +462,11 @@ export interface IRosTypeGeographicMsgsGetGeographicMapResponse {
   success: boolean;
   status: string;
   map: IRosTypeGeographicMsgsGeographicMap;
+}
+
+export interface IRosTypeGeographicMsgsGetRoutePlan {
+  request: IRosTypeGeographicMsgsGetRoutePlanRequest;
+  response: IRosTypeGeographicMsgsGetRoutePlanResponse;
 }
 
 export interface IRosTypeGeographicMsgsGetRoutePlanRequest {
@@ -484,6 +513,11 @@ export interface IRosTypeGeographicMsgsRouteSegment {
   start: IRosTypeUniqueIdentifierMsgsUuid;
   end: IRosTypeUniqueIdentifierMsgsUuid;
   props: IRosTypeDiagnosticMsgsKeyValue[];
+}
+
+export interface IRosTypeGeographicMsgsUpdateGeographicMap {
+  request: IRosTypeGeographicMsgsUpdateGeographicMapRequest;
+  response: IRosTypeGeographicMsgsUpdateGeographicMapResponse;
 }
 
 export interface IRosTypeGeographicMsgsUpdateGeographicMapRequest {
@@ -835,6 +869,11 @@ export enum IRosTypeLgsvlMsgsVehicleStateDataConst {
   VEHICLE_MODE_EMERGENCY_MODE = 4,
 }
 
+export interface IRosTypeLifecycleMsgsChangeState {
+  request: IRosTypeLifecycleMsgsChangeStateRequest;
+  response: IRosTypeLifecycleMsgsChangeStateResponse;
+}
+
 export interface IRosTypeLifecycleMsgsChangeStateRequest {
   transition: IRosTypeLifecycleMsgsTransition;
 }
@@ -843,12 +882,24 @@ export interface IRosTypeLifecycleMsgsChangeStateResponse {
   success: boolean;
 }
 
+export interface IRosTypeLifecycleMsgsGetAvailableStates {
+  response: IRosTypeLifecycleMsgsGetAvailableStatesResponse;
+}
+
 export interface IRosTypeLifecycleMsgsGetAvailableStatesResponse {
   available_states: IRosTypeLifecycleMsgsState[];
 }
 
+export interface IRosTypeLifecycleMsgsGetAvailableTransitions {
+  response: IRosTypeLifecycleMsgsGetAvailableTransitionsResponse;
+}
+
 export interface IRosTypeLifecycleMsgsGetAvailableTransitionsResponse {
   available_transitions: IRosTypeLifecycleMsgsTransitionDescription[];
+}
+
+export interface IRosTypeLifecycleMsgsGetState {
+  response: IRosTypeLifecycleMsgsGetStateResponse;
 }
 
 export interface IRosTypeLifecycleMsgsGetStateResponse {
@@ -925,8 +976,17 @@ export interface IRosTypeLifecycleMsgsTransitionEvent {
   goal_state: IRosTypeLifecycleMsgsState;
 }
 
+export interface IRosTypeNavMsgsGetMap {
+  response: IRosTypeNavMsgsGetMapResponse;
+}
+
 export interface IRosTypeNavMsgsGetMapResponse {
   map: IRosTypeNavMsgsOccupancyGrid;
+}
+
+export interface IRosTypeNavMsgsGetPlan {
+  request: IRosTypeNavMsgsGetPlanRequest;
+  response: IRosTypeNavMsgsGetPlanResponse;
 }
 
 export interface IRosTypeNavMsgsGetPlanRequest {
@@ -972,6 +1032,11 @@ export interface IRosTypeNavMsgsPath {
   poses: IRosTypeGeometryMsgsPoseStamped[];
 }
 
+export interface IRosTypeNavMsgsSetMap {
+  request: IRosTypeNavMsgsSetMapRequest;
+  response: IRosTypeNavMsgsSetMapResponse;
+}
+
 export interface IRosTypeNavMsgsSetMapRequest {
   map: IRosTypeNavMsgsOccupancyGrid;
   initial_pose: IRosTypeGeometryMsgsPoseWithCovarianceStamped;
@@ -995,6 +1060,11 @@ export interface IRosTypePclMsgsPolygonMesh {
   header: IRosTypeStdMsgsHeader;
   cloud: IRosTypeSensorMsgsPointCloud2;
   polygons: IRosTypePclMsgsVertices[];
+}
+
+export interface IRosTypePclMsgsUpdateFilename {
+  request: IRosTypePclMsgsUpdateFilenameRequest;
+  response: IRosTypePclMsgsUpdateFilenameResponse;
 }
 
 export interface IRosTypePclMsgsUpdateFilenameRequest {
@@ -1284,6 +1354,11 @@ export interface IRosTypeSensorMsgsRelativeHumidity {
   variance: number;
 }
 
+export interface IRosTypeSensorMsgsSetCameraInfo {
+  request: IRosTypeSensorMsgsSetCameraInfoRequest;
+  response: IRosTypeSensorMsgsSetCameraInfoResponse;
+}
+
 export interface IRosTypeSensorMsgsSetCameraInfoRequest {
   camera_info: IRosTypeSensorMsgsCameraInfo;
 }
@@ -1497,6 +1572,10 @@ export interface IRosTypeStereoMsgsDisparityImage {
   delta_d: number;
 }
 
+export interface IRosTypeTf2MsgsFrameGraph {
+  response: IRosTypeTf2MsgsFrameGraphResponse;
+}
+
 export interface IRosTypeTf2MsgsFrameGraphResponse {
   frame_yaml: string;
 }
@@ -1549,6 +1628,10 @@ export interface IRosTypeTrajectoryMsgsMultiDofJointTrajectoryPoint {
 
 export interface IRosTypeUniqueIdentifierMsgsUuid {
   uuid: number[];
+}
+
+export interface IRosTypeVisualizationMsgsGetInteractiveMarkers {
+  response: IRosTypeVisualizationMsgsGetInteractiveMarkersResponse;
 }
 
 export interface IRosTypeVisualizationMsgsGetInteractiveMarkersResponse {

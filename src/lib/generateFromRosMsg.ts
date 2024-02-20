@@ -1,4 +1,4 @@
-import { parse, RosMsgField } from '@foxglove/rosmsg';
+import { parse, RosMsgDefinition, RosMsgField } from '@foxglove/rosmsg';
 import { camelCase, compact, partition, upperFirst } from 'lodash';
 
 import { IConfig } from '../types/config';
@@ -57,8 +57,47 @@ export const generateFromRosMsg = (
     return field.value;
   }
 
-  return messageDefinitions
+  const serviceRequests = messageDefinitions.filter((def) =>
+    def.name?.endsWith('_Request')
+  );
+
+  const serviceResponses = messageDefinitions.filter((def) =>
+    def.name?.endsWith('_Response')
+  );
+
+  const serviceDefinitions = serviceRequests.map<RosMsgDefinition | undefined>(
+    (request) => {
+      // Grab the First Response that matches the request
+      const response = serviceResponses.filter(
+        (res) => res.name === request.name?.replace('_Request', '_Response')
+      )[0];
+      if (!response) return;
+
+      return {
+        name: request.name?.replace('_Request', ''),
+        definitions: [
+          {
+            name: 'request',
+            isComplex: true,
+            isArray: false,
+            type: request.name ?? '',
+          },
+          {
+            name: 'response',
+            isComplex: true,
+            isArray: false,
+            type: response.name ?? '',
+          },
+        ],
+      };
+    }
+  );
+
+  const fullMessageDefinitions = [...messageDefinitions, ...serviceDefinitions];
+
+  return fullMessageDefinitions
     .map((definition) => {
+      if (!definition) return '\n';
       // Get the interface key
       const typeName = rosNameToTypeName(definition.name || '', typePrefix);
 
