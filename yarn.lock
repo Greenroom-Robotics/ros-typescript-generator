@@ -437,10 +437,18 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@foxglove/rosmsg@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@foxglove/rosmsg/-/rosmsg-1.0.1.tgz#c18b926fd052676103ad56fd31ca38af74b30469"
-  integrity sha512-odV7ctGQKHKiKqdriwiLS6FSZrTFYMUYUoqkwj6po46MbdvuEDR+Bygw3c6ynkDtRO3OwLhhb/ieUV/CSu3mhA==
+"@foxglove/message-definition@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@foxglove/message-definition/-/message-definition-0.3.1.tgz#63f48e8f3de47bba8943d8bfa8021af635254f1c"
+  integrity sha512-nkPowiED67LjcKEC77CprkUG3XvSsFHHR9HEwWCuhnIC2wm0W57T1J+WWvteoArZ7SdGGlKzSYSRFyjQkgmITw==
+
+"@foxglove/rosmsg@^5.0.1":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@foxglove/rosmsg/-/rosmsg-5.0.3.tgz#cdce0fe9b061801dafbcef2cd6d1206bcf404723"
+  integrity sha512-3VOr+WtYyqLEhTYpJ44J/VkSpDdgieDDlb0iw6uYCtc+eYa6LXXCN6IekmJjPdagjy+9llEC4obb40NbjAvo4Q==
+  dependencies:
+    "@foxglove/message-definition" "^0.3.1"
+    md5-typescript "^1.0.5"
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
@@ -3529,6 +3537,11 @@ md5-hex@^3.0.1:
   integrity sha512-BUiRtTtV39LIJwinWBjqVsU9xhdnz7/i889V859IBFpuqGAj6LuOvHv5XLbgZ2R7ptJoJaEcxkv88/h25T7Ciw==
   dependencies:
     blueimp-md5 "^2.10.0"
+
+md5-typescript@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/md5-typescript/-/md5-typescript-1.0.5.tgz#68c0b24dff8e5d3162e498fa9893b63be72e038f"
+  integrity sha512-ovAc4EtiNt2dY8JPhPr/wkC9h4U5k/nuClNVcG0Ga3V1rMlYpAY24ZaaymFXJlz+ccJ6UMPo3FSaVKe7czBsXw==
 
 mem@^8.0.0:
   version "8.1.1"
