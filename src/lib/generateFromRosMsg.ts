@@ -1,5 +1,8 @@
-import { MessageDefinition, MessageDefinitionField } from '@foxglove/message-definition';
-import { parse, } from '@foxglove/rosmsg';
+import {
+  MessageDefinition,
+  MessageDefinitionField,
+} from '@foxglove/message-definition';
+import { parse } from '@foxglove/rosmsg';
 import { camelCase, compact, partition, upperFirst } from 'lodash';
 
 import { IConfig } from '../types/config';
