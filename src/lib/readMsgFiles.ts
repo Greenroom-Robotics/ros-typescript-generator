@@ -126,14 +126,14 @@ async function processEntries(
         const stats = await stat(resolvedPath);
 
         return {
+          name: entry.name,
           isDirectory: () => stats.isDirectory(),
           isFile: () => stats.isFile(),
-          isBlockDevice: entry.isBlockDevice,
-          isCharacterDevice: entry.isCharacterDevice,
-          isSymbolicLink: entry.isSymbolicLink,
-          isFIFO: entry.isFIFO,
-          isSocket: entry.isSocket,
-          name: entry.name,
+          isBlockDevice: () => entry.isBlockDevice(),
+          isCharacterDevice: () => entry.isCharacterDevice(),
+          isSymbolicLink: () => entry.isSymbolicLink(),
+          isFIFO: () => entry.isFIFO(),
+          isSocket: () => entry.isSocket(),
         };
       } else {
         return entry;
