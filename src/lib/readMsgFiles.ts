@@ -113,18 +113,27 @@ export const generateMsgsFromActionsFiles = async (
   }
 };
 
-async function processEntries(entries: Dirent[], dir: string) {
+async function processEntries(
+  entries: Dirent[],
+  dir: string
+): Promise<Dirent[]> {
   const processedEntries = await Promise.all(
-    entries.map(async (entry) => {
-      const fullPath = join(dir, entry.name);
-
+    entries.map(async (entry): Promise<Dirent> => {
       if (entry.isSymbolicLink()) {
+        const fullPath = join(dir, entry.name);
+
         const resolvedPath = await realpath(fullPath);
         const stats = await stat(resolvedPath);
+
         return {
-          ...entry,
           isDirectory: () => stats.isDirectory(),
           isFile: () => stats.isFile(),
+          isBlockDevice: entry.isBlockDevice,
+          isCharacterDevice: entry.isCharacterDevice,
+          isSymbolicLink: entry.isSymbolicLink,
+          isFIFO: entry.isFIFO,
+          isSocket: entry.isSocket,
+          name: entry.name,
         };
       } else {
         return entry;
