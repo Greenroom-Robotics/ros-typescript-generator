@@ -1,4 +1,5 @@
-import { readdir, readFile, realpath, writeFile } from 'fs/promises';
+import { Dirent } from 'fs';
+import { readdir, readFile, realpath, stat, writeFile } from 'fs/promises';
 import { basename, join } from 'path';
 
 /* eslint-disable functional/prefer-readonly-type,functional/no-let,functional/no-loop-statement,functional/immutable-data */
@@ -112,32 +113,63 @@ export const generateMsgsFromActionsFiles = async (
   }
 };
 
+async function processEntries(
+  entries: Dirent[],
+  dir: string
+): Promise<Dirent[]> {
+  const processedEntries = await Promise.all(
+    entries.map(async (entry): Promise<Dirent> => {
+      if (entry.isSymbolicLink()) {
+        const fullPath = join(dir, entry.name);
+
+        const resolvedPath = await realpath(fullPath);
+        const stats = await stat(resolvedPath);
+
+        return {
+          name: entry.name,
+          isDirectory: () => stats.isDirectory(),
+          isFile: () => stats.isFile(),
+          isBlockDevice: () => entry.isBlockDevice(),
+          isCharacterDevice: () => entry.isCharacterDevice(),
+          isSymbolicLink: () => entry.isSymbolicLink(),
+          isFIFO: () => entry.isFIFO(),
+          isSocket: () => entry.isSocket(),
+        };
+      } else {
+        return entry;
+      }
+    })
+  );
+
+  return processedEntries;
+}
+
 export const getMsgFiles = async (
   dir: string,
   tmpDir: string
 ): Promise<string[]> => {
   let output: string[] = [];
-  for (const entry of await readdir(dir, { withFileTypes: true })) {
+
+  const entries = await readdir(dir, { withFileTypes: true });
+  const processedEntries = await processEntries(entries, dir);
+
+  for (const entry of processedEntries) {
+    const fullPath = join(dir, entry.name);
     if (entry.isDirectory()) {
-      output = output.concat(await getMsgFiles(join(dir, entry.name), tmpDir));
-    } else if (entry.isFile() && entry.name.endsWith('.msg')) {
-      output.push(join(dir, entry.name));
-    } else if (entry.isFile() && entry.name.endsWith('.srv')) {
-      const srvFiles = await generateMsgsFromSrvFiles(
-        dir + '/' + entry.name,
-        tmpDir
-      );
-      output.push(...srvFiles);
-    } else if (entry.isFile() && entry.name.endsWith('.action')) {
-      const actionFiles = await generateMsgsFromActionsFiles(
-        dir + '/' + entry.name,
-        tmpDir
-      );
-      output.push(...actionFiles);
-    } else if (entry.isSymbolicLink()) {
-      const fullPath = join(dir, entry.name);
-      const resolvedPath = await realpath(fullPath);
-      output.push(resolvedPath);
+      output = output.concat(await getMsgFiles(fullPath, tmpDir));
+    } else if (entry.isFile()) {
+      if (entry.name.endsWith('.msg')) {
+        output.push(fullPath);
+      } else if (entry.name.endsWith('.srv')) {
+        const srvFiles = await generateMsgsFromSrvFiles(fullPath, tmpDir);
+        output.push(...srvFiles);
+      } else if (entry.name.endsWith('.action')) {
+        const actionFiles = await generateMsgsFromActionsFiles(
+          fullPath,
+          tmpDir
+        );
+        output.push(...actionFiles);
+      }
     }
   }
   return output;
