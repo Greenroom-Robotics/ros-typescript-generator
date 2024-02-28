@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from lgsvl_msgs/msg/VehicleOdometry.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module lgsvl_msgs {
+  module msg {
+    struct VehicleOdometry {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " meters / second")
+      float velocity;
+
+      @verbatim (language="comment", text=
+        " radians")
+      float front_wheel_angle;
+
+      @verbatim (language="comment", text=
+        " radians")
+      float rear_wheel_angle;
+    };
+  };
+};

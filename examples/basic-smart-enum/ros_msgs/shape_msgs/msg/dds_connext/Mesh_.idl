@@ -1,0 +1,34 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from shape_msgs:msg/Mesh.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Point_.idl"
+#include "shape_msgs/msg/dds_connext/MeshTriangle_.idl"
+
+#ifndef __shape_msgs__msg__mesh__idl__
+#define __shape_msgs__msg__mesh__idl__
+
+
+module shape_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Mesh_ {
+sequence<shape_msgs::msg::dds_::MeshTriangle_> triangles_;
+
+sequence<geometry_msgs::msg::dds_::Point_> vertices_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module shape_msgs
+
+
+#endif  // __shape_msgs__msg__mesh__idl__

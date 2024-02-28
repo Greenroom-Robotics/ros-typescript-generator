@@ -1,0 +1,37 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/Image.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __sensor_msgs__msg__image__idl__
+#define __sensor_msgs__msg__image__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Image_ {
+std_msgs::msg::dds_::Header_ header_;
+unsigned long height_;
+unsigned long width_;
+string encoding_;
+octet is_bigendian_;
+unsigned long step_;
+sequence<octet> data_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__image__idl__

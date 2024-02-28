@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geographic_msgs:msg/GeoPoint.idl
+// generated code does not contain a copyright notice
+
+#ifndef __geographic_msgs__msg__geo_point__idl__
+#define __geographic_msgs__msg__geo_point__idl__
+
+
+module geographic_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct GeoPoint_ {
+double latitude_;
+double longitude_;
+double altitude_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geographic_msgs
+
+
+#endif  // __geographic_msgs__msg__geo_point__idl__

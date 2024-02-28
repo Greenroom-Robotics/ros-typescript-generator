@@ -1,0 +1,42 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from diagnostic_msgs:msg/DiagnosticStatus.idl
+// generated code does not contain a copyright notice
+#include "diagnostic_msgs/msg/dds_connext/KeyValue_.idl"
+
+#ifndef __diagnostic_msgs__msg__diagnostic_status__idl__
+#define __diagnostic_msgs__msg__diagnostic_status__idl__
+
+
+module diagnostic_msgs {
+
+module msg {
+
+module dds_ {
+
+module DiagnosticStatus_Constants {
+const octet OK_ = 0;
+const octet WARN_ = 1;
+const octet ERROR_ = 2;
+const octet STALE_ = 3;
+
+};
+
+struct DiagnosticStatus_ {
+octet level_;
+string name_;
+string message_;
+string hardware_id_;
+sequence<diagnostic_msgs::msg::dds_::KeyValue_> values_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module diagnostic_msgs
+
+
+#endif  // __diagnostic_msgs__msg__diagnostic_status__idl__

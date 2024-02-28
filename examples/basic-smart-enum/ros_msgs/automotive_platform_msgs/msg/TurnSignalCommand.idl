@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/TurnSignalCommand.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    module TurnSignalCommand_Constants {
+      const uint8 NONE = 0;
+      const uint8 LEFT = 1;
+      const uint8 RIGHT = 2;
+    };
+    @verbatim (language="comment", text=
+      " Turn Signal Command with Mode" "\n"
+      " Contains turn signal command and desired autonomy active mode flag")
+    struct TurnSignalCommand {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " Is 1 if autonomy mode should be active")
+      uint16 mode;
+
+      @verbatim (language="comment", text=
+        " Desired turn signal on")
+      uint8 turn_signal;
+    };
+  };
+};

@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from geographic_msgs/srv/GetGeographicMap.srv
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/BoundingBox.idl"
+#include "geographic_msgs/msg/GeographicMap.idl"
+
+module geographic_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " This service requests a region of a geographic map.")
+    struct GetGeographicMap_Request {
+      @verbatim (language="comment", text=
+        " where to read map data")
+      string url;
+
+      @verbatim (language="comment", text=
+        " Bounding box for the desired map.  If all zeros, provide all data" "\n"
+        " available from the specified URL.")
+      geographic_msgs::msg::BoundingBox bounds;
+    };
+    struct GetGeographicMap_Response {
+      @verbatim (language="comment", text=
+        " true if the call succeeded")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        " more details")
+      string status;
+
+      @verbatim (language="comment", text=
+        " The requested map, its bounds may differ from the requested bounds.")
+      geographic_msgs::msg::GeographicMap map;
+    };
+  };
+};

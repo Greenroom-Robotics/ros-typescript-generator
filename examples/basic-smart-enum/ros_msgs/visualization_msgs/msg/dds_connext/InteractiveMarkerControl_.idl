@@ -1,0 +1,55 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from visualization_msgs:msg/InteractiveMarkerControl.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Quaternion_.idl"
+#include "visualization_msgs/msg/dds_connext/Marker_.idl"
+
+#ifndef __visualization_msgs__msg__interactive_marker_control__idl__
+#define __visualization_msgs__msg__interactive_marker_control__idl__
+
+
+module visualization_msgs {
+
+module msg {
+
+module dds_ {
+
+module InteractiveMarkerControl_Constants {
+const octet INHERIT_ = 0;
+const octet FIXED_ = 1;
+const octet VIEW_FACING_ = 2;
+const octet NONE_ = 0;
+const octet MENU_ = 1;
+const octet BUTTON_ = 2;
+const octet MOVE_AXIS_ = 3;
+const octet MOVE_PLANE_ = 4;
+const octet ROTATE_AXIS_ = 5;
+const octet MOVE_ROTATE_ = 6;
+const octet MOVE_3D_ = 7;
+const octet ROTATE_3D_ = 8;
+const octet MOVE_ROTATE_3D_ = 9;
+
+};
+
+struct InteractiveMarkerControl_ {
+string name_;
+geometry_msgs::msg::dds_::Quaternion_ orientation_;
+octet orientation_mode_;
+octet interaction_mode_;
+boolean always_visible_;
+sequence<visualization_msgs::msg::dds_::Marker_> markers_;
+
+boolean independent_marker_orientation_;
+string description_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module visualization_msgs
+
+
+#endif  // __visualization_msgs__msg__interactive_marker_control__idl__

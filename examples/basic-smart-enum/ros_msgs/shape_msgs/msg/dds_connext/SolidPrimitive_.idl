@@ -1,0 +1,46 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from shape_msgs:msg/SolidPrimitive.idl
+// generated code does not contain a copyright notice
+
+#ifndef __shape_msgs__msg__solid_primitive__idl__
+#define __shape_msgs__msg__solid_primitive__idl__
+
+
+module shape_msgs {
+
+module msg {
+
+module dds_ {
+
+module SolidPrimitive_Constants {
+const octet BOX_ = 1;
+const octet SPHERE_ = 2;
+const octet CYLINDER_ = 3;
+const octet CONE_ = 4;
+const octet BOX_X_ = 0;
+const octet BOX_Y_ = 1;
+const octet BOX_Z_ = 2;
+const octet SPHERE_RADIUS_ = 0;
+const octet CYLINDER_HEIGHT_ = 0;
+const octet CYLINDER_RADIUS_ = 1;
+const octet CONE_HEIGHT_ = 0;
+const octet CONE_RADIUS_ = 1;
+
+};
+
+struct SolidPrimitive_ {
+octet type_;
+sequence<double, 3> dimensions_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module shape_msgs
+
+
+#endif  // __shape_msgs__msg__solid_primitive__idl__

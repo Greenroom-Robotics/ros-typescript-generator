@@ -1,0 +1,55 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geographic_msgs:srv/GetRoutePlan.idl
+// generated code does not contain a copyright notice
+#include "geographic_msgs/msg/dds_connext/RoutePath_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __geographic_msgs__srv__get_route_plan__idl__
+#define __geographic_msgs__srv__get_route_plan__idl__
+
+
+module geographic_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetRoutePlan_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ network_;
+unique_identifier_msgs::msg::dds_::UUID_ start_;
+unique_identifier_msgs::msg::dds_::UUID_ goal_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module geographic_msgs
+
+
+module geographic_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetRoutePlan_Response_ {
+boolean success_;
+string status_;
+geographic_msgs::msg::dds_::RoutePath_ plan_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module geographic_msgs
+
+
+#endif  // __geographic_msgs__srv__get_route_plan__idl__

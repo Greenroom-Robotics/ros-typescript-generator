@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/GearCommand.msg
+// generated code does not contain a copyright notice
+
+#include "automotive_platform_msgs/msg/Gear.idl"
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Current Gear Command")
+    struct GearCommand {
+      std_msgs::msg::Header header;
+
+      automotive_platform_msgs::msg::Gear command;
+    };
+  };
+};

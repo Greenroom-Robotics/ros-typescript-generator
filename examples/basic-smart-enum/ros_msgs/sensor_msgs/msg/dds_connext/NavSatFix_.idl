@@ -1,0 +1,45 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/NavSatFix.idl
+// generated code does not contain a copyright notice
+#include "sensor_msgs/msg/dds_connext/NavSatStatus_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __sensor_msgs__msg__nav_sat_fix__idl__
+#define __sensor_msgs__msg__nav_sat_fix__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+module NavSatFix_Constants {
+const octet COVARIANCE_TYPE_UNKNOWN_ = 0;
+const octet COVARIANCE_TYPE_APPROXIMATED_ = 1;
+const octet COVARIANCE_TYPE_DIAGONAL_KNOWN_ = 2;
+const octet COVARIANCE_TYPE_KNOWN_ = 3;
+
+};
+
+struct NavSatFix_ {
+std_msgs::msg::dds_::Header_ header_;
+sensor_msgs::msg::dds_::NavSatStatus_ status_;
+double latitude_;
+double longitude_;
+double altitude_;
+double position_covariance_[9];
+
+octet position_covariance_type_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__nav_sat_fix__idl__

@@ -1,0 +1,41 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from action_msgs:msg/GoalStatus.idl
+// generated code does not contain a copyright notice
+#include "action_msgs/msg/dds_connext/GoalInfo_.idl"
+
+#ifndef __action_msgs__msg__goal_status__idl__
+#define __action_msgs__msg__goal_status__idl__
+
+
+module action_msgs {
+
+module msg {
+
+module dds_ {
+
+module GoalStatus_Constants {
+const octet STATUS_UNKNOWN_ = 0;
+const octet STATUS_ACCEPTED_ = 1;
+const octet STATUS_EXECUTING_ = 2;
+const octet STATUS_CANCELING_ = 3;
+const octet STATUS_SUCCEEDED_ = 4;
+const octet STATUS_CANCELED_ = 5;
+const octet STATUS_ABORTED_ = 6;
+
+};
+
+struct GoalStatus_ {
+action_msgs::msg::dds_::GoalInfo_ goal_info_;
+octet status_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module action_msgs
+
+
+#endif  // __action_msgs__msg__goal_status__idl__

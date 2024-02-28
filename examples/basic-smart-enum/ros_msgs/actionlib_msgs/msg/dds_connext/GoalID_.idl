@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from actionlib_msgs:msg/GoalID.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+
+#ifndef __actionlib_msgs__msg__goal_id__idl__
+#define __actionlib_msgs__msg__goal_id__idl__
+
+
+module actionlib_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct GoalID_ {
+builtin_interfaces::msg::dds_::Time_ stamp_;
+string id_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module actionlib_msgs
+
+
+#endif  // __actionlib_msgs__msg__goal_id__idl__

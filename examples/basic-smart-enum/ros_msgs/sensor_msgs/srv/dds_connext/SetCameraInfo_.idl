@@ -1,0 +1,51 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:srv/SetCameraInfo.idl
+// generated code does not contain a copyright notice
+#include "sensor_msgs/msg/dds_connext/CameraInfo_.idl"
+
+#ifndef __sensor_msgs__srv__set_camera_info__idl__
+#define __sensor_msgs__srv__set_camera_info__idl__
+
+
+module sensor_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetCameraInfo_Request_ {
+sensor_msgs::msg::dds_::CameraInfo_ camera_info_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module sensor_msgs
+
+
+module sensor_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SetCameraInfo_Response_ {
+boolean success_;
+string status_message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__srv__set_camera_info__idl__

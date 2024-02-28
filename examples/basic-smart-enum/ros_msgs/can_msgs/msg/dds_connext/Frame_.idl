@@ -1,0 +1,37 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from can_msgs:msg/Frame.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __can_msgs__msg__frame__idl__
+#define __can_msgs__msg__frame__idl__
+
+
+module can_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Frame_ {
+std_msgs::msg::dds_::Header_ header_;
+unsigned long id_;
+boolean is_rtr_;
+boolean is_extended_;
+boolean is_error_;
+octet dlc_;
+octet data_[8];
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module can_msgs
+
+
+#endif  // __can_msgs__msg__frame__idl__

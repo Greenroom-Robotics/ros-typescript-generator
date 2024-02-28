@@ -1,0 +1,41 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/NavSatStatus.idl
+// generated code does not contain a copyright notice
+
+#ifndef __sensor_msgs__msg__nav_sat_status__idl__
+#define __sensor_msgs__msg__nav_sat_status__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+module NavSatStatus_Constants {
+const octet STATUS_NO_FIX_ = 255;
+const octet STATUS_FIX_ = 0;
+const octet STATUS_SBAS_FIX_ = 1;
+const octet STATUS_GBAS_FIX_ = 2;
+const unsigned short SERVICE_GPS_ = 1;
+const unsigned short SERVICE_GLONASS_ = 2;
+const unsigned short SERVICE_COMPASS_ = 4;
+const unsigned short SERVICE_GALILEO_ = 8;
+
+};
+
+struct NavSatStatus_ {
+octet status_;
+unsigned short service_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__nav_sat_status__idl__

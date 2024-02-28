@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from std_msgs:msg/Header.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+
+#ifndef __std_msgs__msg__header__idl__
+#define __std_msgs__msg__header__idl__
+
+
+module std_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Header_ {
+builtin_interfaces::msg::dds_::Time_ stamp_;
+string frame_id_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module std_msgs
+
+
+#endif  // __std_msgs__msg__header__idl__

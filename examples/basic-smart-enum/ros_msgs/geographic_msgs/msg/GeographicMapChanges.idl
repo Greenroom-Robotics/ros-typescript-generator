@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from geographic_msgs/msg/GeographicMapChanges.msg
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/GeographicMap.idl"
+#include "std_msgs/msg/Header.idl"
+#include "unique_identifier_msgs/msg/UUID.idl"
+
+module geographic_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " A list of geographic map changes.")
+    struct GeographicMapChanges {
+      @verbatim (language="comment", text=
+        " stamp specifies time of change" "\n"
+        " frame_id (normally /map)")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " new and changed points and features")
+      geographic_msgs::msg::GeographicMap diffs;
+
+      @verbatim (language="comment", text=
+        " deleted map components")
+      sequence<unique_identifier_msgs::msg::UUID> deletes;
+    };
+  };
+};

@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from diagnostic_msgs:msg/KeyValue.idl
+// generated code does not contain a copyright notice
+
+#ifndef __diagnostic_msgs__msg__key_value__idl__
+#define __diagnostic_msgs__msg__key_value__idl__
+
+
+module diagnostic_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct KeyValue_ {
+string key_;
+string value_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module diagnostic_msgs
+
+
+#endif  // __diagnostic_msgs__msg__key_value__idl__

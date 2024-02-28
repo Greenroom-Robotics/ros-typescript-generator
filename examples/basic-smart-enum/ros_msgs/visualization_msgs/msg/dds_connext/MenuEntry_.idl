@@ -1,0 +1,39 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from visualization_msgs:msg/MenuEntry.idl
+// generated code does not contain a copyright notice
+
+#ifndef __visualization_msgs__msg__menu_entry__idl__
+#define __visualization_msgs__msg__menu_entry__idl__
+
+
+module visualization_msgs {
+
+module msg {
+
+module dds_ {
+
+module MenuEntry_Constants {
+const octet FEEDBACK_ = 0;
+const octet ROSRUN_ = 1;
+const octet ROSLAUNCH_ = 2;
+
+};
+
+struct MenuEntry_ {
+unsigned long id_;
+unsigned long parent_id_;
+string title_;
+string command_;
+octet command_type_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module visualization_msgs
+
+
+#endif  // __visualization_msgs__msg__menu_entry__idl__

@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geometry_msgs:msg/Polygon.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Point32_.idl"
+
+#ifndef __geometry_msgs__msg__polygon__idl__
+#define __geometry_msgs__msg__polygon__idl__
+
+
+module geometry_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Polygon_ {
+sequence<geometry_msgs::msg::dds_::Point32_> points_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geometry_msgs
+
+
+#endif  // __geometry_msgs__msg__polygon__idl__

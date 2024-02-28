@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from geographic_msgs/msg/KeyValue.msg
+// generated code does not contain a copyright notice
+
+
+module geographic_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Geographic map tag (key, value) pair" "\n"
+      "" "\n"
+      " This is equivalent to diagnostic_msgs/KeyValue, repeated here to" "\n"
+      " avoid introducing a trivial stack dependency.")
+    struct KeyValue {
+      @verbatim (language="comment", text=
+        " tag label")
+      string key;
+
+      @verbatim (language="comment", text=
+        " corresponding value")
+      string value;
+    };
+  };
+};

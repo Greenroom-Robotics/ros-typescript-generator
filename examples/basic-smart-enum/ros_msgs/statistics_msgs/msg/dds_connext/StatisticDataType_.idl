@@ -1,0 +1,38 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from statistics_msgs:msg/StatisticDataType.idl
+// generated code does not contain a copyright notice
+
+#ifndef __statistics_msgs__msg__statistic_data_type__idl__
+#define __statistics_msgs__msg__statistic_data_type__idl__
+
+
+module statistics_msgs {
+
+module msg {
+
+module dds_ {
+
+module StatisticDataType_Constants {
+const octet STATISTICS_DATA_TYPE_UNINITIALIZED_ = 0;
+const octet STATISTICS_DATA_TYPE_AVERAGE_ = 1;
+const octet STATISTICS_DATA_TYPE_MINIMUM_ = 2;
+const octet STATISTICS_DATA_TYPE_MAXIMUM_ = 3;
+const octet STATISTICS_DATA_TYPE_STDDEV_ = 4;
+const octet STATISTICS_DATA_TYPE_SAMPLE_COUNT_ = 5;
+
+};
+
+struct StatisticDataType_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module statistics_msgs
+
+
+#endif  // __statistics_msgs__msg__statistic_data_type__idl__

@@ -1,0 +1,53 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from geographic_msgs/srv/GetGeoPath.srv
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/GeoPath.idl"
+#include "geographic_msgs/msg/GeoPoint.idl"
+#include "unique_identifier_msgs/msg/UUID.idl"
+
+module geographic_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " Searches for given start and goal the nearest route segments" "\n"
+      " and determine the path through the RouteNetwork")
+    struct GetGeoPath_Request {
+      @verbatim (language="comment", text=
+        " starting point")
+      geographic_msgs::msg::GeoPoint start;
+
+      @verbatim (language="comment", text=
+        " goal point")
+      geographic_msgs::msg::GeoPoint goal;
+    };
+    struct GetGeoPath_Response {
+      @verbatim (language="comment", text=
+        " true if the call succeeded")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        " more details")
+      string status;
+
+      @verbatim (language="comment", text=
+        " path to follow")
+      geographic_msgs::msg::GeoPath plan;
+
+      @verbatim (language="comment", text=
+        " the uuid of the RouteNetwork")
+      unique_identifier_msgs::msg::UUID network;
+
+      @verbatim (language="comment", text=
+        " the uuid of the starting RouteSegment")
+      unique_identifier_msgs::msg::UUID start_seg;
+
+      @verbatim (language="comment", text=
+        " the uuid of the ending RouteSegment")
+      unique_identifier_msgs::msg::UUID goal_seg;
+
+      @verbatim (language="comment", text=
+        " the length of the plan")
+      double distance;
+    };
+  };
+};

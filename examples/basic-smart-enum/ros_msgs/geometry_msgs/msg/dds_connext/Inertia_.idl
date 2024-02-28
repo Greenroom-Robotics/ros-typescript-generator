@@ -1,0 +1,37 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geometry_msgs:msg/Inertia.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Vector3_.idl"
+
+#ifndef __geometry_msgs__msg__inertia__idl__
+#define __geometry_msgs__msg__inertia__idl__
+
+
+module geometry_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Inertia_ {
+double m_;
+geometry_msgs::msg::dds_::Vector3_ com_;
+double ixx_;
+double ixy_;
+double ixz_;
+double iyy_;
+double iyz_;
+double izz_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geometry_msgs
+
+
+#endif  // __geometry_msgs__msg__inertia__idl__

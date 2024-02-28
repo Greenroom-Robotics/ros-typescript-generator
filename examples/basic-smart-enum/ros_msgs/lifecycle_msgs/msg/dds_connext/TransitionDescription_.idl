@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from lifecycle_msgs:msg/TransitionDescription.idl
+// generated code does not contain a copyright notice
+#include "lifecycle_msgs/msg/dds_connext/State_.idl"
+#include "lifecycle_msgs/msg/dds_connext/Transition_.idl"
+
+#ifndef __lifecycle_msgs__msg__transition_description__idl__
+#define __lifecycle_msgs__msg__transition_description__idl__
+
+
+module lifecycle_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct TransitionDescription_ {
+lifecycle_msgs::msg::dds_::Transition_ transition_;
+lifecycle_msgs::msg::dds_::State_ start_state_;
+lifecycle_msgs::msg::dds_::State_ goal_state_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module lifecycle_msgs
+
+
+#endif  // __lifecycle_msgs__msg__transition_description__idl__

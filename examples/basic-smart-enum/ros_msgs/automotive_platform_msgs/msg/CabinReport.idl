@@ -1,0 +1,58 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/CabinReport.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Status of vehicle cabin sensors")
+    struct CabinReport {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " The door positions below are from the point of view of someone sitting" "\n"
+        " in the vehicle, facing the X positive direction. Not using driver/passenger" "\n"
+        " since this is different in left- vs right-hand drive vehicles." "\n"
+        " Status of the door nearest the front of the vehicle in the Y+ direction")
+      boolean door_open_front_right;
+
+      @verbatim (language="comment", text=
+        " Status of the door nearest the front of the vehicle in the Y- direction")
+      boolean door_open_front_left;
+
+      @verbatim (language="comment", text=
+        " Status of the door nearest the rear of the vehicle in the Y+ direction")
+      boolean door_open_rear_right;
+
+      @verbatim (language="comment", text=
+        " Status of the door nearest the rear of the vehicle in the Y- direction")
+      boolean door_open_rear_left;
+
+      @verbatim (language="comment", text=
+        " Status of the front compartment cover")
+      boolean hood_open;
+
+      @verbatim (language="comment", text=
+        " Status of the rear compartment cover")
+      boolean trunk_open;
+
+      @verbatim (language="comment", text=
+        " Whether or not a passenger is detected in the front non-driving seat")
+      boolean passenger_present;
+
+      @verbatim (language="comment", text=
+        " Whether or not the passenger-side airbag is enabled")
+      boolean passenger_airbag_enabled;
+
+      @verbatim (language="comment", text=
+        " Whether or not the seatbelt for the driver's seat is buckled")
+      boolean seatbelt_engaged_driver;
+
+      @verbatim (language="comment", text=
+        " Whether or not the seatbelt for the passenger's seat is buckled")
+      boolean seatbelt_engaged_passenger;
+    };
+  };
+};

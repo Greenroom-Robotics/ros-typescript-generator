@@ -8,4 +8,6 @@ export type IConfig = {
   readonly rosVersion?: 1 | 2;
   readonly input: readonly IConfigDirectory[];
   readonly typePrefix: string;
+  readonly useNamespaces?: boolean;
+  readonly smartEnums?: boolean;
 };

@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from lgsvl_msgs/msg/Detection3D.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Twist.idl"
+#include "lgsvl_msgs/msg/BoundingBox3D.idl"
+#include "std_msgs/msg/Header.idl"
+
+module lgsvl_msgs {
+  module msg {
+    struct Detection3D {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " The numeric ID of the detected object")
+      uint32 id;
+
+      @verbatim (language="comment", text=
+        " car, pedestrian")
+      string label;
+
+      @verbatim (language="comment", text=
+        " The confidence score of the detected object in the range")
+      @unit (value="0-1")
+      float score;
+
+      @verbatim (language="comment", text=
+        " A 3D bounding box")
+      lgsvl_msgs::msg::BoundingBox3D bbox;
+
+      @verbatim (language="comment", text=
+        " Linear and angular velocity")
+      geometry_msgs::msg::Twist velocity;
+    };
+  };
+};

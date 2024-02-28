@@ -32,7 +32,9 @@ export const rosTypescriptGenerator = async (config: IConfig) => {
   const typescriptInterfaces = generateFromRosMsg(
     joinedMessages,
     config.typePrefix,
-    config.rosVersion
+    config.rosVersion,
+    config.useNamespaces,
+    config.smartEnums
   );
 
   const typescriptInterfacesWithNote = [

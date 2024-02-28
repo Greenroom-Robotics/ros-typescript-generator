@@ -1,0 +1,50 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/DriverCommands.msg
+// generated code does not contain a copyright notice
+
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Driver Commands Message" "\n"
+      " Contains commands from the driver to the autonomy system")
+    struct DriverCommands {
+      @verbatim (language="comment", text=
+        " Increments each time a command is sent" "\n"
+        " An acknowledge message should be published with this value")
+      uint8 msg_counter;
+
+      @verbatim (language="comment", text=
+        " Engage auto")
+      uint16 engage;
+
+      @verbatim (language="comment", text=
+        " Disengage auto")
+      uint16 disengage;
+
+      @verbatim (language="comment", text=
+        " Increase speed set point")
+      uint16 speed_up;
+
+      @verbatim (language="comment", text=
+        " Decrease speed set point")
+      uint16 slow_down;
+
+      @verbatim (language="comment", text=
+        " Increase distance set point")
+      uint16 further;
+
+      @verbatim (language="comment", text=
+        " Decrease distance set point")
+      uint16 closer;
+
+      @verbatim (language="comment", text=
+        " Right turn signal")
+      uint16 right_turn;
+
+      @verbatim (language="comment", text=
+        " Left turn signal")
+      uint16 left_turn;
+    };
+  };
+};

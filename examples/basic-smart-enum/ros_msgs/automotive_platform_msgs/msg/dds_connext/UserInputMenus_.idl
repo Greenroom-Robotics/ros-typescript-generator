@@ -1,0 +1,45 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from automotive_platform_msgs:msg/UserInputMenus.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __automotive_platform_msgs__msg__user_input_menus__idl__
+#define __automotive_platform_msgs__msg__user_input_menus__idl__
+
+
+module automotive_platform_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct UserInputMenus_ {
+std_msgs::msg::dds_::Header_ header_;
+boolean str_whl_left_btn_left_;
+boolean str_whl_left_btn_down_;
+boolean str_whl_left_btn_right_;
+boolean str_whl_left_btn_up_;
+boolean str_whl_left_btn_ok_;
+boolean str_whl_right_btn_left_;
+boolean str_whl_right_btn_down_;
+boolean str_whl_right_btn_right_;
+boolean str_whl_right_btn_up_;
+boolean str_whl_right_btn_ok_;
+boolean cntr_cons_btn_left_;
+boolean cntr_cons_btn_down_;
+boolean cntr_cons_btn_right_;
+boolean cntr_cons_btn_up_;
+boolean cntr_cons_btn_ok_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module automotive_platform_msgs
+
+
+#endif  // __automotive_platform_msgs__msg__user_input_menus__idl__

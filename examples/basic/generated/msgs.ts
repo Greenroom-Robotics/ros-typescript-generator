@@ -1,14 +1,5 @@
 /* eslint-disable */
 // These files were generated using "ros-typescript-generator"
-export enum IRosTypeStatisticsMsgsStatisticDataTypeConst {
-  STATISTICS_DATA_TYPE_UNINITIALIZED = 0,
-  STATISTICS_DATA_TYPE_AVERAGE = 1,
-  STATISTICS_DATA_TYPE_MINIMUM = 2,
-  STATISTICS_DATA_TYPE_MAXIMUM = 3,
-  STATISTICS_DATA_TYPE_STDDEV = 4,
-  STATISTICS_DATA_TYPE_SAMPLE_COUNT = 5,
-}
-
 export interface IRosTypeActionMsgsCancelGoal {
   request: IRosTypeActionMsgsCancelGoalRequest;
   response: IRosTypeActionMsgsCancelGoalResponse;
@@ -1411,6 +1402,15 @@ export enum IRosTypeShapeMsgsSolidPrimitiveConst {
   CYLINDER_RADIUS = 1,
   CONE_HEIGHT = 0,
   CONE_RADIUS = 1,
+}
+
+export enum IRosTypeStatisticsMsgsStatisticDataTypeConst {
+  STATISTICS_DATA_TYPE_UNINITIALIZED = 0,
+  STATISTICS_DATA_TYPE_AVERAGE = 1,
+  STATISTICS_DATA_TYPE_MINIMUM = 2,
+  STATISTICS_DATA_TYPE_MAXIMUM = 3,
+  STATISTICS_DATA_TYPE_STDDEV = 4,
+  STATISTICS_DATA_TYPE_SAMPLE_COUNT = 5,
 }
 
 export interface IRosTypeStatisticsMsgsMetricsMessage {

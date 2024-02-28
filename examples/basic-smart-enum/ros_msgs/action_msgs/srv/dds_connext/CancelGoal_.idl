@@ -1,0 +1,59 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from action_msgs:srv/CancelGoal.idl
+// generated code does not contain a copyright notice
+#include "action_msgs/msg/dds_connext/GoalInfo_.idl"
+
+#ifndef __action_msgs__srv__cancel_goal__idl__
+#define __action_msgs__srv__cancel_goal__idl__
+
+
+module action_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct CancelGoal_Request_ {
+action_msgs::msg::dds_::GoalInfo_ goal_info_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module action_msgs
+
+
+module action_msgs {
+
+module srv {
+
+module dds_ {
+
+module CancelGoal_Response_Constants {
+const octet ERROR_NONE_ = 0;
+const octet ERROR_REJECTED_ = 1;
+const octet ERROR_UNKNOWN_GOAL_ID_ = 2;
+const octet ERROR_GOAL_TERMINATED_ = 3;
+
+};
+
+struct CancelGoal_Response_ {
+octet return_code_;
+sequence<action_msgs::msg::dds_::GoalInfo_> goals_canceling_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module action_msgs
+
+
+#endif  // __action_msgs__srv__cancel_goal__idl__

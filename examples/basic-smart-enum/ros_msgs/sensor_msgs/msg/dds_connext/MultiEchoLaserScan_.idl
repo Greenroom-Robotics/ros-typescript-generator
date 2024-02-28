@@ -1,0 +1,42 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/MultiEchoLaserScan.idl
+// generated code does not contain a copyright notice
+#include "sensor_msgs/msg/dds_connext/LaserEcho_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __sensor_msgs__msg__multi_echo_laser_scan__idl__
+#define __sensor_msgs__msg__multi_echo_laser_scan__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct MultiEchoLaserScan_ {
+std_msgs::msg::dds_::Header_ header_;
+float angle_min_;
+float angle_max_;
+float angle_increment_;
+float time_increment_;
+float scan_time_;
+float range_min_;
+float range_max_;
+sequence<sensor_msgs::msg::dds_::LaserEcho_> ranges_;
+
+sequence<sensor_msgs::msg::dds_::LaserEcho_> intensities_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__multi_echo_laser_scan__idl__

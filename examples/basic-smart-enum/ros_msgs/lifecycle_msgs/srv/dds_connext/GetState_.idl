@@ -1,0 +1,50 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from lifecycle_msgs:srv/GetState.idl
+// generated code does not contain a copyright notice
+#include "lifecycle_msgs/msg/dds_connext/State_.idl"
+
+#ifndef __lifecycle_msgs__srv__get_state__idl__
+#define __lifecycle_msgs__srv__get_state__idl__
+
+
+module lifecycle_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetState_Request_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module lifecycle_msgs
+
+
+module lifecycle_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetState_Response_ {
+lifecycle_msgs::msg::dds_::State_ current_state_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module lifecycle_msgs
+
+
+#endif  // __lifecycle_msgs__srv__get_state__idl__

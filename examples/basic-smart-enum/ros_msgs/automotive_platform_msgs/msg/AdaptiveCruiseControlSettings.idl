@@ -1,0 +1,49 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/AdaptiveCruiseControlSettings.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Adaptive Cruise Control Settings Message" "\n"
+      " Contains the current settings/status of ACC")
+    struct AdaptiveCruiseControlSettings {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " Current speed set point (m/sec)")
+      float set_speed;
+
+      @verbatim (language="comment", text=
+        " Discrete following location" "\n"
+        " 0 = following distance is the minimum allowed distance" "\n"
+        " n = following distance is the maximum allowed distance" "\n"
+        "      where (n + 1) is the number of allowed distances")
+      uint16 following_spot;
+
+      @verbatim (language="comment", text=
+        " Minimum distance relative to maximum allowed distance" "\n"
+        " 0 to 1.0")
+      float min_percent;
+
+      @verbatim (language="comment", text=
+        " Distance between spots relative to maximum allowed" "\n"
+        " distance" "\n"
+        " 0 to 1.0")
+      float step_percent;
+
+      @verbatim (language="comment", text=
+        " Where CIPV is relative to the maximum allowed distance" "\n"
+        " 0 = there isn't a detected CIPV" "\n"
+        " 1.0 = the CIPV is at the maximum allowed distance" "\n"
+        " The maximum allowed distance varies with speed")
+      float cipv_percent;
+
+      @verbatim (language="comment", text=
+        " The distance corresponding to 1.0 percent (meters)")
+      float max_distance;
+    };
+  };
+};

@@ -1,0 +1,35 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from nav_msgs:msg/MapMetaData.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+#include "geometry_msgs/msg/dds_connext/Pose_.idl"
+
+#ifndef __nav_msgs__msg__map_meta_data__idl__
+#define __nav_msgs__msg__map_meta_data__idl__
+
+
+module nav_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct MapMetaData_ {
+builtin_interfaces::msg::dds_::Time_ map_load_time_;
+float resolution_;
+unsigned long width_;
+unsigned long height_;
+geometry_msgs::msg::dds_::Pose_ origin_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module nav_msgs
+
+
+#endif  // __nav_msgs__msg__map_meta_data__idl__

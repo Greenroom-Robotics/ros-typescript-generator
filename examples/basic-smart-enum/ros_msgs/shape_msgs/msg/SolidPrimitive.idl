@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from shape_msgs/msg/SolidPrimitive.msg
+// generated code does not contain a copyright notice
+
+
+module shape_msgs {
+  module msg {
+    module SolidPrimitive_Constants {
+      const uint8 BOX = 1;
+      const uint8 SPHERE = 2;
+      const uint8 CYLINDER = 3;
+      const uint8 CONE = 4;
+      const uint8 BOX_X = 0;
+      const uint8 BOX_Y = 1;
+      const uint8 BOX_Z = 2;
+      const uint8 SPHERE_RADIUS = 0;
+      const uint8 CYLINDER_HEIGHT = 0;
+      const uint8 CYLINDER_RADIUS = 1;
+      const uint8 CONE_HEIGHT = 0;
+      const uint8 CONE_RADIUS = 1;
+    };
+    @verbatim (language="comment", text=
+      " Defines box, sphere, cylinder, and cone." "\n"
+      " All shapes are defined to have their bounding boxes centered around 0,0,0.")
+    struct SolidPrimitive {
+      @verbatim (language="comment", text=
+        " The type of the shape")
+      uint8 type;
+
+      @verbatim (language="comment", text=
+        " The dimensions of the shape" "\n"
+        " At no point will dimensions have a length > 3.")
+      sequence<double, 3> dimensions;
+    };
+  };
+};

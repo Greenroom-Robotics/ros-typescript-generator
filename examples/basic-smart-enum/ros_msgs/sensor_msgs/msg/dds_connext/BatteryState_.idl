@@ -1,0 +1,71 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/BatteryState.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __sensor_msgs__msg__battery_state__idl__
+#define __sensor_msgs__msg__battery_state__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+module BatteryState_Constants {
+const octet POWER_SUPPLY_STATUS_UNKNOWN_ = 0;
+const octet POWER_SUPPLY_STATUS_CHARGING_ = 1;
+const octet POWER_SUPPLY_STATUS_DISCHARGING_ = 2;
+const octet POWER_SUPPLY_STATUS_NOT_CHARGING_ = 3;
+const octet POWER_SUPPLY_STATUS_FULL_ = 4;
+const octet POWER_SUPPLY_HEALTH_UNKNOWN_ = 0;
+const octet POWER_SUPPLY_HEALTH_GOOD_ = 1;
+const octet POWER_SUPPLY_HEALTH_OVERHEAT_ = 2;
+const octet POWER_SUPPLY_HEALTH_DEAD_ = 3;
+const octet POWER_SUPPLY_HEALTH_OVERVOLTAGE_ = 4;
+const octet POWER_SUPPLY_HEALTH_UNSPEC_FAILURE_ = 5;
+const octet POWER_SUPPLY_HEALTH_COLD_ = 6;
+const octet POWER_SUPPLY_HEALTH_WATCHDOG_TIMER_EXPIRE_ = 7;
+const octet POWER_SUPPLY_HEALTH_SAFETY_TIMER_EXPIRE_ = 8;
+const octet POWER_SUPPLY_TECHNOLOGY_UNKNOWN_ = 0;
+const octet POWER_SUPPLY_TECHNOLOGY_NIMH_ = 1;
+const octet POWER_SUPPLY_TECHNOLOGY_LION_ = 2;
+const octet POWER_SUPPLY_TECHNOLOGY_LIPO_ = 3;
+const octet POWER_SUPPLY_TECHNOLOGY_LIFE_ = 4;
+const octet POWER_SUPPLY_TECHNOLOGY_NICD_ = 5;
+const octet POWER_SUPPLY_TECHNOLOGY_LIMN_ = 6;
+
+};
+
+struct BatteryState_ {
+std_msgs::msg::dds_::Header_ header_;
+float voltage_;
+float temperature_;
+float current_;
+float charge_;
+float capacity_;
+float design_capacity_;
+float percentage_;
+octet power_supply_status_;
+octet power_supply_health_;
+octet power_supply_technology_;
+boolean present_;
+sequence<float> cell_voltage_;
+
+sequence<float> cell_temperature_;
+
+string location_;
+string serial_number_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__battery_state__idl__

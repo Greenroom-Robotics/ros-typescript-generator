@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/Gear.msg
+// generated code does not contain a copyright notice
+
+
+module automotive_platform_msgs {
+  module msg {
+    module Gear_Constants {
+      const uint8 NONE = 0;
+      const uint8 PARK = 1;
+      const uint8 REVERSE = 2;
+      const uint8 NEUTRAL = 3;
+      const uint8 DRIVE = 4;
+      const uint8 LOW = 5;
+    };
+    @verbatim (language="comment", text=
+      " Transmission Gear Value" "\n"
+      " Provides common definitions for commanded and reported gear")
+    struct Gear {
+      uint8 gear;
+    };
+  };
+};

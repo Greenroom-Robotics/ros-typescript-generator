@@ -1,0 +1,35 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geographic_msgs:msg/GeographicMapChanges.idl
+// generated code does not contain a copyright notice
+#include "geographic_msgs/msg/dds_connext/GeographicMap_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __geographic_msgs__msg__geographic_map_changes__idl__
+#define __geographic_msgs__msg__geographic_map_changes__idl__
+
+
+module geographic_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct GeographicMapChanges_ {
+std_msgs::msg::dds_::Header_ header_;
+geographic_msgs::msg::dds_::GeographicMap_ diffs_;
+sequence<unique_identifier_msgs::msg::dds_::UUID_> deletes_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geographic_msgs
+
+
+#endif  // __geographic_msgs__msg__geographic_map_changes__idl__

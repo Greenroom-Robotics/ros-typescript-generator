@@ -1,0 +1,49 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from visualization_msgs:msg/InteractiveMarkerFeedback.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Point_.idl"
+#include "geometry_msgs/msg/dds_connext/Pose_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __visualization_msgs__msg__interactive_marker_feedback__idl__
+#define __visualization_msgs__msg__interactive_marker_feedback__idl__
+
+
+module visualization_msgs {
+
+module msg {
+
+module dds_ {
+
+module InteractiveMarkerFeedback_Constants {
+const octet KEEP_ALIVE_ = 0;
+const octet POSE_UPDATE_ = 1;
+const octet MENU_SELECT_ = 2;
+const octet BUTTON_CLICK_ = 3;
+const octet MOUSE_DOWN_ = 4;
+const octet MOUSE_UP_ = 5;
+
+};
+
+struct InteractiveMarkerFeedback_ {
+std_msgs::msg::dds_::Header_ header_;
+string client_id_;
+string marker_name_;
+string control_name_;
+octet event_type_;
+geometry_msgs::msg::dds_::Pose_ pose_;
+unsigned long menu_entry_id_;
+geometry_msgs::msg::dds_::Point_ mouse_point_;
+boolean mouse_point_valid_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module visualization_msgs
+
+
+#endif  // __visualization_msgs__msg__interactive_marker_feedback__idl__

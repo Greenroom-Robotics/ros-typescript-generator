@@ -1,0 +1,35 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from pcl_msgs:msg/PolygonMesh.idl
+// generated code does not contain a copyright notice
+#include "pcl_msgs/msg/dds_connext/Vertices_.idl"
+#include "sensor_msgs/msg/dds_connext/PointCloud2_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __pcl_msgs__msg__polygon_mesh__idl__
+#define __pcl_msgs__msg__polygon_mesh__idl__
+
+
+module pcl_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct PolygonMesh_ {
+std_msgs::msg::dds_::Header_ header_;
+sensor_msgs::msg::dds_::PointCloud2_ cloud_;
+sequence<pcl_msgs::msg::dds_::Vertices_> polygons_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module pcl_msgs
+
+
+#endif  // __pcl_msgs__msg__polygon_mesh__idl__

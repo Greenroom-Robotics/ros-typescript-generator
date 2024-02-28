@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from action_msgs:msg/GoalStatusArray.idl
+// generated code does not contain a copyright notice
+#include "action_msgs/msg/dds_connext/GoalStatus_.idl"
+
+#ifndef __action_msgs__msg__goal_status_array__idl__
+#define __action_msgs__msg__goal_status_array__idl__
+
+
+module action_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct GoalStatusArray_ {
+sequence<action_msgs::msg::dds_::GoalStatus_> status_list_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module action_msgs
+
+
+#endif  // __action_msgs__msg__goal_status_array__idl__

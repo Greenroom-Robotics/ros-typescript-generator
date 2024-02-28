@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/BrakeCommand.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Current Brake Pedal Command")
+    struct BrakeCommand {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " 0 to 1.0")
+      float brake_pedal;
+    };
+  };
+};

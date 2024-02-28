@@ -22,7 +22,7 @@
     "plugin:eslint-comments/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
-    "plugin:functional/lite",
+    // "plugin:functional/lite",
     "prettier",
     "prettier/@typescript-eslint"
   ],
@@ -39,7 +39,6 @@
         "allowWholeFile": true
       }
     ],
-    "eslint-comments/no-unused-disable": "error",
     "functional/no-throw-statement": "off",
     "import/order": [
       "error",

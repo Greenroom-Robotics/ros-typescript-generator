@@ -2,8 +2,6 @@ import { Dirent } from 'fs';
 import { readdir, readFile, realpath, stat, writeFile } from 'fs/promises';
 import { basename, join } from 'path';
 
-/* eslint-disable functional/prefer-readonly-type,functional/no-let,functional/no-loop-statement,functional/immutable-data */
-
 export const generateMsgsFromSrvFiles = async (
   inputFilePath: string,
   tmpDir: string
@@ -174,8 +172,6 @@ export const getMsgFiles = async (
   }
   return output;
 };
-/* eslint-enable functional/prefer-readonly-type,functional/no-let,functional/no-loop-statement,functional/immutable-data */
-
 export const getMsgFilesData = async (
   dir: string,
   namespace: string,

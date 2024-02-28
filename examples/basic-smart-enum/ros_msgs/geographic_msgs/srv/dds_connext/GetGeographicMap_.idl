@@ -1,0 +1,54 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geographic_msgs:srv/GetGeographicMap.idl
+// generated code does not contain a copyright notice
+#include "geographic_msgs/msg/dds_connext/BoundingBox_.idl"
+#include "geographic_msgs/msg/dds_connext/GeographicMap_.idl"
+
+#ifndef __geographic_msgs__srv__get_geographic_map__idl__
+#define __geographic_msgs__srv__get_geographic_map__idl__
+
+
+module geographic_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetGeographicMap_Request_ {
+string url_;
+geographic_msgs::msg::dds_::BoundingBox_ bounds_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module geographic_msgs
+
+
+module geographic_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetGeographicMap_Response_ {
+boolean success_;
+string status_;
+geographic_msgs::msg::dds_::GeographicMap_ map_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module geographic_msgs
+
+
+#endif  // __geographic_msgs__srv__get_geographic_map__idl__
