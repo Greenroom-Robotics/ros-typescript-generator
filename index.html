@@ -76,35 +76,38 @@
 					<li><input checked="" disabled="" type="checkbox"> ROS1 and ROS2 support</li>
 					<li><input checked="" disabled="" type="checkbox"> Generate ts types from ROS <code>msgs</code></li>
 					<li><input checked="" disabled="" type="checkbox"> Generate ts enums from ROS <code>msgs</code></li>
-					<li><input checked="" disabled="" type="checkbox"> Configurable type prefix, eg: <code>IRosType</code> or <code>Ros</code></li>
+					<li><input checked="" disabled="" type="checkbox"> Configurable type prefix, eg) <code>IRosType</code> or <code>Ros</code> (config: <code>{&quot;typePrefix&quot;: &quot;IRosType&quot;}</code>)</li>
+					<li><input checked="" disabled="" type="checkbox"> TypeScript namespaces for ROS packages (config: <code>{&quot;useNamespaces&quot;: true}</code>)</li>
 					<li><input checked="" disabled="" type="checkbox"> Works with custom <code>.msg</code>, <code>.srv</code> and <code>.action</code> files </li>
 					<li><input checked="" disabled="" type="checkbox"> No runtime dependencies</li>
-					<li><input disabled="" type="checkbox"> Advanced multi-enum support<pre><code class="language-msg"># example_msgs/example.msg
+					<li><input checked="" disabled="" type="checkbox"> Smart enum support (config: <code>{&quot;smartEnums&quot;: true}</code>)</li>
+				</ul>
+				<pre><code class="language-msg"># example_msgs/example.msg
 uint8 STATUS_DISABLED = 0 
 uint8 STATUS_ENABLED = 1
+
+uint8 OTHER_THING_1 = 1
+uint8 OTHER_THING_2 = 2
+
+uint8 status
+uint8 other
+uint8 more
 </code></pre>
-					</li>
-				</ul>
-				<p>uint8 OTHER_THING_1 = 1
-				uint8 OTHER_THING_2 = 2</p>
-				<p>uint8 status
-					uint8 other
-				uint8 more</p>
-				<pre><code>
-Should become:
-```ts
-export enum <span class="hljs-keyword">IRosTypeExampleStatus</span> {
-  <span class="hljs-string">&quot;STATUS_DISABLED&quot;</span> = <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;STATUS_ENABLED&quot;</span> = <span class="hljs-number">1</span>,
+				<p>Becomes</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> ExampleMsgsExample {
+  <span class="hljs-attr">status</span>: ExampleMsgsExampleStatus;
+  other: ExampleMsgsExampleOther;
+  more: <span class="hljs-built_in">number</span>;
 }
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">enum</span> <span class="hljs-keyword">IRosTypeExampleOther</span> {
-  <span class="hljs-string">&quot;OTHER_THING_1&quot;</span> = <span class="hljs-number">1</span>,
-  <span class="hljs-string">&quot;OTHER_THING_2&quot;</span> = <span class="hljs-number">2</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-built_in">enum</span> ExampleMsgsExampleStatus {
+  DISABLED = <span class="hljs-number">0</span>,
+  ENABLED = <span class="hljs-number">1</span>,
 }
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-keyword">IRosTypeExampleOther</span> {
-  <span class="hljs-literal">status</span>: IRosTypeExampleStatus
-  other: IRosTypeExampleOther
-  more: number
+
+<span class="hljs-keyword">export</span> <span class="hljs-built_in">enum</span> ExampleMsgsExampleOther {
+  THING_1 = <span class="hljs-number">1</span>,
+  THING_2 = <span class="hljs-number">2</span>,
 }
 </code></pre>
 				<a href="#comparison-to-rclnodejs--rostsd-gen" id="comparison-to-rclnodejs--rostsd-gen" style="color: inherit; text-decoration: none;">
@@ -185,6 +188,12 @@ export enum <span class="hljs-keyword">IRosTypeExampleStatus</span> {
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getmsgfilesdata" class="tsd-kind-icon">get<wbr>Msg<wbr>Files<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#indent" class="tsd-kind-icon">indent</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#pascalcase" class="tsd-kind-icon">pascal<wbr>Case</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#processentries" class="tsd-kind-icon">process<wbr>Entries</a>
