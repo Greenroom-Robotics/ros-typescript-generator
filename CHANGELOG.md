@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.1](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.8.0...v1.8.1) (2024-02-28)
+
+
+### Bug Fixes
+
+* symbolic link handling for services and actions ([#22](https://github.com/Greenroom-Robotics/ros-typescript-generator/issues/22)) ([8fdfc84](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/8fdfc847575cde7df2212a2602fdba1defda0931))
+
 ## [1.8.0](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.7.0...v1.8.0) (2024-02-20)
 
 
