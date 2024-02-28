@@ -1,0 +1,32 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from pcl_msgs:msg/ModelCoefficients.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __pcl_msgs__msg__model_coefficients__idl__
+#define __pcl_msgs__msg__model_coefficients__idl__
+
+
+module pcl_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct ModelCoefficients_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<float> values_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module pcl_msgs
+
+
+#endif  // __pcl_msgs__msg__model_coefficients__idl__

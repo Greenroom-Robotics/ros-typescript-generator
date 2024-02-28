@@ -1,5 +1,9 @@
-import { parse, RosMsgField } from '@foxglove/rosmsg';
-import { camelCase, compact, partition, snakeCase, upperFirst } from 'lodash';
+import {
+  MessageDefinition,
+  MessageDefinitionField,
+} from '@foxglove/message-definition';
+import { parse } from '@foxglove/rosmsg';
+import { camelCase, compact, partition, upperFirst, snakeCase } from 'lodash';
 
 import { IConfig } from '../types/config';
 
@@ -36,7 +40,7 @@ export const generateFromRosMsg = (
   const messageDefinitions = parse(rosDefinition, { ros2: rosVersion === 2 });
   const primitives = rosVersion === 1 ? primitives1 : primitives2;
 
-  function isOfNoneEmptyType(field: RosMsgField): boolean {
+  function isOfNoneEmptyType(field: MessageDefinitionField): boolean {
     if (!field.isComplex) {
       return true;
     }
@@ -54,7 +58,7 @@ export const generateFromRosMsg = (
     );
   }
 
-  function toEnumValue(field: RosMsgField) {
+  function toEnumValue(field: MessageDefinitionField) {
     if (field.type === 'bool') {
       return field.value ? 1 : 0;
     }
@@ -70,15 +74,54 @@ export const generateFromRosMsg = (
     return field.value;
   }
 
-  function enumEntriesFromFields(fields: RosMsgField[]) {
+  function enumEntriesFromFields(fields: MessageDefinitionField[]) {
     return fields.map((field) => {
-      return `  ${pascalCase(field.name)} = ${toEnumValue(field)},`;
+      return `  ${field.name} = ${toEnumValue(field)},`;
     })
       .join('\n');
   }
 
-  const interfacesByPackage = messageDefinitions
+  const serviceRequests = messageDefinitions.filter((def) =>
+    def.name?.endsWith('_Request')
+  );
+
+  const serviceResponses = messageDefinitions.filter((def) =>
+    def.name?.endsWith('_Response')
+  );
+
+  const serviceDefinitions = serviceRequests.map<MessageDefinition | undefined>(
+    (request) => {
+      // Grab the First Response that matches the request
+      const response = serviceResponses.filter(
+        (res) => res.name === request.name?.replace('_Request', '_Response')
+      )[0];
+      if (!response) return;
+
+      return {
+        name: request.name?.replace('_Request', ''),
+        definitions: [
+          {
+            name: 'request',
+            isComplex: true,
+            isArray: false,
+            type: request.name ?? '',
+          },
+          {
+            name: 'response',
+            isComplex: true,
+            isArray: false,
+            type: response.name ?? '',
+          },
+        ],
+      };
+    }
+  );
+
+  const fullMessageDefinitions = [...messageDefinitions, ...serviceDefinitions];
+
+  const interfacesByPackage = fullMessageDefinitions
     .map((definition) => {
+      if (!definition) return '\n';
       // Get the interface key
       const typeName = rosNameToTypeName(definition.name || '', typePrefix, !useNamespaces);
       const pkgName = pascalCase(definition.name!.split("/")[0])
@@ -98,8 +141,8 @@ export const generateFromRosMsg = (
         // correct enums. The idea behind this is: If there are several
         // constants of a type that's only used by a single field, then
         // these constants must be an enum for that field.
-        const constants_by_type = new Map<String, RosMsgField[]>();
-        const fields_by_type = new Map<String, RosMsgField[]>();
+        const constants_by_type = new Map<String, MessageDefinitionField[]>();
+        const fields_by_type = new Map<String, MessageDefinitionField[]>();
 
         for (let c of definition.definitions) {
           let type = `${c.type}${c.isArray ? '[]' : ''}`;
@@ -145,7 +188,7 @@ ${enumEntriesFromFields(constants_by_type.get(type)!)}
             continue;
           }
           const type = `${field.type}${field.isArray ? '[]' : ''}`;
-          const candidates: RosMsgField[] = [];
+          const candidates: MessageDefinitionField[] = [];
           const prefix = `${snakeCase(field.name).toLocaleUpperCase()}_`;
           for (let c of constants_by_type.get(type) || []) {
             if (c.name.startsWith(prefix)) {

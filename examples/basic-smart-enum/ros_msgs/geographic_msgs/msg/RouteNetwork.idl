@@ -1,0 +1,45 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from geographic_msgs/msg/RouteNetwork.msg
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/BoundingBox.idl"
+#include "geographic_msgs/msg/KeyValue.idl"
+#include "geographic_msgs/msg/RouteSegment.idl"
+#include "geographic_msgs/msg/WayPoint.idl"
+#include "std_msgs/msg/Header.idl"
+#include "unique_identifier_msgs/msg/UUID.idl"
+
+module geographic_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Geographic map route network." "\n"
+      "" "\n"
+      " A directed graph of WayPoint nodes and RouteSegment edges.  This" "\n"
+      " information is extracted from the more-detailed contents of a" "\n"
+      " GeographicMap.  A RouteNetwork contains only the way points and" "\n"
+      " route segments of interest for path planning.")
+    struct RouteNetwork {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " This route network identifier")
+      unique_identifier_msgs::msg::UUID id;
+
+      @verbatim (language="comment", text=
+        " 2D bounding box for network")
+      geographic_msgs::msg::BoundingBox bounds;
+
+      @verbatim (language="comment", text=
+        " Way points in this network")
+      sequence<geographic_msgs::msg::WayPoint> points;
+
+      @verbatim (language="comment", text=
+        " Directed edges of this network")
+      sequence<geographic_msgs::msg::RouteSegment> segments;
+
+      @verbatim (language="comment", text=
+        " Network key/value properties")
+      sequence<geographic_msgs::msg::KeyValue> props;
+    };
+  };
+};

@@ -1,0 +1,53 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from diagnostic_msgs:srv/SelfTest.idl
+// generated code does not contain a copyright notice
+#include "diagnostic_msgs/msg/dds_connext/DiagnosticStatus_.idl"
+
+#ifndef __diagnostic_msgs__srv__self_test__idl__
+#define __diagnostic_msgs__srv__self_test__idl__
+
+
+module diagnostic_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SelfTest_Request_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module diagnostic_msgs
+
+
+module diagnostic_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct SelfTest_Response_ {
+string id_;
+octet passed_;
+sequence<diagnostic_msgs::msg::dds_::DiagnosticStatus_> status_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module diagnostic_msgs
+
+
+#endif  // __diagnostic_msgs__srv__self_test__idl__

@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geographic_msgs:msg/BoundingBox.idl
+// generated code does not contain a copyright notice
+#include "geographic_msgs/msg/dds_connext/GeoPoint_.idl"
+
+#ifndef __geographic_msgs__msg__bounding_box__idl__
+#define __geographic_msgs__msg__bounding_box__idl__
+
+
+module geographic_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct BoundingBox_ {
+geographic_msgs::msg::dds_::GeoPoint_ min_pt_;
+geographic_msgs::msg::dds_::GeoPoint_ max_pt_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geographic_msgs
+
+
+#endif  // __geographic_msgs__msg__bounding_box__idl__

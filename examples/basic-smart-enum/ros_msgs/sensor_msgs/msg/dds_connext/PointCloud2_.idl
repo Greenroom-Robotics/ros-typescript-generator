@@ -1,0 +1,41 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/PointCloud2.idl
+// generated code does not contain a copyright notice
+#include "sensor_msgs/msg/dds_connext/PointField_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __sensor_msgs__msg__point_cloud2__idl__
+#define __sensor_msgs__msg__point_cloud2__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct PointCloud2_ {
+std_msgs::msg::dds_::Header_ header_;
+unsigned long height_;
+unsigned long width_;
+sequence<sensor_msgs::msg::dds_::PointField_> fields_;
+
+boolean is_bigendian_;
+unsigned long point_step_;
+unsigned long row_step_;
+sequence<octet> data_;
+
+boolean is_dense_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__point_cloud2__idl__

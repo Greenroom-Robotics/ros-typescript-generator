@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/RegionOfInterest.idl
+// generated code does not contain a copyright notice
+
+#ifndef __sensor_msgs__msg__region_of_interest__idl__
+#define __sensor_msgs__msg__region_of_interest__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct RegionOfInterest_ {
+unsigned long x_offset_;
+unsigned long y_offset_;
+unsigned long height_;
+unsigned long width_;
+boolean do_rectify_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__region_of_interest__idl__

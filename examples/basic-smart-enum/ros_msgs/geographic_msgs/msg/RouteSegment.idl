@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from geographic_msgs/msg/RouteSegment.msg
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/KeyValue.idl"
+#include "unique_identifier_msgs/msg/UUID.idl"
+
+module geographic_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Route network segment." "\n"
+      "" "\n"
+      " This is one directed edge of a RouteNetwork graph. It represents a" "\n"
+      " known path from one way point to another.  If the path is two-way," "\n"
+      " there will be another RouteSegment with \"start\" and \"end\" reversed.")
+    struct RouteSegment {
+      @verbatim (language="comment", text=
+        " Unique identifier for this segment")
+      unique_identifier_msgs::msg::UUID id;
+
+      @verbatim (language="comment", text=
+        " beginning way point of segment")
+      unique_identifier_msgs::msg::UUID start;
+
+      @verbatim (language="comment", text=
+        " ending way point of segment")
+      unique_identifier_msgs::msg::UUID end;
+
+      @verbatim (language="comment", text=
+        " segment properties")
+      sequence<geographic_msgs::msg::KeyValue> props;
+    };
+  };
+};

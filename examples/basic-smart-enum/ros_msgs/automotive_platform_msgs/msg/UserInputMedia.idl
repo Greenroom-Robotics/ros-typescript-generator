@@ -1,0 +1,41 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/UserInputMedia.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " User input (e.g. button presses) related to media controls")
+    struct UserInputMedia {
+      std_msgs::msg::Header header;
+
+      boolean btn_vol_up;
+
+      boolean btn_vol_down;
+
+      boolean btn_mute;
+
+      boolean btn_next;
+
+      boolean btn_prev;
+
+      boolean btn_next_hang_up;
+
+      boolean btn_prev_answer;
+
+      boolean btn_hang_up;
+
+      boolean btn_answer;
+
+      boolean btn_play;
+
+      boolean btn_pause;
+
+      boolean btn_play_pause;
+
+      boolean btn_mode;
+    };
+  };
+};

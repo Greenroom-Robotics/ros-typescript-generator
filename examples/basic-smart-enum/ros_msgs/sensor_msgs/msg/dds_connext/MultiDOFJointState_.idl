@@ -1,0 +1,41 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/MultiDOFJointState.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Transform_.idl"
+#include "geometry_msgs/msg/dds_connext/Twist_.idl"
+#include "geometry_msgs/msg/dds_connext/Wrench_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __sensor_msgs__msg__multi_dof_joint_state__idl__
+#define __sensor_msgs__msg__multi_dof_joint_state__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct MultiDOFJointState_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<string> joint_names_;
+
+sequence<geometry_msgs::msg::dds_::Transform_> transforms_;
+
+sequence<geometry_msgs::msg::dds_::Twist_> twist_;
+
+sequence<geometry_msgs::msg::dds_::Wrench_> wrench_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__multi_dof_joint_state__idl__

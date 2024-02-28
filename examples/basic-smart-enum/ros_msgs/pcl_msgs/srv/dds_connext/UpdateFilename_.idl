@@ -1,0 +1,49 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from pcl_msgs:srv/UpdateFilename.idl
+// generated code does not contain a copyright notice
+
+#ifndef __pcl_msgs__srv__update_filename__idl__
+#define __pcl_msgs__srv__update_filename__idl__
+
+
+module pcl_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct UpdateFilename_Request_ {
+string filename_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module pcl_msgs
+
+
+module pcl_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct UpdateFilename_Response_ {
+boolean success_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module pcl_msgs
+
+
+#endif  // __pcl_msgs__srv__update_filename__idl__

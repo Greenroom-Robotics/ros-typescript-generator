@@ -1,0 +1,32 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geographic_msgs:msg/GeoPoseStamped.idl
+// generated code does not contain a copyright notice
+#include "geographic_msgs/msg/dds_connext/GeoPose_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __geographic_msgs__msg__geo_pose_stamped__idl__
+#define __geographic_msgs__msg__geo_pose_stamped__idl__
+
+
+module geographic_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct GeoPoseStamped_ {
+std_msgs::msg::dds_::Header_ header_;
+geographic_msgs::msg::dds_::GeoPose_ pose_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geographic_msgs
+
+
+#endif  // __geographic_msgs__msg__geo_pose_stamped__idl__

@@ -8,75 +8,75 @@
     },
     {
       "namespace": "action_msgs",
-      "path": "/opt/ros/galactic/share/action_msgs"
+      "path": "/opt/ros/iron/share/action_msgs"
     },
     {
       "namespace": "actionlib_msgs",
-      "path": "/opt/ros/galactic/share/actionlib_msgs"
+      "path": "/opt/ros/iron/share/actionlib_msgs"
     },
     {
       "namespace": "diagnostic_msgs",
-      "path": "/opt/ros/galactic/share/diagnostic_msgs"
+      "path": "/opt/ros/iron/share/diagnostic_msgs"
     },
     {
       "namespace": "geometry_msgs",
-      "path": "/opt/ros/galactic/share/geometry_msgs"
+      "path": "/opt/ros/iron/share/geometry_msgs"
     },
     {
       "namespace": "lifecycle_msgs",
-      "path": "/opt/ros/galactic/share/lifecycle_msgs"
+      "path": "/opt/ros/iron/share/lifecycle_msgs"
     },
     {
       "namespace": "nav_msgs",
-      "path": "/opt/ros/galactic/share/nav_msgs"
+      "path": "/opt/ros/iron/share/nav_msgs"
     },
     {
       "namespace": "rosgraph_msgs",
-      "path": "/opt/ros/galactic/share/rosgraph_msgs"
+      "path": "/opt/ros/iron/share/rosgraph_msgs"
     },
     {
       "namespace": "sensor_msgs",
-      "path": "/opt/ros/galactic/share/sensor_msgs"
+      "path": "/opt/ros/iron/share/sensor_msgs"
     },
     {
       "namespace": "shape_msgs",
-      "path": "/opt/ros/galactic/share/shape_msgs"
+      "path": "/opt/ros/iron/share/shape_msgs"
     },
     {
       "namespace": "statistics_msgs",
-      "path": "/opt/ros/galactic/share/statistics_msgs"
+      "path": "/opt/ros/iron/share/statistics_msgs"
     },
     {
       "namespace": "std_msgs",
-      "path": "/opt/ros/galactic/share/std_msgs"
+      "path": "/opt/ros/iron/share/std_msgs"
     },
     {
       "namespace": "stereo_msgs",
-      "path": "/opt/ros/galactic/share/stereo_msgs"
+      "path": "/opt/ros/iron/share/stereo_msgs"
     },
     {
       "namespace": "tf2_geometry_msgs",
-      "path": "/opt/ros/galactic/share/tf2_geometry_msgs"
+      "path": "/opt/ros/iron/share/tf2_geometry_msgs"
     },
     {
       "namespace": "tf2_msgs",
-      "path": "/opt/ros/galactic/share/tf2_msgs"
+      "path": "/opt/ros/iron/share/tf2_msgs"
     },
     {
       "namespace": "tf2_sensor_msgs",
-      "path": "/opt/ros/galactic/share/tf2_sensor_msgs"
+      "path": "/opt/ros/iron/share/tf2_sensor_msgs"
     },
     {
       "namespace": "trajectory_msgs",
-      "path": "/opt/ros/galactic/share/trajectory_msgs"
+      "path": "/opt/ros/iron/share/trajectory_msgs"
     },
     {
       "namespace": "unique_identifier_msgs",
-      "path": "/opt/ros/galactic/share/unique_identifier_msgs"
+      "path": "/opt/ros/iron/share/unique_identifier_msgs"
     },
     {
       "namespace": "visualization_msgs",
-      "path": "/opt/ros/galactic/share/visualization_msgs"
+      "path": "/opt/ros/iron/share/visualization_msgs"
     }
   ],
   "typePrefix": "IRosType"

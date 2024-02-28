@@ -1,0 +1,35 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from trajectory_msgs:msg/MultiDOFJointTrajectory.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+#include "trajectory_msgs/msg/dds_connext/MultiDOFJointTrajectoryPoint_.idl"
+
+#ifndef __trajectory_msgs__msg__multi_dof_joint_trajectory__idl__
+#define __trajectory_msgs__msg__multi_dof_joint_trajectory__idl__
+
+
+module trajectory_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct MultiDOFJointTrajectory_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<string> joint_names_;
+
+sequence<trajectory_msgs::msg::dds_::MultiDOFJointTrajectoryPoint_> points_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module trajectory_msgs
+
+
+#endif  // __trajectory_msgs__msg__multi_dof_joint_trajectory__idl__

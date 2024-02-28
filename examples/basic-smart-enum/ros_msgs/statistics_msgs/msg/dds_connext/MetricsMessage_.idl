@@ -1,0 +1,37 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from statistics_msgs:msg/MetricsMessage.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+#include "statistics_msgs/msg/dds_connext/StatisticDataPoint_.idl"
+
+#ifndef __statistics_msgs__msg__metrics_message__idl__
+#define __statistics_msgs__msg__metrics_message__idl__
+
+
+module statistics_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct MetricsMessage_ {
+string measurement_source_name_;
+string metrics_source_;
+string unit_;
+builtin_interfaces::msg::dds_::Time_ window_start_;
+builtin_interfaces::msg::dds_::Time_ window_stop_;
+sequence<statistics_msgs::msg::dds_::StatisticDataPoint_> statistics_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module statistics_msgs
+
+
+#endif  // __statistics_msgs__msg__metrics_message__idl__

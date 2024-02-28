@@ -1,0 +1,38 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from automotive_platform_msgs:msg/Gear.idl
+// generated code does not contain a copyright notice
+
+#ifndef __automotive_platform_msgs__msg__gear__idl__
+#define __automotive_platform_msgs__msg__gear__idl__
+
+
+module automotive_platform_msgs {
+
+module msg {
+
+module dds_ {
+
+module Gear_Constants {
+const octet NONE_ = 0;
+const octet PARK_ = 1;
+const octet REVERSE_ = 2;
+const octet NEUTRAL_ = 3;
+const octet DRIVE_ = 4;
+const octet LOW_ = 5;
+
+};
+
+struct Gear_ {
+octet gear_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module automotive_platform_msgs
+
+
+#endif  // __automotive_platform_msgs__msg__gear__idl__

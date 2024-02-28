@@ -1,0 +1,36 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/PointCloud.idl
+// generated code does not contain a copyright notice
+#include "geometry_msgs/msg/dds_connext/Point32_.idl"
+#include "sensor_msgs/msg/dds_connext/ChannelFloat32_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __sensor_msgs__msg__point_cloud__idl__
+#define __sensor_msgs__msg__point_cloud__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct PointCloud_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<geometry_msgs::msg::dds_::Point32_> points_;
+
+sequence<sensor_msgs::msg::dds_::ChannelFloat32_> channels_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__point_cloud__idl__

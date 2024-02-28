@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from shape_msgs:msg/MeshTriangle.idl
+// generated code does not contain a copyright notice
+
+#ifndef __shape_msgs__msg__mesh_triangle__idl__
+#define __shape_msgs__msg__mesh_triangle__idl__
+
+
+module shape_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct MeshTriangle_ {
+unsigned long vertex_indices_[3];
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module shape_msgs
+
+
+#endif  // __shape_msgs__msg__mesh_triangle__idl__

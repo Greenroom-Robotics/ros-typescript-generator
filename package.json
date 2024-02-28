@@ -1,6 +1,6 @@
 {
   "name": "ros-typescript-generator",
-  "version": "1.6.4",
+  "version": "1.8.1",
   "description": "A CLI for generating typescript interfaces from ros messages and services",
   "main": "build/main/cli/cli.js",
   "typings": "build/main/cli/cli.d.ts",
@@ -45,7 +45,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "@foxglove/rosmsg": "^1.0.1",
+    "@foxglove/rosmsg": "^5.0.1",
     "chalk": "^4.1.2",
     "commander": "^8.1.0",
     "lodash": "^4.17.21",

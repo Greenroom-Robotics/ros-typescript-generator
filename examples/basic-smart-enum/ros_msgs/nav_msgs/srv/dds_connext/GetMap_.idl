@@ -1,0 +1,50 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from nav_msgs:srv/GetMap.idl
+// generated code does not contain a copyright notice
+#include "nav_msgs/msg/dds_connext/OccupancyGrid_.idl"
+
+#ifndef __nav_msgs__srv__get_map__idl__
+#define __nav_msgs__srv__get_map__idl__
+
+
+module nav_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetMap_Request_ {
+octet structure_needs_at_least_one_member_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module nav_msgs
+
+
+module nav_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct GetMap_Response_ {
+nav_msgs::msg::dds_::OccupancyGrid_ map_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module nav_msgs
+
+
+#endif  // __nav_msgs__srv__get_map__idl__

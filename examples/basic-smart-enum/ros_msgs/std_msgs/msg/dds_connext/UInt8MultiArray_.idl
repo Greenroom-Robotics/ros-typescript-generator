@@ -1,0 +1,32 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from std_msgs:msg/UInt8MultiArray.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/MultiArrayLayout_.idl"
+
+#ifndef __std_msgs__msg__u_int8_multi_array__idl__
+#define __std_msgs__msg__u_int8_multi_array__idl__
+
+
+module std_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct UInt8MultiArray_ {
+std_msgs::msg::dds_::MultiArrayLayout_ layout_;
+sequence<octet> data_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module std_msgs
+
+
+#endif  // __std_msgs__msg__u_int8_multi_array__idl__

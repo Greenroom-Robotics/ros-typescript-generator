@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from geographic_msgs/srv/UpdateGeographicMap.srv
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/GeographicMapChanges.idl"
+
+module geographic_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " This service updates a geographic map.")
+    struct UpdateGeographicMap_Request {
+      @verbatim (language="comment", text=
+        " Changes to geographic map.")
+      geographic_msgs::msg::GeographicMapChanges updates;
+    };
+    struct UpdateGeographicMap_Response {
+      @verbatim (language="comment", text=
+        " true if the call succeeded")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        " more details")
+      string status;
+    };
+  };
+};

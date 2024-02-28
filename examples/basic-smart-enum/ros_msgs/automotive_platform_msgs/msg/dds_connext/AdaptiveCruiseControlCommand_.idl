@@ -1,0 +1,39 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from automotive_platform_msgs:msg/AdaptiveCruiseControlCommand.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __automotive_platform_msgs__msg__adaptive_cruise_control_command__idl__
+#define __automotive_platform_msgs__msg__adaptive_cruise_control_command__idl__
+
+
+module automotive_platform_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct AdaptiveCruiseControlCommand_ {
+std_msgs::msg::dds_::Header_ header_;
+octet msg_counter_;
+float set_speed_;
+unsigned short set_;
+unsigned short resume_;
+unsigned short cancel_;
+unsigned short speed_up_;
+unsigned short slow_down_;
+unsigned short further_;
+unsigned short closer_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module automotive_platform_msgs
+
+
+#endif  // __automotive_platform_msgs__msg__adaptive_cruise_control_command__idl__

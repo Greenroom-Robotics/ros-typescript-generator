@@ -1,0 +1,38 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/JointState.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __sensor_msgs__msg__joint_state__idl__
+#define __sensor_msgs__msg__joint_state__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct JointState_ {
+std_msgs::msg::dds_::Header_ header_;
+sequence<string> name_;
+
+sequence<double> position_;
+
+sequence<double> velocity_;
+
+sequence<double> effort_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__joint_state__idl__

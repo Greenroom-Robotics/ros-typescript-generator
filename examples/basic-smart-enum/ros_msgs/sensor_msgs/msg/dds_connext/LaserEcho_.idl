@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from sensor_msgs:msg/LaserEcho.idl
+// generated code does not contain a copyright notice
+
+#ifndef __sensor_msgs__msg__laser_echo__idl__
+#define __sensor_msgs__msg__laser_echo__idl__
+
+
+module sensor_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct LaserEcho_ {
+sequence<float> echoes_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module sensor_msgs
+
+
+#endif  // __sensor_msgs__msg__laser_echo__idl__

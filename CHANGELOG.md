@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.1](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.8.0...v1.8.1) (2024-02-28)
+
+
+### Bug Fixes
+
+* symbolic link handling for services and actions ([#22](https://github.com/Greenroom-Robotics/ros-typescript-generator/issues/22)) ([8fdfc84](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/8fdfc847575cde7df2212a2602fdba1defda0931))
+
+## [1.8.0](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.7.0...v1.8.0) (2024-02-20)
+
+
+### Features
+
+* "@foxglove/rosmsg" to version "^5.0.1" ([#19](https://github.com/Greenroom-Robotics/ros-typescript-generator/issues/19)) ([68eaf18](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/68eaf18eda2379f1929c70ad8f662f7449a1911a))
+* Group Service Request/Response in a single interface ([#18](https://github.com/Greenroom-Robotics/ros-typescript-generator/issues/18)) ([12bd66a](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/12bd66acb339d71a23cb5a0afa3be643d82acebf))
+
+
+### Bug Fixes
+
+* Add handling for symbolic links in getMsgFiles function ([#21](https://github.com/Greenroom-Robotics/ros-typescript-generator/issues/21)) ([6fec6f2](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/6fec6f24ce4fe2cc1d1fd452d6950fc4fa61c0d1))
+* resolve issues with @foxglove/rosmsg upgade ([a0b9ed1](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/a0b9ed183bd588dc29ac60c61642246894bd3e14))
+
+## [1.7.0](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.6.4...v1.7.0) (2023-10-10)
+
+
+### Features
+
+* add support for action and srv files ([#14](https://github.com/Greenroom-Robotics/ros-typescript-generator/issues/14)) ([6baec16](https://github.com/Greenroom-Robotics/ros-typescript-generator/commit/6baec160eb102e03266569d841f55ed263394bad))
+
 ### [1.6.4](https://github.com/Greenroom-Robotics/ros-typescript-generator/compare/v1.6.2...v1.6.4) (2023-04-26)
 
 

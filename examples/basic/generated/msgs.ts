@@ -1,12 +1,8 @@
 /* eslint-disable */
 // These files were generated using "ros-typescript-generator"
-export enum IRosTypeStatisticsMsgsStatisticDataTypeConst {
-  STATISTICS_DATA_TYPE_UNINITIALIZED = 0,
-  STATISTICS_DATA_TYPE_AVERAGE = 1,
-  STATISTICS_DATA_TYPE_MINIMUM = 2,
-  STATISTICS_DATA_TYPE_MAXIMUM = 3,
-  STATISTICS_DATA_TYPE_STDDEV = 4,
-  STATISTICS_DATA_TYPE_SAMPLE_COUNT = 5,
+export interface IRosTypeActionMsgsCancelGoal {
+  request: IRosTypeActionMsgsCancelGoalRequest;
+  response: IRosTypeActionMsgsCancelGoalResponse;
 }
 
 export interface IRosTypeActionMsgsCancelGoalRequest {
@@ -46,7 +42,7 @@ export enum IRosTypeActionMsgsGoalStatusConst {
 }
 
 export interface IRosTypeActionMsgsGoalStatusArray {
-  status_list: IRosTypeActionlibMsgsGoalStatus[];
+  status_list: IRosTypeActionMsgsGoalStatus[];
 }
 
 export interface IRosTypeActionlibMsgsGoalId {
@@ -328,6 +324,11 @@ export interface IRosTypeCanMsgsFrame {
   data: number[];
 }
 
+export interface IRosTypeDiagnosticMsgsAddDiagnostics {
+  request: IRosTypeDiagnosticMsgsAddDiagnosticsRequest;
+  response: IRosTypeDiagnosticMsgsAddDiagnosticsResponse;
+}
+
 export interface IRosTypeDiagnosticMsgsAddDiagnosticsRequest {
   load_namespace: string;
 }
@@ -360,6 +361,10 @@ export enum IRosTypeDiagnosticMsgsDiagnosticStatusConst {
 export interface IRosTypeDiagnosticMsgsKeyValue {
   key: string;
   value: string;
+}
+
+export interface IRosTypeDiagnosticMsgsSelfTest {
+  response: IRosTypeDiagnosticMsgsSelfTestResponse;
 }
 
 export interface IRosTypeDiagnosticMsgsSelfTestResponse {
@@ -405,13 +410,18 @@ export interface IRosTypeGeographicMsgsGeographicMap {
   bounds: IRosTypeGeographicMsgsBoundingBox;
   points: IRosTypeGeographicMsgsWayPoint[];
   features: IRosTypeGeographicMsgsMapFeature[];
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeographicMsgsGeographicMapChanges {
   header: IRosTypeStdMsgsHeader;
   diffs: IRosTypeGeographicMsgsGeographicMap;
   deletes: IRosTypeUniqueIdentifierMsgsUuid[];
+}
+
+export interface IRosTypeGeographicMsgsGetGeoPath {
+  request: IRosTypeGeographicMsgsGetGeoPathRequest;
+  response: IRosTypeGeographicMsgsGetGeoPathResponse;
 }
 
 export interface IRosTypeGeographicMsgsGetGeoPathRequest {
@@ -429,6 +439,11 @@ export interface IRosTypeGeographicMsgsGetGeoPathResponse {
   distance: number;
 }
 
+export interface IRosTypeGeographicMsgsGetGeographicMap {
+  request: IRosTypeGeographicMsgsGetGeographicMapRequest;
+  response: IRosTypeGeographicMsgsGetGeographicMapResponse;
+}
+
 export interface IRosTypeGeographicMsgsGetGeographicMapRequest {
   url: string;
   bounds: IRosTypeGeographicMsgsBoundingBox;
@@ -438,6 +453,11 @@ export interface IRosTypeGeographicMsgsGetGeographicMapResponse {
   success: boolean;
   status: string;
   map: IRosTypeGeographicMsgsGeographicMap;
+}
+
+export interface IRosTypeGeographicMsgsGetRoutePlan {
+  request: IRosTypeGeographicMsgsGetRoutePlanRequest;
+  response: IRosTypeGeographicMsgsGetRoutePlanResponse;
 }
 
 export interface IRosTypeGeographicMsgsGetRoutePlanRequest {
@@ -460,7 +480,7 @@ export interface IRosTypeGeographicMsgsKeyValue {
 export interface IRosTypeGeographicMsgsMapFeature {
   id: IRosTypeUniqueIdentifierMsgsUuid;
   components: IRosTypeUniqueIdentifierMsgsUuid[];
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeographicMsgsRouteNetwork {
@@ -469,21 +489,26 @@ export interface IRosTypeGeographicMsgsRouteNetwork {
   bounds: IRosTypeGeographicMsgsBoundingBox;
   points: IRosTypeGeographicMsgsWayPoint[];
   segments: IRosTypeGeographicMsgsRouteSegment[];
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeographicMsgsRoutePath {
   header: IRosTypeStdMsgsHeader;
   network: IRosTypeUniqueIdentifierMsgsUuid;
   segments: IRosTypeUniqueIdentifierMsgsUuid[];
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeographicMsgsRouteSegment {
   id: IRosTypeUniqueIdentifierMsgsUuid;
   start: IRosTypeUniqueIdentifierMsgsUuid;
   end: IRosTypeUniqueIdentifierMsgsUuid;
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
+}
+
+export interface IRosTypeGeographicMsgsUpdateGeographicMap {
+  request: IRosTypeGeographicMsgsUpdateGeographicMapRequest;
+  response: IRosTypeGeographicMsgsUpdateGeographicMapResponse;
 }
 
 export interface IRosTypeGeographicMsgsUpdateGeographicMapRequest {
@@ -498,7 +523,7 @@ export interface IRosTypeGeographicMsgsUpdateGeographicMapResponse {
 export interface IRosTypeGeographicMsgsWayPoint {
   id: IRosTypeUniqueIdentifierMsgsUuid;
   position: IRosTypeGeographicMsgsGeoPoint;
-  props: IRosTypeDiagnosticMsgsKeyValue[];
+  props: IRosTypeGeographicMsgsKeyValue[];
 }
 
 export interface IRosTypeGeometryMsgsAccel {
@@ -835,6 +860,11 @@ export enum IRosTypeLgsvlMsgsVehicleStateDataConst {
   VEHICLE_MODE_EMERGENCY_MODE = 4,
 }
 
+export interface IRosTypeLifecycleMsgsChangeState {
+  request: IRosTypeLifecycleMsgsChangeStateRequest;
+  response: IRosTypeLifecycleMsgsChangeStateResponse;
+}
+
 export interface IRosTypeLifecycleMsgsChangeStateRequest {
   transition: IRosTypeLifecycleMsgsTransition;
 }
@@ -843,12 +873,24 @@ export interface IRosTypeLifecycleMsgsChangeStateResponse {
   success: boolean;
 }
 
+export interface IRosTypeLifecycleMsgsGetAvailableStates {
+  response: IRosTypeLifecycleMsgsGetAvailableStatesResponse;
+}
+
 export interface IRosTypeLifecycleMsgsGetAvailableStatesResponse {
   available_states: IRosTypeLifecycleMsgsState[];
 }
 
+export interface IRosTypeLifecycleMsgsGetAvailableTransitions {
+  response: IRosTypeLifecycleMsgsGetAvailableTransitionsResponse;
+}
+
 export interface IRosTypeLifecycleMsgsGetAvailableTransitionsResponse {
   available_transitions: IRosTypeLifecycleMsgsTransitionDescription[];
+}
+
+export interface IRosTypeLifecycleMsgsGetState {
+  response: IRosTypeLifecycleMsgsGetStateResponse;
 }
 
 export interface IRosTypeLifecycleMsgsGetStateResponse {
@@ -925,8 +967,17 @@ export interface IRosTypeLifecycleMsgsTransitionEvent {
   goal_state: IRosTypeLifecycleMsgsState;
 }
 
+export interface IRosTypeNavMsgsGetMap {
+  response: IRosTypeNavMsgsGetMapResponse;
+}
+
 export interface IRosTypeNavMsgsGetMapResponse {
   map: IRosTypeNavMsgsOccupancyGrid;
+}
+
+export interface IRosTypeNavMsgsGetPlan {
+  request: IRosTypeNavMsgsGetPlanRequest;
+  response: IRosTypeNavMsgsGetPlanResponse;
 }
 
 export interface IRosTypeNavMsgsGetPlanRequest {
@@ -972,6 +1023,11 @@ export interface IRosTypeNavMsgsPath {
   poses: IRosTypeGeometryMsgsPoseStamped[];
 }
 
+export interface IRosTypeNavMsgsSetMap {
+  request: IRosTypeNavMsgsSetMapRequest;
+  response: IRosTypeNavMsgsSetMapResponse;
+}
+
 export interface IRosTypeNavMsgsSetMapRequest {
   map: IRosTypeNavMsgsOccupancyGrid;
   initial_pose: IRosTypeGeometryMsgsPoseWithCovarianceStamped;
@@ -995,6 +1051,11 @@ export interface IRosTypePclMsgsPolygonMesh {
   header: IRosTypeStdMsgsHeader;
   cloud: IRosTypeSensorMsgsPointCloud2;
   polygons: IRosTypePclMsgsVertices[];
+}
+
+export interface IRosTypePclMsgsUpdateFilename {
+  request: IRosTypePclMsgsUpdateFilenameRequest;
+  response: IRosTypePclMsgsUpdateFilenameResponse;
 }
 
 export interface IRosTypePclMsgsUpdateFilenameRequest {
@@ -1284,6 +1345,11 @@ export interface IRosTypeSensorMsgsRelativeHumidity {
   variance: number;
 }
 
+export interface IRosTypeSensorMsgsSetCameraInfo {
+  request: IRosTypeSensorMsgsSetCameraInfoRequest;
+  response: IRosTypeSensorMsgsSetCameraInfoResponse;
+}
+
 export interface IRosTypeSensorMsgsSetCameraInfoRequest {
   camera_info: IRosTypeSensorMsgsCameraInfo;
 }
@@ -1336,6 +1402,15 @@ export enum IRosTypeShapeMsgsSolidPrimitiveConst {
   CYLINDER_RADIUS = 1,
   CONE_HEIGHT = 0,
   CONE_RADIUS = 1,
+}
+
+export enum IRosTypeStatisticsMsgsStatisticDataTypeConst {
+  STATISTICS_DATA_TYPE_UNINITIALIZED = 0,
+  STATISTICS_DATA_TYPE_AVERAGE = 1,
+  STATISTICS_DATA_TYPE_MINIMUM = 2,
+  STATISTICS_DATA_TYPE_MAXIMUM = 3,
+  STATISTICS_DATA_TYPE_STDDEV = 4,
+  STATISTICS_DATA_TYPE_SAMPLE_COUNT = 5,
 }
 
 export interface IRosTypeStatisticsMsgsMetricsMessage {
@@ -1497,6 +1572,10 @@ export interface IRosTypeStereoMsgsDisparityImage {
   delta_d: number;
 }
 
+export interface IRosTypeTf2MsgsFrameGraph {
+  response: IRosTypeTf2MsgsFrameGraphResponse;
+}
+
 export interface IRosTypeTf2MsgsFrameGraphResponse {
   frame_yaml: string;
 }
@@ -1531,7 +1610,7 @@ export interface IRosTypeTrajectoryMsgsJointTrajectoryPoint {
   velocities: number[];
   accelerations: number[];
   effort: number[];
-  time_from_start: number;
+  time_from_start: { sec: number, nanosec: number };
 }
 
 export interface IRosTypeTrajectoryMsgsMultiDofJointTrajectory {
@@ -1544,11 +1623,15 @@ export interface IRosTypeTrajectoryMsgsMultiDofJointTrajectoryPoint {
   transforms: IRosTypeGeometryMsgsTransform[];
   velocities: IRosTypeGeometryMsgsTwist[];
   accelerations: IRosTypeGeometryMsgsTwist[];
-  time_from_start: number;
+  time_from_start: { sec: number, nanosec: number };
 }
 
 export interface IRosTypeUniqueIdentifierMsgsUuid {
   uuid: number[];
+}
+
+export interface IRosTypeVisualizationMsgsGetInteractiveMarkers {
+  response: IRosTypeVisualizationMsgsGetInteractiveMarkersResponse;
 }
 
 export interface IRosTypeVisualizationMsgsGetInteractiveMarkersResponse {
@@ -1567,7 +1650,7 @@ export interface IRosTypeVisualizationMsgsImageMarker {
   outline_color: IRosTypeStdMsgsColorRgba;
   filled: number;
   fill_color: IRosTypeStdMsgsColorRgba;
-  lifetime: number;
+  lifetime: { sec: number, nanosec: number };
   points: IRosTypeGeometryMsgsPoint[];
   outline_colors: IRosTypeStdMsgsColorRgba[];
 }
@@ -1675,7 +1758,7 @@ export interface IRosTypeVisualizationMsgsMarker {
   pose: IRosTypeGeometryMsgsPose;
   scale: IRosTypeGeometryMsgsVector3;
   color: IRosTypeStdMsgsColorRgba;
-  lifetime: number;
+  lifetime: { sec: number, nanosec: number };
   frame_locked: boolean;
   points: IRosTypeGeometryMsgsPoint[];
   colors: IRosTypeStdMsgsColorRgba[];

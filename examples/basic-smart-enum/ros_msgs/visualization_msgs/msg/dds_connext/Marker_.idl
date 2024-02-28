@@ -1,0 +1,70 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from visualization_msgs:msg/Marker.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Duration_.idl"
+#include "geometry_msgs/msg/dds_connext/Point_.idl"
+#include "geometry_msgs/msg/dds_connext/Pose_.idl"
+#include "geometry_msgs/msg/dds_connext/Vector3_.idl"
+#include "std_msgs/msg/dds_connext/ColorRGBA_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __visualization_msgs__msg__marker__idl__
+#define __visualization_msgs__msg__marker__idl__
+
+
+module visualization_msgs {
+
+module msg {
+
+module dds_ {
+
+module Marker_Constants {
+const long ARROW_ = 0;
+const long CUBE_ = 1;
+const long SPHERE_ = 2;
+const long CYLINDER_ = 3;
+const long LINE_STRIP_ = 4;
+const long LINE_LIST_ = 5;
+const long CUBE_LIST_ = 6;
+const long SPHERE_LIST_ = 7;
+const long POINTS_ = 8;
+const long TEXT_VIEW_FACING_ = 9;
+const long MESH_RESOURCE_ = 10;
+const long TRIANGLE_LIST_ = 11;
+const long ADD_ = 0;
+const long MODIFY_ = 0;
+const long DELETE_ = 2;
+const long DELETEALL_ = 3;
+
+};
+
+struct Marker_ {
+std_msgs::msg::dds_::Header_ header_;
+string ns_;
+long id_;
+long type_;
+long action_;
+geometry_msgs::msg::dds_::Pose_ pose_;
+geometry_msgs::msg::dds_::Vector3_ scale_;
+std_msgs::msg::dds_::ColorRGBA_ color_;
+builtin_interfaces::msg::dds_::Duration_ lifetime_;
+boolean frame_locked_;
+sequence<geometry_msgs::msg::dds_::Point_> points_;
+
+sequence<std_msgs::msg::dds_::ColorRGBA_> colors_;
+
+string text_;
+string mesh_resource_;
+boolean mesh_use_embedded_materials_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module visualization_msgs
+
+
+#endif  // __visualization_msgs__msg__marker__idl__

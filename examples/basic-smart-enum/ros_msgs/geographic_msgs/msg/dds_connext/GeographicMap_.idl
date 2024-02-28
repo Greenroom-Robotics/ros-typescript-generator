@@ -1,0 +1,43 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from geographic_msgs:msg/GeographicMap.idl
+// generated code does not contain a copyright notice
+#include "geographic_msgs/msg/dds_connext/BoundingBox_.idl"
+#include "geographic_msgs/msg/dds_connext/KeyValue_.idl"
+#include "geographic_msgs/msg/dds_connext/MapFeature_.idl"
+#include "geographic_msgs/msg/dds_connext/WayPoint_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __geographic_msgs__msg__geographic_map__idl__
+#define __geographic_msgs__msg__geographic_map__idl__
+
+
+module geographic_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct GeographicMap_ {
+std_msgs::msg::dds_::Header_ header_;
+unique_identifier_msgs::msg::dds_::UUID_ id_;
+geographic_msgs::msg::dds_::BoundingBox_ bounds_;
+sequence<geographic_msgs::msg::dds_::WayPoint_> points_;
+
+sequence<geographic_msgs::msg::dds_::MapFeature_> features_;
+
+sequence<geographic_msgs::msg::dds_::KeyValue_> props_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module geographic_msgs
+
+
+#endif  // __geographic_msgs__msg__geographic_map__idl__

@@ -1,0 +1,43 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from automotive_platform_msgs:msg/UserInputADAS.idl
+// generated code does not contain a copyright notice
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __automotive_platform_msgs__msg__user_input_adas__idl__
+#define __automotive_platform_msgs__msg__user_input_adas__idl__
+
+
+module automotive_platform_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct UserInputADAS_ {
+std_msgs::msg::dds_::Header_ header_;
+boolean btn_cc_on_;
+boolean btn_cc_off_;
+boolean btn_cc_on_off_;
+boolean btn_cc_set_inc_;
+boolean btn_cc_set_dec_;
+boolean btn_cc_res_;
+boolean btn_cc_cncl_;
+boolean btn_cc_res_cncl_;
+boolean btn_acc_gap_inc_;
+boolean btn_acc_gap_dec_;
+boolean btn_lka_on_;
+boolean btn_lka_off_;
+boolean btn_lka_on_off_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module automotive_platform_msgs
+
+
+#endif  // __automotive_platform_msgs__msg__user_input_adas__idl__

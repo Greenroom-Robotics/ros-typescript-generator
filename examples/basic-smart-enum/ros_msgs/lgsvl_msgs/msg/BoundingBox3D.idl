@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from lgsvl_msgs/msg/BoundingBox3D.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/Vector3.idl"
+
+module lgsvl_msgs {
+  module msg {
+    struct BoundingBox3D {
+      @verbatim (language="comment", text=
+        " 3D position and orientation of the bounding box center in Lidar space, in meters")
+      geometry_msgs::msg::Pose position;
+
+      @verbatim (language="comment", text=
+        " Size of the bounding box, in meters")
+      geometry_msgs::msg::Vector3 size;
+    };
+  };
+};

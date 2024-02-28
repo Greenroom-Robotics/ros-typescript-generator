@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from geographic_msgs/msg/RoutePath.msg
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/KeyValue.idl"
+#include "std_msgs/msg/Header.idl"
+#include "unique_identifier_msgs/msg/UUID.idl"
+
+module geographic_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Path through a route network." "\n"
+      "" "\n"
+      " A path is a sequence of RouteSegment edges.  This information is" "\n"
+      " extracted from a RouteNetwork graph.  A RoutePath lists the route" "\n"
+      " segments needed to reach some chosen goal.")
+    struct RoutePath {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " Route network containing this path")
+      unique_identifier_msgs::msg::UUID network;
+
+      @verbatim (language="comment", text=
+        " Sequence of RouteSegment IDs")
+      sequence<unique_identifier_msgs::msg::UUID> segments;
+
+      @verbatim (language="comment", text=
+        " Key/value properties")
+      sequence<geographic_msgs::msg::KeyValue> props;
+    };
+  };
+};

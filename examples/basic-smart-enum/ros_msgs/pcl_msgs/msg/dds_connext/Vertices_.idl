@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from pcl_msgs:msg/Vertices.idl
+// generated code does not contain a copyright notice
+
+#ifndef __pcl_msgs__msg__vertices__idl__
+#define __pcl_msgs__msg__vertices__idl__
+
+
+module pcl_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Vertices_ {
+sequence<unsigned long> vertices_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module pcl_msgs
+
+
+#endif  // __pcl_msgs__msg__vertices__idl__

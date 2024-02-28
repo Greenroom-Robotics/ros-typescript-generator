@@ -1,0 +1,50 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from diagnostic_msgs:srv/AddDiagnostics.idl
+// generated code does not contain a copyright notice
+
+#ifndef __diagnostic_msgs__srv__add_diagnostics__idl__
+#define __diagnostic_msgs__srv__add_diagnostics__idl__
+
+
+module diagnostic_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct AddDiagnostics_Request_ {
+string load_namespace_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module diagnostic_msgs
+
+
+module diagnostic_msgs {
+
+module srv {
+
+module dds_ {
+
+
+struct AddDiagnostics_Response_ {
+boolean success_;
+string message_;
+
+};
+
+
+};  // module dds_
+
+};  // module srv
+
+};  // module diagnostic_msgs
+
+
+#endif  // __diagnostic_msgs__srv__add_diagnostics__idl__

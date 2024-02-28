@@ -1,0 +1,53 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from automotive_platform_msgs/msg/AdaptiveCruiseControlCommand.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module automotive_platform_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Adaptive Cruise Control Command Message" "\n"
+      " Contains commands to engage/disengage ACC or adjust the set points")
+    struct AdaptiveCruiseControlCommand {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " Increments each time a command is sent" "\n"
+        " An acknowledge message should be published with this value")
+      uint8 msg_counter;
+
+      @verbatim (language="comment", text=
+        " Speed setpoint (m/sec)")
+      float set_speed;
+
+      @verbatim (language="comment", text=
+        " Engage ACC at the above speed set point")
+      uint16 set;
+
+      @verbatim (language="comment", text=
+        " Resume ACC at previous speed set point")
+      uint16 resume;
+
+      @verbatim (language="comment", text=
+        " Disengage ACC")
+      uint16 cancel;
+
+      @verbatim (language="comment", text=
+        " Increase speed set point")
+      uint16 speed_up;
+
+      @verbatim (language="comment", text=
+        " Decrease speed set point")
+      uint16 slow_down;
+
+      @verbatim (language="comment", text=
+        " Increase distance set point")
+      uint16 further;
+
+      @verbatim (language="comment", text=
+        " Decrease distance set point")
+      uint16 closer;
+    };
+  };
+};

@@ -1,0 +1,30 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from rosgraph_msgs:msg/Clock.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+
+#ifndef __rosgraph_msgs__msg__clock__idl__
+#define __rosgraph_msgs__msg__clock__idl__
+
+
+module rosgraph_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct Clock_ {
+builtin_interfaces::msg::dds_::Time_ clock_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module rosgraph_msgs
+
+
+#endif  // __rosgraph_msgs__msg__clock__idl__

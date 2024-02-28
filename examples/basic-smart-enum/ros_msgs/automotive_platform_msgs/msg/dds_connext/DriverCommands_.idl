@@ -1,0 +1,37 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from automotive_platform_msgs:msg/DriverCommands.idl
+// generated code does not contain a copyright notice
+
+#ifndef __automotive_platform_msgs__msg__driver_commands__idl__
+#define __automotive_platform_msgs__msg__driver_commands__idl__
+
+
+module automotive_platform_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct DriverCommands_ {
+octet msg_counter_;
+unsigned short engage_;
+unsigned short disengage_;
+unsigned short speed_up_;
+unsigned short slow_down_;
+unsigned short further_;
+unsigned short closer_;
+unsigned short right_turn_;
+unsigned short left_turn_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module automotive_platform_msgs
+
+
+#endif  // __automotive_platform_msgs__msg__driver_commands__idl__

@@ -1,0 +1,44 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from lifecycle_msgs:msg/State.idl
+// generated code does not contain a copyright notice
+
+#ifndef __lifecycle_msgs__msg__state__idl__
+#define __lifecycle_msgs__msg__state__idl__
+
+
+module lifecycle_msgs {
+
+module msg {
+
+module dds_ {
+
+module State_Constants {
+const octet PRIMARY_STATE_UNKNOWN_ = 0;
+const octet PRIMARY_STATE_UNCONFIGURED_ = 1;
+const octet PRIMARY_STATE_INACTIVE_ = 2;
+const octet PRIMARY_STATE_ACTIVE_ = 3;
+const octet PRIMARY_STATE_FINALIZED_ = 4;
+const octet TRANSITION_STATE_CONFIGURING_ = 10;
+const octet TRANSITION_STATE_CLEANINGUP_ = 11;
+const octet TRANSITION_STATE_SHUTTINGDOWN_ = 12;
+const octet TRANSITION_STATE_ACTIVATING_ = 13;
+const octet TRANSITION_STATE_DEACTIVATING_ = 14;
+const octet TRANSITION_STATE_ERRORPROCESSING_ = 15;
+
+};
+
+struct State_ {
+octet id_;
+string label_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module lifecycle_msgs
+
+
+#endif  // __lifecycle_msgs__msg__state__idl__

@@ -1,0 +1,39 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from stereo_msgs:msg/DisparityImage.idl
+// generated code does not contain a copyright notice
+#include "sensor_msgs/msg/dds_connext/Image_.idl"
+#include "sensor_msgs/msg/dds_connext/RegionOfInterest_.idl"
+#include "std_msgs/msg/dds_connext/Header_.idl"
+
+#ifndef __stereo_msgs__msg__disparity_image__idl__
+#define __stereo_msgs__msg__disparity_image__idl__
+
+
+module stereo_msgs {
+
+module msg {
+
+module dds_ {
+
+
+struct DisparityImage_ {
+std_msgs::msg::dds_::Header_ header_;
+sensor_msgs::msg::dds_::Image_ image_;
+float f_;
+float t_;
+sensor_msgs::msg::dds_::RegionOfInterest_ valid_window_;
+float min_disparity_;
+float max_disparity_;
+float delta_d_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module stereo_msgs
+
+
+#endif  // __stereo_msgs__msg__disparity_image__idl__

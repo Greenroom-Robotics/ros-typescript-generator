@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from geographic_msgs/msg/WayPoint.msg
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/GeoPoint.idl"
+#include "geographic_msgs/msg/KeyValue.idl"
+#include "unique_identifier_msgs/msg/UUID.idl"
+
+module geographic_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Way-point element for a geographic map.")
+    struct WayPoint {
+      @verbatim (language="comment", text=
+        " Unique way-point identifier")
+      unique_identifier_msgs::msg::UUID id;
+
+      @verbatim (language="comment", text=
+        " Position relative to WGS 84 ellipsoid")
+      geographic_msgs::msg::GeoPoint position;
+
+      @verbatim (language="comment", text=
+        " Key/value properties for this point")
+      sequence<geographic_msgs::msg::KeyValue> props;
+    };
+  };
+};
