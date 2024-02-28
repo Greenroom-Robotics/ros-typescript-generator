@@ -58,6 +58,9 @@ Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rost
 {
   "output": "./generated/ros_msgs.ts",
   "rosVersion": 2, // 1 or 2
+  "typePrefix": "IRosType",
+  "useNamespaces": false, // Should we use namespaces for ROS packages?
+  "smartEnums": true, // Should we use smart enums (as described above)
   "input": [
     {
       "namespace": "std_msgs",
@@ -69,7 +72,6 @@ Unlike [rostsd-gen](https://github.com/RobotWebTools/rclnodejs/tree/develop/rost
     },
     // Add any other messages including your own custom messages.
   ],
-  "typePrefix": "IRosType"
 }
 ```
 - Run `npx ros-typescript-generator --config ros-ts-generator-config.json`
