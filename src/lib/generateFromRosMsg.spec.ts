@@ -92,27 +92,27 @@ export enum ExampleMessageConst {
   t.is(result, expected);
 });
 
-test.skip('generateFromRosMsg with enum which are prefixed', (t) => {
+test('generateFromRosMsg with enum which are prefixed', (t) => {
   const result = generateFromRosMsg(
     `MSG: example/Message
 
-  uint8 blinker_state
-  uint8 headlight_state
-  uint8 wiper_state
-  uint8 current_gear
+  uint8 blinker
+  uint8 headlight
+  uint8 wipers
+  uint8 gear
   uint8 vehicle_mode
   bool hand_brake_active
   bool horn_active
   bool autonomous_mode_active
 
-  uint8 BLINKERS_OFF = 0
-  uint8 BLINKERS_LEFT = 1
-  uint8 BLINKERS_RIGHT = 2
-  uint8 BLINKERS_HAZARD = 3
+  uint8 BLINKER_STATE_OFF = 0
+  uint8 BLINKER_STATE_LEFT = 1
+  uint8 BLINKER_STATE_RIGHT = 2
+  uint8 BLINKER_STATE_HAZARD = 3
 
-  uint8 HEADLIGHTS_OFF = 0
-  uint8 HEADLIGHTS_LOW = 1
-  uint8 HEADLIGHTS_HIGH = 2
+  uint8 HEADLIGHT_OFF = 0
+  uint8 HEADLIGHT_LOW = 1
+  uint8 HEADLIGHT_HIGH = 2
 
   uint8 WIPERS_OFF = 0
   uint8 WIPERS_LOW = 1
@@ -132,7 +132,133 @@ test.skip('generateFromRosMsg with enum which are prefixed', (t) => {
   uint8 VEHICLE_MODE_EMERGENCY_MODE = 4`
   );
 
-  const expected = ` `;
+  const expected = `export interface ExampleMessage {
+  blinker: number;
+  headlight: number;
+  wipers: number;
+  gear: number;
+  vehicle_mode: number;
+  hand_brake_active: boolean;
+  horn_active: boolean;
+  autonomous_mode_active: boolean;
+}
+
+export enum ExampleMessageConst {
+  BLINKER_STATE_OFF = 0,
+  BLINKER_STATE_LEFT = 1,
+  BLINKER_STATE_RIGHT = 2,
+  BLINKER_STATE_HAZARD = 3,
+  HEADLIGHT_OFF = 0,
+  HEADLIGHT_LOW = 1,
+  HEADLIGHT_HIGH = 2,
+  WIPERS_OFF = 0,
+  WIPERS_LOW = 1,
+  WIPERS_MED = 2,
+  WIPERS_HIGH = 3,
+  GEAR_NEUTRAL = 0,
+  GEAR_DRIVE = 1,
+  GEAR_REVERSE = 2,
+  GEAR_PARKING = 3,
+  GEAR_LOW = 4,
+  VEHICLE_MODE_COMPLETE_MANUAL = 0,
+  VEHICLE_MODE_COMPLETE_AUTO_DRIVE = 1,
+  VEHICLE_MODE_AUTO_STEER_ONLY = 2,
+  VEHICLE_MODE_AUTO_SPEED_ONLY = 3,
+  VEHICLE_MODE_EMERGENCY_MODE = 4,
+}`;
+  t.is(result, expected);
+});
+
+test('generateFromRosMsg with enum which are prefixed with smartEnums mode', (t) => {
+  const result = generateFromRosMsg(
+    `MSG: example/Message
+
+  uint8 blinker
+  uint8 headlight
+  uint8 wipers
+  uint8 gear
+  uint8 vehicle_mode
+  bool hand_brake_active
+  bool horn_active
+  bool autonomous_mode_active
+
+  uint8 BLINKER_STATE_OFF = 0
+  uint8 BLINKER_STATE_LEFT = 1
+  uint8 BLINKER_STATE_RIGHT = 2
+  uint8 BLINKER_STATE_HAZARD = 3
+
+  uint8 HEADLIGHT_OFF = 0
+  uint8 HEADLIGHT_LOW = 1
+  uint8 HEADLIGHT_HIGH = 2
+
+  uint8 WIPERS_OFF = 0
+  uint8 WIPERS_LOW = 1
+  uint8 WIPERS_MED = 2
+  uint8 WIPERS_HIGH = 3
+
+  uint8 GEAR_NEUTRAL = 0
+  uint8 GEAR_DRIVE = 1
+  uint8 GEAR_REVERSE = 2
+  uint8 GEAR_PARKING = 3
+  uint8 GEAR_LOW = 4
+
+  uint8 VEHICLE_MODE_COMPLETE_MANUAL = 0
+  uint8 VEHICLE_MODE_COMPLETE_AUTO_DRIVE = 1
+  uint8 VEHICLE_MODE_AUTO_STEER_ONLY = 2
+  uint8 VEHICLE_MODE_AUTO_SPEED_ONLY = 3
+  uint8 VEHICLE_MODE_EMERGENCY_MODE = 4`,
+    '',
+    2,
+    false,
+    true
+  );
+
+  const expected = `export interface ExampleMessage {
+  blinker: ExampleMessageBlinker;
+  headlight: ExampleMessageHeadlight;
+  wipers: ExampleMessageWipers;
+  gear: ExampleMessageGear;
+  vehicle_mode: ExampleMessageVehicleMode;
+  hand_brake_active: boolean;
+  horn_active: boolean;
+  autonomous_mode_active: boolean;
+}
+
+export enum ExampleMessageBlinker {
+  STATE_OFF = 0,
+  STATE_LEFT = 1,
+  STATE_RIGHT = 2,
+  STATE_HAZARD = 3,
+}
+
+export enum ExampleMessageHeadlight {
+  OFF = 0,
+  LOW = 1,
+  HIGH = 2,
+}
+
+export enum ExampleMessageWipers {
+  OFF = 0,
+  LOW = 1,
+  MED = 2,
+  HIGH = 3,
+}
+
+export enum ExampleMessageGear {
+  NEUTRAL = 0,
+  DRIVE = 1,
+  REVERSE = 2,
+  PARKING = 3,
+  LOW = 4,
+}
+
+export enum ExampleMessageVehicleMode {
+  COMPLETE_MANUAL = 0,
+  COMPLETE_AUTO_DRIVE = 1,
+  AUTO_STEER_ONLY = 2,
+  AUTO_SPEED_ONLY = 3,
+  EMERGENCY_MODE = 4,
+}`;
   t.is(result, expected);
 });
 

@@ -136,7 +136,7 @@ export const generateFromRosMsg = (
         typePrefix,
         !useNamespaces
       );
-      const pkgName = pascalCase(definition.name!.split('/')[0]);
+      const pkgName = pascalCase(definition.name?.split('/')[0] || '');
 
       // Find the constant and variable definitions
       // eslint-disable-next-line prefer-const
@@ -286,13 +286,13 @@ ${tsRemainingEnum}
     }, new Map<string, string[]>());
 
   return Array.from(interfacesByPackage.entries())
-    .map(([pkgName, ifaces]) => {
+    .map(([pkgName, interfaces]) => {
       if (useNamespaces) {
         return `export namespace ${pascalCase(pkgName)} {
-${ifaces.map((iface) => indent(iface, 2)).join('\n\n')}
+${interfaces.map((iface) => indent(iface, 2)).join('\n\n')}
 }`;
       } else {
-        return ifaces.join('\n\n');
+        return interfaces.join('\n\n');
       }
     })
     .join('\n\n');
