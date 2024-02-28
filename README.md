@@ -13,7 +13,7 @@ A CLI for generating typescript interfaces and enums from ros `msg` files.
 - [x] TypeScript namespaces for ROS packages (config: `{"useNamespaces": true}`)
 - [x] Works with custom `.msg`, `.srv` and `.action` files 
 - [x] No runtime dependencies
-- [x] Advanced multi-enum support (config: `{"smartEnumVariants": true}`)
+- [x] Smart enum support (config: `{"smartEnums": true}`)
 
 ```msg
 # example_msgs/example.msg
@@ -37,13 +37,13 @@ export interface ExampleMsgsExample {
 }
 
 export enum ExampleMsgsExampleStatus {
-  Disabled = 0,
-  Enabled = 1,
+  DISABLED = 0,
+  ENABLED = 1,
 }
 
 export enum ExampleMsgsExampleOther {
-  Thing1 = 1,
-  Thing2 = 2,
+  THING_1 = 1,
+  THING_2 = 2,
 }
 ```
 ### Comparison to rclnodejs / rostsd-gen

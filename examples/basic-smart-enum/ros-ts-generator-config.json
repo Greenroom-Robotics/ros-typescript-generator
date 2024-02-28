@@ -87,6 +87,6 @@
       "path": "./ros_msgs/visualization_msgs"
     }
   ],
-  "smartEnumVariants": true,
+  "smartEnums": true,
   "typePrefix": "IRosType"
 }

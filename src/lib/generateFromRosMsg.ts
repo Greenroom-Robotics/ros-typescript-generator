@@ -3,7 +3,7 @@ import {
   MessageDefinitionField,
 } from '@foxglove/message-definition';
 import { parse } from '@foxglove/rosmsg';
-import { camelCase, compact, partition, upperFirst, snakeCase } from 'lodash';
+import { camelCase, compact, partition, snakeCase, upperFirst } from 'lodash';
 
 import { IConfig } from '../types/config';
 
@@ -11,19 +11,26 @@ import { primitives1, primitives2 } from './primitives';
 
 const SUPPORTED_ROS_VERSIONS = [1, 2];
 
-const rosNameToTypeName = (rosName: string, prefix = '', includePackageName = true) => {
+const rosNameToTypeName = (
+  rosName: string,
+  prefix = '',
+  includePackageName = true
+) => {
   if (!includePackageName) {
-    rosName = rosName.split("/").slice(-1)[0]
+    rosName = rosName.split('/').slice(-1)[0];
   }
   return `${prefix}${upperFirst(camelCase(rosName))}`;
-}
+};
 
-const pascalCase = (str: string) => upperFirst(camelCase(str))
+const pascalCase = (str: string) => upperFirst(camelCase(str));
 
 const indent = (str: string, width: number) => {
-  let padding = " ".repeat(width);
-  return str.split("\n").map(l => `${padding}${l}`).join("\n")
-}
+  const padding = ' '.repeat(width);
+  return str
+    .split('\n')
+    .map((l) => `${padding}${l}`)
+    .join('\n');
+};
 
 /** Take in a ros definition string and generates a typescript interface */
 export const generateFromRosMsg = (
@@ -31,7 +38,7 @@ export const generateFromRosMsg = (
   typePrefix = '',
   rosVersion: IConfig['rosVersion'] = 2,
   useNamespaces = false,
-  smartEnumVariants = false,
+  smartEnums = false
 ) => {
   if (!SUPPORTED_ROS_VERSIONS.includes(rosVersion)) {
     throw new Error('Unsupported rosVersion');
@@ -74,10 +81,11 @@ export const generateFromRosMsg = (
     return field.value;
   }
 
-  function enumEntriesFromFields(fields: MessageDefinitionField[]) {
-    return fields.map((field) => {
-      return `  ${field.name} = ${toEnumValue(field)},`;
-    })
+  function enumEntriesFromFields(fields: readonly MessageDefinitionField[]) {
+    return fields
+      .map((field) => {
+        return `  ${field.name} = ${toEnumValue(field)},`;
+      })
       .join('\n');
   }
 
@@ -123,52 +131,61 @@ export const generateFromRosMsg = (
     .map((definition) => {
       if (!definition) return '\n';
       // Get the interface key
-      const typeName = rosNameToTypeName(definition.name || '', typePrefix, !useNamespaces);
-      const pkgName = pascalCase(definition.name!.split("/")[0])
+      const typeName = rosNameToTypeName(
+        definition.name || '',
+        typePrefix,
+        !useNamespaces
+      );
+      const pkgName = pascalCase(definition.name!.split('/')[0]);
 
       // Find the constant and variable definitions
+      // eslint-disable-next-line prefer-const
       let [defConstants, defTypes] = partition(
         definition.definitions,
         (field) => field.isConstant
       );
 
       // enums which have been intelligently matched by the algorithms below
-      const generatedEnums: string[] = [];
-      if (smartEnumVariants) {
-
+      const generatedEnums: readonly string[] = [];
+      if (smartEnums) {
         // === Enum matching algorithm 1 ===
         // First attempt to group constants together as semantically
         // correct enums. The idea behind this is: If there are several
         // constants of a type that's only used by a single field, then
         // these constants must be an enum for that field.
-        const constants_by_type = new Map<String, MessageDefinitionField[]>();
-        const fields_by_type = new Map<String, MessageDefinitionField[]>();
+        const constants_by_type = new Map<string, MessageDefinitionField[]>();
+        const fields_by_type = new Map<string, MessageDefinitionField[]>();
 
-        for (let c of definition.definitions) {
-          let type = `${c.type}${c.isArray ? '[]' : ''}`;
+        for (const c of definition.definitions) {
+          const type = `${c.type}${c.isArray ? '[]' : ''}`;
           if (!constants_by_type.has(type)) {
-            constants_by_type.set(type, [])
-            fields_by_type.set(type, [])
+            constants_by_type.set(type, []);
+            fields_by_type.set(type, []);
           }
           if (c.isConstant) {
-            constants_by_type.get(type)!.push(c)
+            constants_by_type.get(type)!.push(c);
           } else {
-            fields_by_type.get(type)!.push(c)
+            fields_by_type.get(type)!.push(c);
           }
         }
 
-        for (let type of fields_by_type.keys()) {
-          if (fields_by_type.get(type)!.length === 1 && constants_by_type.get(type)!.length > 1) {
+        for (const type of fields_by_type.keys()) {
+          if (
+            fields_by_type.get(type)!.length === 1 &&
+            constants_by_type.get(type)!.length > 1
+          ) {
             // A field is the only one of its type in this
             // message, so all constants of that type must
             // be its possible values.
             const field = fields_by_type.get(type)![0];
             field.type = rosNameToTypeName(`${typeName}_${field.name}`);
             (field as any).typeAdjusted = true;
-            defConstants = defConstants.filter(c => !constants_by_type.get(type)!.includes(c))
+            defConstants = defConstants.filter(
+              (c) => !constants_by_type.get(type)!.includes(c)
+            );
             generatedEnums.push(`export enum ${field.type} {
 ${enumEntriesFromFields(constants_by_type.get(type)!)}
-}`)
+}`);
           }
         }
 
@@ -183,31 +200,31 @@ ${enumEntriesFromFields(constants_by_type.get(type)!)}
         //   string DIRECTION_RIGHT = "right"
         // we can assume the constants that have a field name as a prefix
         // belong to that field as enum variants.
-        for (let field of definition.definitions) {
+        for (const field of definition.definitions) {
           if (field.isConstant) {
             continue;
           }
           const type = `${field.type}${field.isArray ? '[]' : ''}`;
-          const candidates: MessageDefinitionField[] = [];
+          const candidates: readonly MessageDefinitionField[] = [];
           const prefix = `${snakeCase(field.name).toLocaleUpperCase()}_`;
-          for (let c of constants_by_type.get(type) || []) {
+          for (const c of constants_by_type.get(type) || []) {
             if (c.name.startsWith(prefix)) {
-              candidates.push(c)
+              candidates.push(c);
             }
           }
           if (candidates.length > 1) {
             field.type = rosNameToTypeName(`${typeName}_${field.name}`);
             (field as any).typeAdjusted = true;
-            defConstants = defConstants.filter(c => !candidates.includes(c))
-            const candidates_without_prefix = candidates.map(c => {
+            defConstants = defConstants.filter((c) => !candidates.includes(c));
+            const candidates_without_prefix = candidates.map((c) => {
               return {
                 ...c,
                 name: c.name.slice(prefix.length),
-              }
-            })
+              };
+            });
             generatedEnums.push(`export enum ${field.type} {
 ${enumEntriesFromFields(candidates_without_prefix)}
-}`)
+}`);
           }
         }
 
@@ -222,12 +239,18 @@ ${enumEntriesFromFields(candidates_without_prefix)}
             param.type in primitives
               ? primitives[param.type as keyof typeof primitives]
               : useNamespaces
-                ? param.type.split("/")[0] === pkgName ? pascalCase(param.type.split("/")[1]) : param.type.split("/").map(pascalCase).join(".")
-                : rosNameToTypeName(param.type, (param as any)["typeAdjusted"] === true ? '' : typePrefix)
-            ;
-
+              ? param.type.split('/')[0] === pkgName
+                ? pascalCase(param.type.split('/')[1])
+                : param.type.split('/').map(pascalCase).join('.')
+              : rosNameToTypeName(
+                  param.type,
+                  (param as any)['typeAdjusted'] === true ? '' : typePrefix
+                );
           const arrayMarker = param.isArray ? '[]' : '';
-          return `  ${param.name}: ${paramType.replace(".", `.${typePrefix}`)}${arrayMarker};`;
+          return `  ${param.name}: ${paramType.replace(
+            '.',
+            `.${typePrefix}`
+          )}${arrayMarker};`;
         })
         .join('\n');
 
@@ -245,26 +268,31 @@ ${tsTypes}
 ${tsRemainingEnum}
 }`;
 
-      return [pkgName, compact([tsTypeFinal, ...generatedEnums, tsRemainingEnumFinal]).join('\n\n')];
+      return [
+        pkgName,
+        compact([tsTypeFinal, ...generatedEnums, tsRemainingEnumFinal]).join(
+          '\n\n'
+        ),
+      ];
     })
     .filter((item) => !!item[1])
     .sort()
     .reduce((interfacesByPackage, [pkgName, iface]) => {
       if (!interfacesByPackage.has(pkgName)) {
-        interfacesByPackage.set(pkgName, [])
+        interfacesByPackage.set(pkgName, []);
       }
       interfacesByPackage.get(pkgName)!.push(iface);
       return interfacesByPackage;
-    }, new Map<string, string[]>());
+    }, new Map<string, readonly string[]>());
 
   return Array.from(interfacesByPackage.entries())
     .map(([pkgName, ifaces]) => {
       if (useNamespaces) {
         return `export namespace ${pascalCase(pkgName)} {
-${ifaces.map(iface => indent(iface, 2)).join("\n\n")}
-}`
+${ifaces.map((iface) => indent(iface, 2)).join('\n\n')}
+}`;
       } else {
-        return ifaces.join("\n\n")
+        return ifaces.join('\n\n');
       }
     })
     .join('\n\n');

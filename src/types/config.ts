@@ -9,5 +9,5 @@ export type IConfig = {
   readonly input: readonly IConfigDirectory[];
   readonly typePrefix: string;
   readonly useNamespaces?: boolean;
-  readonly smartEnumVariants?: boolean;
+  readonly smartEnums?: boolean;
 };

@@ -34,7 +34,7 @@ export const rosTypescriptGenerator = async (config: IConfig) => {
     config.typePrefix,
     config.rosVersion,
     config.useNamespaces,
-    config.smartEnumVariants
+    config.smartEnums
   );
 
   const typescriptInterfacesWithNote = [
