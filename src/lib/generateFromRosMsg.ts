@@ -146,7 +146,7 @@ export const generateFromRosMsg = (
       );
 
       // enums which have been intelligently matched by the algorithms below
-      const generatedEnums: readonly string[] = [];
+      const generatedEnums: string[] = [];
       if (smartEnums) {
         // === Enum matching algorithm 1 ===
         // First attempt to group constants together as semantically
@@ -205,7 +205,7 @@ ${enumEntriesFromFields(constants_by_type.get(type)!)}
             continue;
           }
           const type = `${field.type}${field.isArray ? '[]' : ''}`;
-          const candidates: readonly MessageDefinitionField[] = [];
+          const candidates: MessageDefinitionField[] = [];
           const prefix = `${snakeCase(field.name).toLocaleUpperCase()}_`;
           for (const c of constants_by_type.get(type) || []) {
             if (c.name.startsWith(prefix)) {
@@ -283,7 +283,7 @@ ${tsRemainingEnum}
       }
       interfacesByPackage.get(pkgName)!.push(iface);
       return interfacesByPackage;
-    }, new Map<string, readonly string[]>());
+    }, new Map<string, string[]>());
 
   return Array.from(interfacesByPackage.entries())
     .map(([pkgName, ifaces]) => {
